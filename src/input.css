@@ -1,0 +1,44 @@
+ @import "tailwindcss";
+ @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap');
+
+
+ @theme {
+   --color-primary: #570835;
+   --color-cream-bg: #F8F3E5;
+   --color-yellow-bg: #FDF3C8;
+   --color-cremson-bg: #F5E1BD;
+   --color-circle-bg: #F9F6C1;
+   --font-poppins: 'Poppins', sans-serif;
+   --font-pacifico: "Pacifico", cursive;
+   --font-inter: "Inter", sans-serif;
+   --font-heading: "Playfair Display", serif;
+   --font-banner:"Libre Baskerville", serif;
+ }
+
+ @layer base {
+   body {
+     @apply bg-white text-primary font-sans antialiased;
+   }
+ }
+
+ @layer components {
+   .nav-link {
+     @apply text-gray-700 hover:text-primary px-3 py-2 text-sm font-medium transition-colors;
+   }
+
+   .btn-solid {
+     @apply bg-[var(--color-primary)] text-white px-8 py-2.5 rounded-full hover:bg-[var(--color-primary)]/90 inline-block text-sm font-medium transition-colors cursor-pointer;
+   }
+
+   .btn-outline {
+     @apply border border-[var(--color-primary)] text-[var(--color-primary)] px-8 py-2.5 rounded-full hover:bg-[var(--color-primary)] hover:text-white inline-block text-sm font-medium transition-colors cursor-pointer;
+   }
+
+   .search-input {
+     @apply bg-gray-50 border border-gray-200 rounded-full py-2 pl-5 pr-10 text-sm focus:outline-none focus:border-[var(--color-primary)] w-[250px] transition-colors;
+   }
+ }

@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Page - Rituals</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!--css cdn-->
+    <link rel="stylesheet" href="./output/style.css">
+</head>
+
+<body>
+
+    <!---------------- Topbar & Navbar ---------------->
+    <header>
+        <div class="bg-[#F8F3E5] w-full flex flex-col">
+            <!--- Top Banner -->
+            <div class="w-full">
+                <div
+                    class="max-w-[1820px] mx-auto px-[20px] md:px-[50px] py-2 flex justify-between items-center text-[13px] text-primary">
+                    <div class="hidden md:block flex-1"></div>
+                    <!-- Top banner text -->
+                    <div class="flex-1 text-center font-medium font-inter text-[var(--color-primary)]">Exclusive 20% OFF
+                        on any amount</div>
+                    <div class="hidden md:flex flex-1 justify-end">
+                        <a href="#"
+                            class="hover:text-[var(--color-primary)] font-medium transition-colors text-primary">Login /
+                            Signup</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-full border-b border-[var(--color-primary)]"></div>
+            <!-- Main Navbar -->
+            <div class="w-full z-40 relative">
+                <div
+                    class="max-w-[1820px] mx-auto px-[20px] md:px-[50px] py-3 flex items-center justify-between w-full">
+                    <!--  Logo -->
+                    <div class="w-1/3 flex justify-start">
+                        <a href="index.html"
+                            class="text-3xl lg:text-4xl font-bold text-[var(--color-primary)] font-pacifico relative z-10">Rituals</a>
+                    </div>
+
+                    <!-- 2. Nav Links  -->
+                    <div class="w-1/3 flex justify-center">
+                        <nav class="hidden lg:flex space-x-8 items-center whitespace-nowrap z-10">
+                            <a href="index.html" class="nav-link text-primary">Home</a>
+                            <a href="about.html" class="nav-link text-primary">About Us</a>
+
+                            <!-- Dropdown Section -->
+                            <div class="relative group">
+                                <a href="shop.html"
+                                    class="nav-link text-primary flex items-center gap-1 focus:outline-none cursor-pointer pb-2">
+                                    Shop
+                                    <i class="fa-solid fa-chevron-down text-[10px] ml-1"></i>
+                                </a>
+                                <div
+                                    class="absolute left-1/2 -translate-x-1/2 mt-0 w-48 bg-white border border-gray-100 shadow-lg rounded-md overflow-hidden hidden group-hover:block transition-all z-50">
+                                    <a href="#" class="block px-4 py-2 text-sm text-primary hover:bg-gray-50">Wedding
+                                        card</a>
+                                    <a href="shop.html"
+                                        class="block px-4 py-2 text-sm text-primary hover:bg-gray-50">Gifts</a>
+                                    <a href="#"
+                                        class="block px-4 py-2 text-sm text-primary hover:bg-gray-50">Accessories</a>
+                                </div>
+                            </div>
+
+                            <a href="blog.html" class="nav-link text-primary">Blog</a>
+                            <a href="contact.html"
+                                class="nav-link text-[var(--color-primary)] font-semibold border-b-2 border-[var(--color-primary)] pb-1">Contact</a>
+                        </nav>
+                    </div>
+                    <div class="w-1/3 flex justify-end items-center gap-4 sm:gap-6 relative z-10">
+                        <!-- Search Bar -->
+                        <div class="hidden xl:block relative">
+                            <input type="text" placeholder="What are you looking for..."
+                                class="search-input bg-white/60 border border-[var(--color-primary)]/40 focus:border-[var(--color-primary)] transition-all w-[240px] lg:w-[280px] py-1.5 px-4 rounded-full outline-none text-sm" />
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                class="h-4 w-4 absolute right-4 top-2.5 text-[var(--color-primary)]" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                            </svg>
+                        </div>
+                        <!-- Icons -->
+                        <div class="hidden lg:flex items-center space-x-4 text-[var(--color-primary)]">
+                            <a href="#" class="hover:opacity-80 transition-colors"><i
+                                    class="fa-regular fa-user text-lg lg:text-xl"></i></a>
+                            <a href="#" class="hover:opacity-80 transition-colors"><i
+                                    class="fa-regular fa-heart text-lg lg:text-xl"></i></a>
+                            <a href="#" class="hover:opacity-80 transition-colors relative">
+                                <i class="fa-solid fa-cart-shopping text-lg lg:text-xl"></i>
+                                <span
+                                    class="absolute -top-2 -right-2 bg-[var(--color-primary)] text-white text-[10px] font-bold px-[5px] py-[1px] rounded-full">0</span>
+                            </a>
+                        </div>
+                        <!-- Mobile Menu Toggler & Cart -->
+                        <div class="flex lg:hidden items-center gap-5 relative z-[60]">
+                            <a href="#" class="text-[var(--color-primary)] relative">
+                                <i class="fa-solid fa-cart-shopping text-xl"></i>
+                                <span
+                                    class="absolute -top-2 -right-2 bg-[var(--color-primary)] text-white text-[10px] font-bold px-[5px] py-[1px] rounded-full">0</span>
+                            </a>
+                            <button id="mobile-menu-btn"
+                                class="text-[var(--color-primary)] text-2xl focus:outline-none cursor-pointer">
+                                <i class="fa-solid fa-bars transition-all duration-300"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Mobile Menu Panel -->
+    <div id="mobile-menu-panel"
+        class="fixed top-0 left-0 h-full w-[280px] bg-[#F8F3E5] shadow-2xl z-50 flex flex-col p-6 overflow-y-auto transform -translate-x-full transition-transform duration-300 [&.is-open]:translate-x-0">
+        <div class="mb-8 border-b border-primary/20 pb-4 mt-2">
+            <a href="#" class="text-3xl font-bold text-[var(--color-primary)] font-pacifico">Rituals</a>
+        </div>
+        <nav class="flex flex-col space-y-4">
+            <a href="index.html" class="text-primary font-medium text-lg border-b border-primary/10 pb-2">Home</a>
+            <a href="about.html" class="text-primary font-medium text-lg border-b border-primary/10 pb-2">About Us</a>
+            <a href="shop.html"
+                class="text-primary font-medium text-lg flex items-center justify-between border-b border-primary/10 pb-2">
+                Shop <i class="fa-solid fa-chevron-down text-xs"></i>
+            </a>
+            <a href="blog.html" class="text-primary font-medium text-lg border-b border-primary/10 pb-2">Blog</a>
+            <a href="contact.html" class="text-primary font-medium text-lg border-b border-primary/10 pb-2">Contact</a>
+        </nav>
+    </div>
+
+    <!---------------- Banner ---------------->
+    <main>
+        <!-- Cart Title -->
+        <div class="w-full max-w-[1820px] mx-auto px-4 sm:px-[50px] pt-8 pb-2">
+            <div class="text-xs sm:text-sm text-[var(--color-primary)] font-medium mb-4 font-inter">
+                <a href="#" class="hover:underline ">Home page</a> &gt; <span>Return Gifts</span> &gt;
+                <span>Printed Tin jar</span> &gt; <span>Cart Page</span>
+            </div>
+            <h1 class="text-xs sm:text-3xl font-semibold text-primary mb-1">Cart</h1>
+            <a href="#"
+                class="text-xs sm:text-sm text-[var(--color-primary)] font-medium hover:underline inline-block mb-6 font-poppins text-sm">&lt;
+                Continue to shopping</a>
+
+            <div class="relative flex items-center justify-center my-4">
+                <div class="flex-grow border-t border-[var(--color-primary)]"></div>
+                <span class="mx-4 text-purple-500 text-base">
+                    <i class="fa-solid fa-star"></i>
+                </span>
+                <div class="flex-grow border-t border-[var(--color-primary)]"></div>
+            </div>
+        </div>
+        <!-- Cart Items -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            <!--  List -->
+            <div class="col-span-12 lg:col-span-8 flex flex-col gap-6">
+
+                <div class="flex items-center gap-4">
+                    <div
+                        class="w-6 h-6 bg-white border border-green-600 rounded-md flex items-center justify-center text-green-600 shrink-0">
+                        <i class="fa-solid fa-check text-xs"></i>
+                    </div>
+                    <div
+                        class="flex-1 bg-[#F8F3E5] p-5 sm:p-6 rounded-2xl border border-amber-100 relative flex flex-col sm:flex-row items-center justify-between gap-4 pb-12 sm:pb-6">
+                        <!-- Image 1 -->
+                        <div class="flex items-center gap-3 w-full sm:w-auto">
+                            <!-- Image Box -->
+                            <div class="w-[200px] h-[150px] overflow-hidden rounded-xl shrink-0 shadow-sm">
+                                <img src="./images/contact_img/bn1.png" alt="Kids Printed Tin Jar"
+                                    class="w-full h-full object-cover rounded-xl" />
+                            </div>
+                            <!-- Product Details -->
+                            <div>
+                                <h3 class="font-normal font-poppins text-base text-primary mb-1">Kids Printed Tin Jar
+                                </h3>
+                                <p class="text-xs text-primary mb-1">Product id: <span
+                                        class="text-primary font-medium">1883183</span></p>
+                                <p class="text-xs text-primary font-medium mb-2 font-poppins">Product in stock</p>
+                                <div class="flex items-center gap-3 sm:hidden">
+                                    <span class="font-bold text-[var(--color-primary)] text-sm">$14.00</span>
+                                    <span class="text-xs text-primary line-through">$24.00</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Price-->
+                        <div class="flex items-center justify-between sm:justify-end gap-6 w-full sm:w-auto">
+                            <div class="hidden sm:flex items-center gap-2">
+                                <span class="font-bold text-[var(--color-primary)] text-base">$14.00</span>
+                                <span class="text-xs text-red-500 line-through">$24.00</span>
+                            </div>
+                            <!-- Quantity Button -->
+                            <div
+                                class="flex items-center rounded-lg border border-gray-300 overflow-hidden shadow-sm bg-white">
+                                <button type="button"
+                                    class="w-8 h-8 flex items-center justify-center bg-[var(--color-primary)] text-white cursor-pointer">-</button>
+                                <span
+                                    class="font-medium text-sm w-10 text-center text-[var(--color-primary)] bg-white">10</span>
+                                <button type="button"
+                                    class="w-8 h-8 flex items-center justify-center bg-[var(--color-primary)] text-white cursor-pointer">+</button>
+                            </div>
+                            <span class="text-xs text-primary hidden md:inline">Minimum order quantity - 10
+                                units/bag</span>
+                        </div>
+                        <!-- Delete Button -->
+                        <button
+                            class="text-primary hover:text-red-600 transition-colors cursor-pointer text-base p-2 absolute bottom-2 right-4">
+                            <i class="fa-regular fa-trash-can"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-4">
+                    <div
+                        class="w-6 h-6 bg-white border border-green-600 rounded-md flex items-center justify-center text-green-600 shrink-0">
+                        <i class="fa-solid fa-check text-xs"></i>
+                    </div>
+                    <div
+                        class="flex-1 bg-[#F8F3E5] p-4 sm:p-5 rounded-2xl border border-amber-100 relative flex flex-col sm:flex-row items-center justify-between gap-4 pb-12 sm:pb-6">
+                        <!-- Image:2 -->
+                        <div class="flex items-center gap-3 w-full sm:w-auto">
+                            <!-- Image  -->
+                            <div class="w-[200px] h-[150px] overflow-hidden rounded-xl shrink-0 shadow-sm">
+                                <img src="./images/contact_img/bn2.png" alt="bag"
+                                    class="w-full h-full object-cover rounded-xl" />
+                            </div>
+                            <div>
+                                <h3 class="font-normal font-poppins text-base text-primary mb-1 font-poppins">Favor Bags
+                                </h3>
+                                <p class="text-xs text-primary mb-1 font-poppins">Product id: <span
+                                        class="text-primary font-medium font-poppins">9548940</span></p>
+                                <p class="text-xs text-primary font-medium mb-2 font-poppins">Product in stock</p>
+                                <div class="flex items-center gap-3 sm:hidden">
+                                    <span
+                                        class="font-bold text-[var(--color-primary)] text-sm font-poppins">$14.00</span>
+                                    <span class="text-xs text-primary line-through font-poppins">$24.00</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- price -->
+                        <div class="flex items-center justify-between sm:justify-end gap-6 w-full sm:w-auto">
+                            <div class="hidden sm:flex items-center gap-2">
+                                <span class="font-bold text-[var(--color-primary)] text-base">$14.00</span>
+                                <span class="text-xs text-red-500 line-through">$24.00</span>
+                            </div>
+
+                            <!-- Quantity Button -->
+                            <div
+                                class="flex items-center rounded-lg border border-gray-300 overflow-hidden shadow-sm bg-white">
+                                <button type="button"
+                                    class="w-8 h-8 flex items-center justify-center bg-[var(--color-primary)] text-white cursor-pointer">-</button>
+                                <span
+                                    class="font-medium text-sm w-10 text-center text-[var(--color-primary)] bg-white">10</span>
+                                <button type="button"
+                                    class="w-8 h-8 flex items-center justify-center bg-[var(--color-primary)] text-white cursor-pointer">+</button>
+                            </div>
+
+                            <span class="text-xs text-primary hidden md:inline">Minimum order quantity - 10
+                                units/bag</span>
+                        </div>
+
+                        <!-- Delete Button  -->
+                        <button
+                            class="text-primary hover:text-red-600 transition-colors cursor-pointer text-base p-2 absolute bottom-2 right-4">
+                            <i class="fa-regular fa-trash-can"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="mt-2">
+                    <div class="w-full border-t border-[var(--color-primary)] mb-3"></div>
+                </div>
+            </div>
+            <div class="col-span-12 lg:col-span-4 flex flex-col gap-6">
+                <div class="bg-[#F8F3E5] p-5 sm:p-6 rounded-2xl border border-amber-100 flex flex-col gap-6">
+                    <!-- Coupon Section -->
+                    <div>
+                        <h3 class="font-bold text-base text-[var(--color-primary)] mb-3 font-poppins">Coupon</h3>
+                        <div class="flex items-center gap-2">
+                            <input type="text" placeholder="Type your coupon"
+                                class="flex-1 bg-white border border-gray-300 rounded-xl px-4 py-2.5 text-sm outline-none focus:ring-2 focus:ring-[var(--color-primary)]" />
+                            <button
+                                class="bg-[var(--color-primary)] text-white px-5 py-2.5 rounded-xl font-medium text-sm hover:bg-[#3d0525] transition-all cursor-pointer">Apply</button>
+                        </div>
+                    </div>
+
+                    <hr class="border-amber-200">
+
+                    <!-- Checkout  -->
+                    <div>
+                        <h3 class="font-bold text-base text-[var(--color-primary)] mb-4 font-poppins">Checkout</h3>
+                        <p class="text-xs text-primary mb-3 font-medium font-normal font-poppins">Dispatch all products
+                        </p>
+                        <div class="space-y-2.5 text-sm text-primary pb-4 mb-4">
+                            <div class="flex justify-between">
+                                <span class="text-primary font-poppins font-normal">Total Products (10)</span>
+                                <span class="font-normal font-poppins">$200</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-primary font-poppins font-normal">Discount</span>
+                                <span class="text-primary font-poppins font-normal">-$20</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-primary font-poppins font-normal">Final Price</span>
+                                <span class="font-normal font-poppins">$180</span>
+                            </div>
+
+                            <hr class="border-[var(--color-primary)] my-2">
+
+                            <div class="flex justify-between">
+                                <span class="text-primary font-poppins font-normal">Total Price</span>
+                                <span class="font-normal text-base text-[var(--color-primary)] font-poppins">$180</span>
+                            </div>
+                        </div>
+                        <button
+                            class="w-[80%] max-w-[280px] mx-auto font-poppins font-normal bg-[var(--color-primary)] text-white py-3 px-6 rounded-xl font-medium text-sm hover:bg-[#3d0525] transition-all shadow-md cursor-pointer text-center block">
+                            Proceed to Checkout
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Special Instruction -->
+                <div class="bg-[#F8F3E5] p-5 rounded-2xl border border-amber-100">
+                    <h3 class="font-bold text-sm text-primary mb-2 font-poppins">Special Instruction for seller</h3>
+                    <textarea placeholder="Type here..." rows="3"
+                        class="w-full bg-white border border-primary rounded-xl p-3 text-sm text-primary outline-none focus:ring-2 focus:ring-[var(--color-primary)] resize-none"></textarea>
+                </div>
+            </div>
+        </div>
+
+        <section class="max-w-[1820px] mx-auto px-[50px] mt-24 pb-20">
+            <!-- Heading -->
+            <h2
+                class="text-center font-semibold font-poppins text-2xl md:text-[28px] text-[var(--color-primary)] mb-16">
+                You may also like
+            </h2>
+            <div class="mb-16">
+                <div class="relative w-full">
+                    <!-- Left Arrow -->
+                    <button
+                        class="absolute left-3 top-[145px] -translate-y-1/2 z-20 w-10 h-10 rounded-full flex items-center justify-center backdrop-blur-md border border-white/85 shadow-md text-black hover:bg-white/90 transition-all cursor-pointer">
+
+                        <i class="fa-solid fa-arrow-left"></i>
+
+                    </button>
+                    <!-- 4 Products -->
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 justify-items-center">
+
+                        <!-- Card 1 -->
+
+                        <a href="#" class="group block w-full max-w-[290px]">
+
+                            <div class="w-full h-[290px] bg-gray-50 rounded-[16px] overflow-hidden mb-2.5">
+
+                                <img src="./images/contact_img/y1 (1).png" alt="Card"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+
+                            </div>
+
+                            <div class="flex flex-col px-1">
+
+                                <div class="flex justify-between items-start mb-1">
+
+                                    <h4 class="font-semibold font-poppins text-[15px] text-primary">Mural Printed Tin
+
+                                        Jar</h4>
+
+                                    <span class="text-primary hover:text-red-500 transition-colors text-[16px]"><i
+                                            class="fa-regular fa-heart"></i></span>
+
+                                </div>
+
+                                <div class="flex items-center gap-1.5 mb-1">
+
+                                    <div class="flex text-[var(--color-primary)] text-[12px] gap-[2px]">
+
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+
+                                    </div>
+
+                                    <span class="text-[12px] font-poppins font-medium text-primary">4 Reviews</span>
+
+                                </div>
+
+                                <div class="flex items-center gap-2">
+
+                                    <span class="font-bold font-poppins text-[15px] text-gray-900">$20</span>
+
+                                    <span class="text-[12px] text-primary font-medium line-through">$25</span>
+
+                                </div>
+
+                            </div>
+
+                        </a>
+                        <!-- Card 2 -->
+
+                        <a href="#" class="group block w-full max-w-[290px]">
+
+                            <div class="w-full h-[290px] bg-gray-50 rounded-[16px] overflow-hidden mb-2.5">
+
+                                <img src="./images/contact_img/y1 (2).png" alt="Card"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+
+                            </div>
+
+                            <div class="flex flex-col px-1">
+
+                                <div class="flex justify-between items-start mb-1">
+
+                                    <h4 class="font-semibold font-poppins text-[15px] text-primary">Printed Tin Jar</h4>
+
+                                    <span class="text-primary hover:text-red-500 transition-colors text-[16px]"><i
+                                            class="fa-regular fa-heart"></i></span>
+
+                                </div>
+
+                                <div class="flex items-center gap-1.5 mb-1">
+
+                                    <div class="flex text-[var(--color-primary)] text-[12px] gap-[2px]">
+
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+
+                                    </div>
+
+                                    <span class="text-[12px] text-primary font-medium">4 Reviews</span>
+
+                                </div>
+
+                                <div class="flex items-center gap-2">
+
+                                    <span class="font-bold font-poppins text-[15px] text-gray-900">$20</span>
+
+                                    <span class="text-[12px] text-primary font-medium line-through">$25</span>
+
+                                </div>
+
+                            </div>
+
+                        </a>
+                        <!-- Card 3 -->
+                        <a href="#" class="group block w-full max-w-[290px]">
+                            <div class="w-full h-[290px] bg-gray-50 rounded-[16px] overflow-hidden mb-2.5">
+
+                                <img src="./images/contact_img/y1 (3).png" alt="Card"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                            </div>
+
+                            <div class="flex flex-col px-1">
+
+                                <div class="flex justify-between items-start mb-1">
+
+                                    <h4 class="font-semibold font-poppins text-[15px] text-primary">Floral Printed Tin
+
+                                        Jar</h4>
+
+                                    <span class="text-primary hover:text-red-500 transition-colors text-[16px]"><i
+                                            class="fa-regular fa-heart"></i></span>
+
+                                </div>
+
+                                <div class="flex items-center gap-1.5 mb-1">
+
+                                    <div class="flex text-[var(--color-primary)] text-[12px] gap-[2px]">
+
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+
+                                    </div>
+
+                                    <span class="text-[12px] text-primary font-medium">4 Reviews</span>
+
+                                </div>
+
+                                <div class="flex items-center gap-2">
+
+                                    <span class="font-bold font-poppins text-[15px] text-gray-900">₹20</span>
+
+                                    <span class="text-[12px] text-primary font-medium line-through">₹25</span>
+                                </div>
+                            </div>
+                        </a>
+                        <!-- Card 4 -->
+                        <a href="#" class="group block w-full max-w-[290px]">
+                            <div class="w-full h-[290px] bg-gray-50 rounded-[16px] overflow-hidden mb-2.5">
+                                <img src="./images/contact_img/y4.png" alt="Card"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                            </div>
+                            <div class="flex flex-col px-1">
+                                <div class="flex justify-between items-start mb-1">
+                                    <h4 class="font-semibold font-poppins text-[15px] text-primary">Doli Printed Tin Jar
+                                    </h4>
+                                    <span class="text-primary hover:text-red-500 transition-colors text-[16px]"><i
+                                            class="fa-regular fa-heart"></i></span>
+                                </div>
+                                <div class="flex items-center gap-1.5 mb-1">
+                                    <div class="flex text-[var(--color-primary)] text-[12px] gap-[2px]">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <span class="text-[12px] text-primary font-medium">4 Reviews</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span class="font-bold font-poppins text-[15px] text-gray-900">₹20</span>
+                                    <span class="text-[12px] text-primary font-medium line-through">₹25</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- Right Arrow -->
+                    <button
+                        class="absolute right-3 top-[145px] -translate-y-1/2 z-20 w-10 h-10 rounded-full flex items-center justify-center backdrop-blur-md border border-white/85 shadow-md text-black hover:bg-white/90 transition-all cursor-pointer">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- scanner -->
+        <section class="max-w-[1820px] mx-auto px-4 sm:px-[50px] mt-10 mb-20">
+            <!-- Banner -->
+            <div
+                class="bg-[#F9F6C1] rounded-[25px] py-8 md:py-10 px-6 md:px-16 shadow-sm relative flex items-center w-full">
+                <!-- QR Scanner -->
+                <div
+                    class="hidden lg:block absolute left-10 md:left-16 -top-2 z-20 bg-white border-2 border-[var(--color-primary)] rounded-[20px] p-3 text-center shadow-xl w-[150px]">
+                    <div
+                        class="w-full h-[120px] bg-gray-50 rounded-[12px] overflow-hidden mb-2 flex items-center justify-center">
+                        <img src="./images/contact_img/scanner.png" alt="Scanner QR"
+                            class="w-full h-full object-contain" />
+                    </div>
+                    <span class="text-[12px] font-bold text-[var(--color-primary)]">Scan Me</span>
+                </div>
+                <!-- Main ------->
+                <div class="grid grid-cols-12 gap-6 items-center w-full lg:pl-56">
+                    <!--  Heading , Paragraph-->
+                    <div class="col-span-12 md:col-span-8 text-center flex flex-col justify-center items-center">
+                        <h3 class="font-semibold text-center text-2xl md:text-3xl text-[var(--color-primary)] mb-1">
+                            Stay ahead of the deals!
+                        </h3>
+                        <p
+                            class="text-[var(--color-primary)] font-poppins text-center font-medium text-sm md:text-base italic">
+                            "Experience shopping made easy - grab our app for <br class="hidden sm:inline">
+                            deals,
+                            speed
+                            and convenience."
+                        </p>
+                    </div>
+                    <!--  App Icons  -->
+                    <div
+                        class="col-span-12 md:col-span-4 flex flex-col items-center md:items-end justify-center gap-2.5">
+                        <!-- App -->
+                        <div class="flex items-center gap-3">
+                            <a href="#"
+                                class="w-11 h-11 rounded-full bg-[var(--color-primary)] flex items-center justify-center text-white hover:opacity-90 transition-opacity shadow-md overflow-hidden p-2.5">
+                                <img src="./images/contact_img/material-symbols_android.png" alt="Google Play"
+                                    class="w-full h-full object-contain" />
+                            </a>
+                            <a href="#"
+                                class="w-11 h-11 rounded-full bg-[var(--color-primary)] flex items-center justify-center text-white hover:opacity-90 transition-opacity shadow-md overflow-hidden p-2.5">
+                                <img src="./images/contact_img/ic_baseline-apple.png" alt="Apple Store"
+                                    class="w-full h-full object-contain" />
+                            </a>
+                        </div>
+                        <!-- Download Now -->
+                        <button type="button"
+                            class="bg-[var(--color-primary)] text-white text-xs md:text-sm font-semibold px-5 py-2 rounded-full hover:opacity-95 transition-opacity shadow-md cursor-pointer">
+                            Download now
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Stores Section -->
+        <section class="max-w-[1820px] mx-auto px-[50px] mb-20 text-center">
+            <h2 class="text-2xl md:text-3xl font-semibold font-poppins text-[var(--color-primary)] mb-2">Our
+                Stores
+            </h2>
+            <p class="text-sm text-primary mb-10">Visit the nearest store to experience our products.</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="flex flex-col items-center">
+                    <img src="./images/contact_img/Mumbai Icon 1.png" alt="Mumbai Store"
+                        class="w-full max-w-[350px] h-auto object-contain mb-4" />
+
+                </div>
+                <div class="flex flex-col items-center">
+                    <img src="./images/contact_img/Kolkata Icon 1.png" alt="Kolkata Store"
+                        class="w-full max-w-[350px] h-auto object-contain mb-4" />
+
+                </div>
+                <div class="flex flex-col items-center">
+                    <img src="./images/contact_img/Amedabad Icon 1.png" alt="Ahmedabad Store"
+                        class="w-full max-w-[350px] h-auto object-contain mb-4" />
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!---------------- FOOTER SECTION ---------------->
+     <footer>
+        <div class="bg-[#F8F3E5] py-16 text-gray-800">
+            <div class="max-w-[1820px] mx-auto px-[50px] grid grid-cols-12 gap-6 items-start">
+                <!-- Paragraph -->
+                <p class="col-span-12 lg:col-span-4 text-primary text-sm md:text-base leading-relaxed pr-0 lg:pr-8">
+                    At Rituals, we redefine gifting in India with an extensive range of 5,000+ gifts crafted for retail
+                    and
+                    bulk needs. From premium and utility gifts to return and corporate gifting, each product is designed
+                    to
+                    elevate every occasion with quality and elegance.
+                </p>
+                <!--  Details Column -->
+                <div class="col-span-6 md:col-span-3 lg:col-span-2">
+                    <p class="font-bold text-sm md:text-base text-[var(--color-primary)] mb-4">Details</p>
+                    <ul class="space-y-3 text-xs md:text-sm text-primary list-none">
+                        <li><a href="#" class="hover:underline">About Us</a></li>
+                        <li><a href="#" class="hover:underline">FAQs</a></li>
+                        <li><a href="#" class="hover:underline">Blogs</a></li>
+                    </ul>
+                </div>
+                <!-- 3. Contact Column  -->
+                <div class="col-span-6 md:col-span-3 lg:col-span-2">
+                    <p class="font-bold text-sm md:text-base text-[var(--color-primary)] mb-4">Contact</p>
+                    <ul class="space-y-3 text-xs md:text-sm text-primary list-none">
+                        <li><a href="mailto:support@rituals.com"
+                                class="hover:underline break-all">support@rituals.com</a>
+                        </li>
+                        <li><a href="tel:+91948403302114" class="hover:underline">+91 948403302114</a></li>
+                    </ul>
+                </div>
+                <!--  Customer -------------->
+                <div class="col-span-6 md:col-span-3 lg:col-span-2">
+                    <p class="font-bold text-sm md:text-base text-[var(--color-primary)] mb-4">Customer Policy</p>
+                    <ul class="space-y-3 text-xs md:text-sm text-primary list-none">
+                        <li><a href="#" class="hover:underline">Terms &amp; Conditions</a></li>
+                        <li><a href="#" class="hover:underline">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:underline">Return &amp; Refunds</a></li>
+                        <li><a href="#" class="hover:underline">Shipping</a></li>
+                        <li><a href="#" class="hover:underline">Terms of Service</a></li>
+                        <li><a href="#" class="hover:underline">Refund Policy</a></li>
+                    </ul>
+                </div>
+                <!--  Support Column -->
+                <div class="col-span-6 md:col-span-3 lg:col-span-2">
+                    <p class="font-bold text-sm md:text-base text-[var(--color-primary)] mb-4">Support</p>
+                    <ul class="space-y-3 text-xs md:text-sm text-primary list-none">
+                        <li><a href="#" class="hover:underline">Track your order</a></li>
+                        <li><a href="#" class="hover:underline">Register on Rituals</a></li>
+                        <li><a href="#" class="hover:underline">Order History</a></li>
+                    </ul>
+                </div>
+                <!--  Logo -->
+                <div class="col-span-12 lg:col-span-7 mt-8 lg:mt-4 flex items-center gap-3">
+                    <p
+                        class="font-bold text-6xl md:text-8xl lg:text-[130px] tracking-tight text-[var(--color-primary)] leading-none select-none m-0">
+                        Rituals </p>
+                    <span
+                        class="shrink-0 w-8 h-8 md:w-12 md:h-12 rounded-full bg-[#F9F6C1] border border-[var(--color-primary)] flex items-center justify-center text-sm md:text-lg font-bold text-[var(--color-primary)]">
+                        R
+                    </span>
+                </div>
+                <!--  Bottom Utilities-->
+                <div
+                    class="col-span-12 lg:col-span-5 mt-8 lg:mt-4 flex flex-col justify-between items-start lg:items-end gap-6 lg:h-full">
+                    <!-- Back to Top Button -->
+                    <a href="#top" aria-label="Back to top"
+                        class="w-11 h-11 rounded-full bg-[#F9F6C1] border border-[var(--color-primary)] flex items-center justify-center text-[var(--color-primary)] hover:opacity-80 transition-opacity">
+                        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m18 15-6-6-6 6" />
+                        </svg>
+                    </a>
+
+                    <div
+                        class="w-full flex flex-col md:flex-row md:items-center justify-between gap-4 text-xs md:text-sm text-gray-600">
+                        <!-- Copyright -->
+                        <a href="#" class="hover:text-[var(--color-primary)] text-primary transition-colors underline">
+                            © 2026 Rituals. All rights reserved by ari
+                        </a>
+                        <!-- Social Links  -->
+                        <ul class="flex flex-wrap items-center gap-4 list-none underline">
+                            <li><a href="#"
+                                    class="hover:text-[var(--color-primary)] text-primary underline">Facebook</a>
+                            </li>
+                            <li><a href="#"
+                                    class="hover:text-[var(--color-primary)] text-primary underline">Instagram</a>
+                            </li>
+                            <li><a href="#" class="hover:text-[var(--color-primary)] text-primary underline">Behance</a>
+                            </li>
+                            <li><a href="#"
+                                    class="hover:text-[var(--color-primary)] text-primary underline">Dribbble</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/4.0.0/jquery.min.js"
+        integrity="sha512-8LENNbXmzI/Gbj+OwXmqR6V4QaUAw0/porPzy1+dQoJqC0JPHedWoe0DDOTL2uHA5XXJyIsPtiMHH86pVlay6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./js/script.js"></script>
+
+</body>
+
+</html>

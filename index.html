@@ -1,0 +1,1300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rituals - Home</title>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Tailwind  -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./output/style.css">
+</head>
+
+<body>
+    <!------------------ Header ------------------->
+    <header>
+        <div class="bg-[#F8F3E5] w-full overflow-hidden flex flex-col">
+            <!--- Top Banner -->
+            <div class="w-full">
+                <div
+                    class="max-w-[1820px] mx-auto px-[50px] py-2.5 flex justify-between items-center text-[13px] text-primary">
+                    <div class="hidden md:block flex-1"></div>
+                    <div class="flex-1 text-center font-medium font-inter">Exclusive 20% OFF on any amount</div>
+                    <div class="hidden md:flex flex-1 justify-end">
+                        <a href="#"
+                            class="hover:text-[var(--color-primary)] font-medium transition-colors text-primary">Login /
+                            Signup</a>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full border-b border-primary"></div>
+
+            <!-- Navbar -->
+            <div class="w-full z-40 relative">
+                <div
+                    class="max-w-[1820px] mx-auto px-[20px] md:px-[50px] py-5 flex items-center justify-between relative">
+
+                    <!-- Logo  -->
+                    <a href="#"
+                        class="text-4xl font-bold text-[var(--color-primary)] font-pacifico relative z-10">Rituals</a>
+
+                    <!-- Nav Links  -->
+                    <nav
+                        class="hidden md:flex absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 space-x-8 items-center whitespace-nowrap z-20">
+                        <a href="index.html" class="nav-link font-semibold border-b-2 pb-1">Home</a>
+                        <a href="about.html"
+                            class="nav-link  text-[var(--color-primary)] text-primary   border-[var(--color-primary)]">About
+                            Us</a>
+                        <div class="relative group">
+                            <a href="shop.html"
+                                class="nav-link text-primary flex items-center gap-1 focus:outline-none cursor-pointer pb-2">
+                                Shop
+                                <i class="fa-solid fa-chevron-down text-[10px] ml-1"></i>
+                            </a>
+                            <div
+                                class="absolute left-0 mt-0 w-48 bg-white border border-gray-100 shadow-lg rounded-md overflow-hidden hidden group-hover:block transition-all z-50">
+                                <a href="#" class="block px-4 py-2 text-sm text-primary hover:bg-gray-50">Wedding
+                                    card</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-primary hover:bg-gray-50">Gifts</a>
+                                <a href="#"
+                                    class="block px-4 py-2 text-sm text-primary hover:bg-gray-50">Accessories</a>
+                            </div>
+                        </div>
+                        <a href="blog.html" class="nav-link text-primary">Blog</a>
+                        <a href="contact.html" class="nav-link text-primary">Contact</a>
+                    </nav>
+
+                    <!-- Icons & Search Bar -->
+                    <div class="hidden lg:flex justify-end items-center space-x-6 relative z-10">
+                        <!-- Search Bar -->
+                        <div class="relative">
+                            <input type="text" placeholder="What are you looking for..."
+                                class="search-input bg-white/60 border-transparent focus:bg-white transition-all w-[280px] py-1.5 px-4 rounded-full" />
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 absolute right-4 top-2 text-primary"
+                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                            </svg>
+                        </div>
+                        <!-- Icons -->
+                        <div class="flex items-center space-x-4 text-primary">
+                            <a href="#" class="hover:text-[var(--color-primary)] transition-colors"><i
+                                    class="fa-regular fa-user text-xl"></i></a>
+                            <a href="#" class="hover:text-[var(--color-primary)] transition-colors"><i
+                                    class="fa-regular fa-heart text-xl"></i></a>
+                            <a href="#" class="hover:text-[var(--color-primary)] transition-colors relative">
+                                <i class="fa-solid fa-cart-shopping text-xl"></i>
+                                <span
+                                    class="absolute -top-2 -right-2 bg-[var(--color-primary)] text-white text-[10px] font-bold px-[5px] py-[1px] rounded-full">0</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- TOGGLER -->
+                    <div class="flex lg:hidden items-center gap-5 relative z-[60]">
+                        <!-- cart -->
+                        <a href="#" class="text-primary relative">
+                            <i class="fa-solid fa-cart-shopping text-xl"></i>
+                            <span
+                                class="absolute -top-2 -right-2 bg-[var(--color-primary)] text-white text-[10px] font-bold px-[5px] py-[1px] rounded-full">0</span>
+                        </a>
+                        <!-- Toggler Button -->
+                        <button id="mobile-menu-btn"
+                            class="text-[var(--color-primary)] text-2xl focus:outline-none cursor-pointer">
+                            <i class="fa-solid fa-bars transition-all duration-300"></i>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--  Mobile Menu Pannel-->
+    <div id="mobile-menu-panel"
+        class="fixed top-0 left-0 h-full w-[280px] bg-[#F8F3E5] shadow-2xl z-50 flex flex-col p-6 overflow-y-auto transform -translate-x-full transition-transform duration-300 [&.is-open]:translate-x-0">
+        <!-- Mobile Logo -->
+        <div class="mb-8 border-b border-primary/20 pb-4 mt-2">
+            <a href="#" class="text-3xl font-bold text-[var(--color-primary)] font-heading font-pacifico">Rituals</a>
+        </div>
+
+        <!-- Navigation Links -->
+        <nav class="flex flex-col space-y-4">
+            <a href="index.html"
+                class="text-[var(--color-primary)] font-semibold text-lg border-b border-primary/10 pb-2">Home</a>
+            <a href="about.html"
+                class="text-primary hover:text-[var(--color-primary)] font-medium text-lg border-b border-primary/10 pb-2">About
+                Us</a>
+            <a href="blog.html"
+                class="text-primary hover:text-[var(--color-primary)] font-medium text-lg flex items-center justify-between border-b border-primary/10 pb-2">
+                Shop <i class="fa-solid fa-chevron-down text-xs"></i>
+            </a>
+            <a href="shop.html"
+                class="text-primary hover:text-[var(--color-primary)] font-medium text-lg border-b border-primary/10 pb-2">Blog</a>
+            <a href="contact.html"
+                class="text-primary hover:text-[var(--color-primary)] font-medium text-lg border-b border-primary/10 pb-2">Contact</a>
+        </nav>
+
+        <!-- Mobile -->
+        <div class="mt-8 pt-4 flex flex-col gap-4">
+            <div class="relative w-full">
+                <input type="text" placeholder="Search..."
+                    class="search-input bg-white w-full border border-primary/20 rounded-full py-2 pl-4 pr-10 text-sm focus:outline-none" />
+                <i class="fa-solid fa-magnifying-glass absolute right-4 top-3 text-primary text-sm"></i>
+            </div>
+            <a href="#"
+                class="block text-center bg-[var(--color-primary)] text-white py-2.5 rounded-full font-medium text-sm mt-2">Login
+                / Signup</a>
+        </div>
+    </div>
+
+    <main>
+        <!-- Hero Banner  -->
+        <div class="bg-[#F8F3E5] w-full overflow-hidden flex flex-col">
+            <div class="relative w-full flex-1">
+                <div class="absolute top-0 right-0 w-[35%] h-[95%] bg-[#F9F6C1] z-0 hidden lg:block"></div>
+                <section class="max-w-[1820px] mx-auto px-[50px] pt-12 pb-24 relative z-10">
+                    <div class="grid grid-cols-12 gap-6 items-center">
+                        <div class="col-span-12 lg:col-span-6 z-10 pb-10 flex flex-col">
+                            <p
+                                class="w-fit border-b-[1px] border-black pb-1 text-[var(--color-primary)] ml-[50px] text-[25px] font-light font-banner text-sm uppercase tracking-widest mb-4">
+                                SPECIAL OFFER 50% OFF
+                            </p>
+                            <h1
+                                class="w-fit border-b-[1px] border-black pb-2 font-heading text-6xl md:text-7xl lg:text-[100px] leading-[1.1] text-[var(--color-primary)] ml-[50px] mb-6 font-light">
+                                Wedding<br />Cards
+                            </h1>
+                            <p class="text-primary  text-lg md:text-xl mb-10 max-w-md ml-[50px] font-banner">
+                                Elegant and best quality cards
+                            </p>
+                            <div class="flex flex-wrap gap-4">
+                                <a href="#" class="btn-solid text-center ml-[50px]">Shop Now</a>
+                                <a href="#" class="btn-outline text-center bg-transparent">Explore Now</a>
+                            </div>
+                        </div>
+                        <!--  Images -->
+                        <div
+                            class="col-span-12 lg:col-span-6 relative flex justify-center lg:justify-end items-center min-h-[550px]">
+                            <div class="flex flex-row items-center gap-8 md:gap-14 z-10 w-full justify-end lg:pr-10">
+                                <div
+                                    class="w-[240px] md:w-[280px] h-[320px] md:h-[380px] mt-24 transition-transform hover:-translate-y-2 duration-300">
+                                    <img src="./images/index_img/Bl.png" alt="Rectangular Wedding Card"
+                                        class="w-full h-full object-cover rounded-[24px] shadow-2xl" />
+                                </div>
+                                <div
+                                    class="w-[260px] md:w-[320px] h-[380px] md:h-[480px] mb-12 transition-transform hover:-translate-y-2 duration-300">
+                                    <img src="./images/index_img/Br.png" alt="Arched Wedding Card"
+                                        class="w-full h-full object-cover rounded-t-[160px] rounded-b-[24px] shadow-xl" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <!-- Featured Categories Section -->
+        <section class="max-w-[1820px] mx-auto px-[50px] mt-16 py-12">
+            <!--  Title -->
+            <h2
+                class="text-center font-poppins font-semibold text-3xl md:text-[28px] text-[var(--color-primary)] mb-10">
+                Featured Categories
+            </h2>
+
+            <div class="relative w-full">
+                <div class="grid grid-cols-12 gap-6 justify-items-center">
+                    <!-- Wedding Cards -->
+                    <div
+                        class="card_img col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-2 block group w-[200px] h-[250px]">
+                        <div
+                            class="border-4 border-[var(--color-primary)] rounded-[18px] overflow-hidden flex flex-col bg-white w-full h-full transition-transform duration-300 group-hover:-translate-y-2 group-hover:shadow-lg">
+                            <div class="w-full h-[190px] shrink-0 overflow-hidden">
+                                <img src="./images/index_img/Rectangle 9.png" alt="Wedding Cards"
+                                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                            </div>
+                            <div
+                                class="bg-[var(--color-primary)] font-poppins font-normal text-white text-center text-[16px] xl:text-[13px]  px-2 flex-grow flex items-center justify-center leading-tight">
+                                Wedding Cards Collections
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Digital Invites -->
+                    <div
+                        class="card_img col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-2 block group w-[200px] h-[250px]">
+                        <div
+                            class="border-4 border-[var(--color-primary)] rounded-[18px] overflow-hidden flex flex-col bg-white w-full h-full transition-transform duration-300 group-hover:-translate-y-2 group-hover:shadow-lg">
+                            <div class="w-full h-[190px] shrink-0 overflow-hidden">
+                                <img src="./images/index_img/Rectangle 11.png " alt="Digital Invites"
+                                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                            </div>
+                            <div
+                                class="bg-[var(--color-primary)] font-poppins font-normal text-white text-center text-[16px] xl:text-[13px]  px-2 flex-grow flex items-center justify-center leading-tight">
+                                Digital Invites Templates
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Personalized Stationery -->
+                    <div
+                        class="card_img col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-2 block group w-[200px] h-[250px]">
+                        <div
+                            class="border-4 border-[var(--color-primary)] rounded-[18px] overflow-hidden flex flex-col bg-white w-full h-full transition-transform duration-300 group-hover:-translate-y-2 group-hover:shadow-lg">
+                            <div class="w-full h-[190px] shrink-0 overflow-hidden">
+                                <img src="./images/index_img/Rectangle 13.png " alt="Personalized Stationery"
+                                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                            </div>
+                            <div
+                                class="bg-[var(--color-primary)] font-poppins font-normal  text-white text-center text-[16px] xl:text-[13px] px-2 flex-grow flex items-center justify-center leading-tight">
+                                Personalized Stationery
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Return Gifts & Hampers -->
+                    <div
+                        class="card_img col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-2 block group w-[200px] h-[250px]">
+                        <div
+                            class="border-4 border-[var(--color-primary)] rounded-[18px] overflow-hidden flex flex-col bg-white w-full h-full transition-transform duration-300 group-hover:-translate-y-2 group-hover:shadow-lg">
+                            <div class="w-full h-[190px] shrink-0 overflow-hidden">
+                                <img src="./images/index_img/Rectangle 15.png " alt="Return gifts & Hampers"
+                                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                            </div>
+                            <div
+                                class="bg-[var(--color-primary)] font-poppins text-white text-center text-[11px] xl:text-[13px] font-normal px-2 flex-grow flex items-center justify-center leading-tight">
+                                Return gifts & Hampers
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Wedding Accessories -->
+                    <div
+                        class="card_img col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-2 block group w-[200px] h-[250px]">
+                        <div
+                            class="border-4 border-[var(--color-primary)] rounded-[18px] overflow-hidden flex flex-col bg-white w-full h-full transition-transform duration-300 group-hover:-translate-y-2 group-hover:shadow-lg">
+                            <div class="w-full h-[190px] shrink-0 overflow-hidden">
+                                <img src="./images/index_img/Rectangle 17.png " alt="Wedding Accessories"
+                                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                            </div>
+                            <div
+                                class="bg-[var(--color-primary)] font-poppins text-white text-center font-normal text-[16px] xl:text-[13px] px-2 flex-grow flex items-center justify-center leading-tight">
+                                Wedding Accessories
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Favour Bags -->
+                    <div
+                        class="card_img col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-2 block group w-[200px] h-[250px]">
+                        <div
+                            class="border-4 border-[var(--color-primary)] rounded-[18px] overflow-hidden flex flex-col bg-white w-full h-full transition-transform duration-300 group-hover:-translate-y-2 group-hover:shadow-lg">
+                            <div class="w-full h-[190px] shrink-0 overflow-hidden">
+                                <img src="./images/index_img/Rectangle 19.png " alt="Favour Bags"
+                                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                            </div>
+                            <div
+                                class="bg-[var(--color-primary)] font-poppins text-white text-center text-[16px] xl:text-[13px] font-normal px-2 flex-grow flex items-center justify-center leading-tight">
+                                Favour Bags
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Best Selling Products Section -->
+        <section class="max-w-[1820px] mx-auto px-[50px] mt-24 pb-20">
+            <div class="flex items-center justify-center w-full mb-10">
+                <div class="h-[1px] bg-primary flex-1"></div>
+                <div class="mx-6 text-purple-500 text-sm">
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="h-[1px] bg-primary flex-1"></div>
+            </div>
+            <!--  Heading -->
+            <h2
+                class="text-center font-semibold font-poppins text-3xl md:text-[28px] text-[var(--color-primary)] mb-16">
+                Best selling Products
+            </h2>
+            <!--  Popular Wedding Cards -->
+            <div class="mb-16">
+                <h3 class="text-left font-semibold font-poppins text-lg md:text-xl text-[var(--color-primary)] mb-6">
+                    Popular Wedding Cards
+                </h3>
+                <!-- Arrows -->
+                <div class="relative w-full">
+                    <button
+                        class="absolute left-3 top-[105px] -translate-y-1/2 z-20 w-10 h-10 rounded-full flex items-center justify-center  backdrop-blur-md border border-white/80 shadow-md  text-black hover:bg-white/90 transition-all cursor-pointer">
+
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </button>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6 justify-items-center">
+                        <!-- Card 1 -->
+                        <a href="#" class="group block w-full max-w-[220px]">
+                            <div class="w-full h-[210px] bg-gray-50 rounded-[16px] overflow-hidden mb-2.5">
+                                <img src="./images/index_img/iv1.png" alt="Card"
+                                    class="w-full h-full  object-cover group-hover:scale-105 transition-transform duration-500" />
+                            </div>
+                            <div class="flex flex-col px-1">
+                                <div class="flex justify-between items-start mb-1">
+                                    <h4 class=" text-primary font-poppins text-[20px] font-semibold">Invitation Card
+                                    </h4>
+                                    <span class="text-primary hover:text-red-500 transition-colors text-[14px]"><i
+                                            class="fa-regular fa-heart"></i></span>
+                                </div>
+                                <div class="flex items-center gap-1.5 mb-1">
+                                    <div class="flex text-[var(--color-primary)] text-[11px] gap-[2px]">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <span class=" font-poppins text-[14px] font-medium">4 Reviews</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span class="font-medium font-poppins text-[14px] text-gray-900">$20</span>
+                                    <span class=" text-red-500/70 font-medium line-through text-[14px]">$25</span>
+                                </div>
+                            </div>
+                        </a>
+                        <!-- Card 2 -->
+                        <a href="#" class="group block w-full max-w-[220px]">
+                            <div class="w-full h-[210px] bg-gray-50 rounded-[16px] overflow-hidden mb-2.5">
+                                <img src="./images/index_img/iv2.png" alt="Card"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                            </div>
+                            <div class="flex flex-col px-1">
+                                <div class="flex justify-between items-start mb-1">
+                                    <h4 class="font-semibold text-[20px] text-primary font-poppins">Invitation Card</h4>
+                                    <span class="text-primary hover:text-red-500 transition-colors text-[14px]"><i
+                                            class="fa-regular fa-heart"></i></span>
+                                </div>
+                                <div class="flex items-center gap-1.5 mb-1">
+                                    <div class="flex text-[var(--color-primary)] text-[11px] gap-[2px]">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <span class=" text-primary font-poppins font-medium text-[14px]">4 Reviews</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span class="font-medium text-[14px] text-primary  font-poppins">$20</span>
+                                    <span
+                                        class="text-[14px] text-red-500/70 font-medium line-through font-poppins">$25</span>
+                                </div>
+                            </div>
+                        </a>
+                        <!-- Card 3 -->
+                        <a href="#" class="group block w-full max-w-[220px]">
+                            <div class="w-full h-[210px] bg-gray-50 rounded-[16px] overflow-hidden mb-2.5">
+                                <img src="./images/index_img/iv3.png" alt="Card"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                            </div>
+                            <div class="flex flex-col px-1">
+                                <div class="flex justify-between items-start mb-1">
+                                    <h4 class="font-semibold text-[20px] text-primary font-poppins">Invitation Card</h4>
+                                    <span class="text-primary hover:text-red-500 transition-colors text-[14px]"><i
+                                            class="fa-regular fa-heart"></i></span>
+                                </div>
+                                <div class="flex items-center gap-1.5 mb-1">
+                                    <div class="flex text-[var(--color-primary)] text-[14px] gap-[2px]">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <span class="text-[14px] text-primary font-medium font-poppins">4 Reviews</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span class="font-medium font-poppins text-[14px] text-primary">$20</span>
+                                    <span
+                                        class="text-[14px] font-poppins  text-red-500/70 font-medium line-through">$25</span>
+                                </div>
+                            </div>
+                        </a>
+                        <!-- Card 4 -->
+                        <a href="#" class="group block w-full max-w-[220px]">
+                            <div class="w-full h-[210px] bg-gray-50 rounded-[16px] overflow-hidden mb-2.5">
+                                <img src="./images/index_img/iv4.png" alt="Card"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                            </div>
+                            <div class="flex flex-col px-1">
+                                <div class="flex justify-between items-start mb-1">
+                                    <h4 class="font-semibold text-[20px] text-primary">Invitation Card</h4>
+                                    <span class="text-primary hover:text-red-500 transition-colors text-[14px]"><i
+                                            class="fa-regular fa-heart"></i></span>
+                                </div>
+                                <div class="flex items-center gap-1.5 mb-1">
+                                    <div class="flex text-[var(--color-primary)] text-[11px] gap-[2px]">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <span class="text-[14px] text-primary font-medium">4 Reviews</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span class="font-medium text-[14px] text-primary">$20</span>
+                                    <span class="text-[14px] text-red-500/70 font-medium line-through">$25</span>
+                                </div>
+                            </div>
+                        </a>
+                        <!-- Card 5 -->
+                        <a href="#" class="group block w-full max-w-[220px]">
+                            <div class="w-full h-[210px] bg-gray-50 rounded-[16px] overflow-hidden mb-2.5">
+                                <img src="./images/index_img/iv5.png" alt="Card"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                            </div>
+                            <div class="flex flex-col px-1">
+                                <div class="flex justify-between items-start mb-1">
+                                    <h4 class="font-semibold text-[20px] text-primary">Invitation Card</h4>
+                                    <span class="text-primary hover:text-red-500 transition-colors text-[14px]"><i
+                                            class="fa-regular fa-heart"></i></span>
+                                </div>
+                                <div class="flex items-center gap-1.5 mb-1">
+                                    <div class="flex text-[var(--color-primary)] text-[11px] gap-[2px]">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <span class="text-[14px] text-primary font-medium font-poppins">4 Reviews</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span class="font-medium text-[14px] text-primary font-poppins">$20</span>
+                                    <span
+                                        class="text-[14px] text-red-500/70 font-medium line-through font-poppins">$25</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Right Arrow-->
+                    <button
+                        class="absolute right-3 top-[105px] -translate-y-1/2 z-20 w-10 h-10 rounded-full flex items-center justify-center text-black backdrop-blur-md border border-white/80 shadow-md text-[var(--color-primary)] hover:bg-white/90 transition-all cursor-pointer">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                </div>
+            </div>
+
+            <!-----------------  Return Gifts  ------------->
+            <div class="mb-16">
+                <h3 class="text-left font-poppins font-semibold text-lg md:text-xl text-[var(--color-primary)] mb-6">
+                    Return Gifts
+                </h3>
+                <div class="relative w-full">
+                    <!--Arrow  -->
+                    <button
+                        class="absolute left-3 top-[105px] -translate-y-1/2 z-20 w-10 h-10 rounded-full flex items-center justify-center backdrop-blur-md border text-black border-white/80 shadow-md text-[var(--color-primary)] hover:bg-white/90 transition-all cursor-pointer">
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </button>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6 justify-items-center">
+                        <!-- Card 1 -->
+                        <a href="#" class="group block w-full max-w-[220px]">
+                            <div class="w-full h-[210px] bg-gray-50 rounded-[16px] overflow-hidden mb-2.5">
+                                <img src="./images/index_img/Rg1.png" alt="Gift"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                            </div>
+                            <div class="flex flex-col px-1">
+                                <div class="flex justify-between items-start mb-1">
+                                    <h4 class="font-semibold text-[18px] text-primary font-poppins">Mural Printed Tin
+                                        Jar</h4>
+                                    <span class="text-primary hover:text-red-500 transition-colors text-[14px]"><i
+                                            class="fa-regular fa-heart"></i></span>
+                                </div>
+                                <div class="flex items-center gap-1.5 mb-1">
+                                    <div class="flex text-[var(--color-primary)] text-[11px] gap-[2px]">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <span class="text-[14px] text-primary font-medium font-poppins">4 Reviews</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span class="font-medium font-poppins text-[14px] text-primary">$150</span>
+                                    <span
+                                        class="text-[14px] text-red-500/70 font-medium  font-poppinsline-through">$180</span>
+                                </div>
+                            </div>
+                        </a>
+                        <!-- Card 2 -->
+                        <a href="#" class="group block w-full max-w-[220px]">
+                            <div class="w-full h-[210px] bg-gray-50 rounded-[16px] overflow-hidden mb-2.5">
+                                <img src="./images/index_img/RG2.png" alt="Gift"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                            </div>
+                            <div class="flex flex-col px-1">
+                                <div class="flex justify-between items-start mb-1">
+                                    <h4 class="font-semibold text-[20px] text-primary font-poppins">Printed Tin Jar</h4>
+                                    <span class="text-primary hover:text-red-500 transition-colors text-[14px]"><i
+                                            class="fa-regular fa-heart"></i></span>
+                                </div>
+                                <div class="flex items-center gap-1.5 mb-1">
+                                    <div class="flex text-[var(--color-primary)] text-[11px] gap-[2px]">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <span class="text-[14px] text-primary font-poppins font-medium">4 Reviews</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span class="font-medium text-[14px] text-primary font-poppins">$120</span>
+                                    <span
+                                        class="text-[14px] text-red-500/70 font-medium line-through font-poppins">$150</span>
+                                </div>
+                            </div>
+                        </a>
+                        <!-- Card 3 -->
+                        <a href="#" class="group block w-full max-w-[220px]">
+                            <div class="w-full h-[210px] bg-gray-50 rounded-[16px] overflow-hidden mb-2.5">
+                                <img src="./images/index_img/Rg3.png" alt="Gift"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                            </div>
+                            <div class="flex flex-col px-1">
+                                <div class="flex justify-between items-start mb-1">
+                                    <h4 class="font-semibold text-[18px] text-primary font-poppins">Floral Printed Tin
+                                        Jar</h4>
+                                    <span class="text-primary hover:text-red-500 transition-colors text-[14px]"><i
+                                            class="fa-regular fa-heart"></i></span>
+                                </div>
+                                <div class="flex items-center gap-1.5 mb-1">
+                                    <div class="flex text-[var(--color-primary)] text-[11px] gap-[2px]">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <span class="text-[14px] text-primary font-poppins font-medium">4 Reviews</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span class="font-semibold text-[14px] text-primary font-poppins">$130</span>
+                                    <span
+                                        class="text-[14px] text-red-500/70 font-medium font-poppins line-through">$160</span>
+                                </div>
+                            </div>
+                        </a>
+                        <!-- Card 4 -->
+                        <a href="#" class="group block w-full max-w-[220px]">
+                            <div class="w-full h-[210px] bg-gray-50 rounded-[16px] overflow-hidden mb-2.5">
+                                <img src="./images/index_img/RG4.png" alt="Gift"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                            </div>
+                            <div class="flex flex-col px-1">
+                                <div class="flex justify-between items-start mb-1">
+                                    <h4 class="font-semibold text-[20px] text-primary font-poppins ">Kum Kum Holder</h4>
+                                    <span class="text-primary hover:text-red-500 transition-colors text-[14px]"><i
+                                            class="fa-regular fa-heart"></i></span>
+                                </div>
+                                <div class="flex items-center gap-1.5 mb-1">
+                                    <div class="flex text-[var(--color-primary)] text-[11px] gap-[2px]">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <span class="text-[14px] text-primary font-medium font-poppins">4 Reviews</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span class="font-medium  font-poppins text-[14px] text-primary">$90</span>
+                                    <span
+                                        class="text-[14px] font-poppins text-red-500/70 font-medium line-through">$120</span>
+                                </div>
+                            </div>
+                        </a>
+                        <!-- Card 5 -->
+                        <a href="#" class="group block w-full max-w-[220px]">
+                            <div class="w-full h-[210px] bg-gray-50 rounded-[16px] overflow-hidden mb-2.5">
+                                <img src="./images/index_img/RG5.png" alt="Gift"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                            </div>
+                            <div class="flex flex-col px-1">
+                                <div class="flex justify-between items-start mb-1">
+                                    <h4 class="font-semibold text-[20px] text-primary font-poppins">Customize Fruit Box
+                                    </h4>
+                                    <span class="text-primary hover:text-red-500 transition-colors text-[14px]"><i
+                                            class="fa-regular fa-heart"></i></span>
+                                </div>
+                                <div class="flex items-center gap-1.5 mb-1">
+                                    <div class="flex text-[var(--color-primary)] text-[11px] gap-[2px]">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <span class="text-[14px] text-primary font-medium font-poppins">4 Reviews</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span class="font-bold text-[13px] text-primary font-poppins">$250</span>
+                                    <span
+                                        class="text-[14px] text-red-500/70 font-medium  font-poppins line-through">$300</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Arrow  -->
+                    <button
+                        class="absolute right-3 top-[105px] -translate-y-1/2 z-20 w-10 h-10 rounded-full flex items-center justify-center bg-gray/60 text-black backdrop-blur-md border border-white/80 shadow-md  hover:bg-white/90 transition-all cursor-pointer">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                </div>
+            </div>
+
+            <!--- Combo Bundles  -->
+            <div>
+                <h3 class="text-left font-semibold font-poppins text-lg md:text-xl text-[var(--color-primary)] mb-6">
+                    Combo Bundles
+                </h3>
+                <div class="relative w-full">
+                    <!-- Arrow-->
+                    <button
+                        class="absolute left-3 top-[105px] -translate-y-1/2 z-20 w-10 h-10 rounded-full text-black flex items-center justify-center backdrop-blur-md border border-white/80 shadow-md text-[var(--color-primary)] hover:bg-white/90 transition-all cursor-pointer">
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </button>
+
+                    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6 justify-items-center">
+                        <!-- Card 1 -->
+                        <a href="#" class="group block w-full max-w-[220px]">
+                            <div class="w-full h-[210px] bg-gray-50 rounded-[16px] overflow-hidden mb-2.5">
+                                <img src="./images/index_img/CB1.png" alt="Combo"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                            </div>
+                            <div class="flex flex-col px-1">
+                                <div class="flex justify-between items-start mb-1">
+                                    <h4 class="font-semibold text-[20px] text-primary font-poppins">Wedding Combo Set
+                                    </h4>
+                                    <span class="text-primary hover:text-red-500 transition-colors text-[14px]"><i
+                                            class="fa-regular fa-heart"></i></span>
+                                </div>
+                                <div class="flex items-center gap-1.5 mb-1">
+                                    <div class="flex text-[var(--color-primary)] text-[11px] gap-[2px]">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <span class="text-[14px] text-primary font-poppins font-medium">4 Reviews</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span class="font-medium text-[14px] text-primary font-poppins">$450</span>
+                                    <span
+                                        class="text-[14px] text-red-500/70 font-medium line-through font-poppins">$550</span>
+                                </div>
+                            </div>
+                        </a>
+                        <!-- Card 2 -->
+                        <a href="#" class="group block w-full max-w-[220px]">
+                            <div class="w-full h-[210px] bg-gray-50 rounded-[16px] overflow-hidden mb-2.5">
+                                <img src="./images/index_img/cb2.png" alt="Combo"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                            </div>
+                            <div class="flex flex-col px-1">
+                                <div class="flex justify-between items-start mb-1">
+                                    <h4 class="font-semibold text-[18px] text-primary font-poppins">Invitation & Gift
+                                        Pack</h4>
+                                    <span class="text-primary hover:text-red-500 transition-colors text-[14px]"><i
+                                            class="fa-regular fa-heart"></i></span>
+                                </div>
+                                <div class="flex items-center gap-1.5 mb-1">
+                                    <div class="flex text-[var(--color-primary)] text-[11px] gap-[2px]">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <span class="text-[14px] text-primary font-poppins font-medium">4 Reviews</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span class="font-semibold text-[14px] text-primary font-poppins ">$350</span>
+                                    <span
+                                        class="text-[14px] text-red-500/70 font-medium line-through font-poppins">$420</span>
+                                </div>
+                            </div>
+                        </a>
+                        <!-- Card 3 -->
+                        <a href="#" class="group block w-full max-w-[220px]">
+                            <div class="w-full h-[210px] bg-gray-50 rounded-[16px] overflow-hidden mb-2.5">
+                                <img src="./images/index_img/cb3.png" alt="Combo"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                            </div>
+                            <div class="flex flex-col px-1">
+                                <div class="flex justify-between items-start mb-1">
+                                    <h4 class="font-semibold text-[20px] text-primary">Stationery Bundle</h4>
+                                    <span class="text-primary hover:text-red-500 transition-colors text-[14px]"><i
+                                            class="fa-regular fa-heart"></i></span>
+                                </div>
+                                <div class="flex items-center gap-1.5 mb-1">
+                                    <div class="flex text-[var(--color-primary)] text-[11px] gap-[2px]">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <span class="text-[14px] text-primary font-medium font-poppins">4 Reviews</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span class="font-medium text-[14px] text-primary font-poppins">$290</span>
+                                    <span
+                                        class="text-[14px] text-red-500/70 font-medium line-through font-poppins">$350</span>
+                                </div>
+                            </div>
+                        </a>
+                        <!-- Card 4 -->
+                        <a href="#" class="group block w-full max-w-[220px]">
+                            <div class="w-full h-[210px] bg-gray-50 rounded-[16px] overflow-hidden mb-2.5">
+                                <img src="./images/index_img/cb4.png" alt="Combo"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                            </div>
+                            <div class="flex flex-col px-1">
+                                <div class="flex justify-between items-start mb-1">
+                                    <h4 class="font-semibold text-[20px] text-primary">Return Gift Combo</h4>
+                                    <span class="text-primary hover:text-red-500 transition-colors text-[14px]"><i
+                                            class="fa-regular fa-heart"></i></span>
+                                </div>
+                                <div class="flex items-center gap-1.5 mb-1">
+                                    <div class="flex text-[var(--color-primary)] text-[11px] gap-[2px]">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <span class="text-[14px] text-primary font-medium font-poppins">4 Reviews</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span class="font-medium text-[14px] text-primary font-poppins">$400</span>
+                                    <span class="text-[14px] text-red-500/70 font-medium line-through">$480</span>
+                                </div>
+                            </div>
+                        </a>
+                        <!-- Card 5 -->
+                        <a href="#" class="group block w-full max-w-[220px]">
+                            <div class="w-full h-[210px] bg-gray-50 rounded-[16px] overflow-hidden mb-2.5">
+                                <img src="./images/index_img/cb5.png" alt="Combo"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                            </div>
+                            <div class="flex flex-col px-1">
+                                <div class="flex justify-between items-start mb-1">
+                                    <h4 class="font-semibold text-[20px] text-primary">Luxury Wedding Pack</h4>
+                                    <span class="text-primary hover:text-red-500 transition-colors text-[14px]"><i
+                                            class="fa-regular fa-heart"></i></span>
+                                </div>
+                                <div class="flex items-center gap-1.5 mb-1">
+                                    <div class="flex text-[var(--color-primary)] text-[11px] gap-[2px]">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <span class="text-[14px] text-primary font-medium">4 Reviews</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span class="font-medium text-[14px] text-primary font-poppins">$600</span>
+                                    <span
+                                        class="text-[14px] text-red-500/70 font-medium line-through font-poppins">$750</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Right Arrow--->
+                    <button
+                        class="absolute right-3 top-[105px] -translate-y-1/2 z-20 w-10 h-10 rounded-full flex items-center justify-center  backdrop-blur-md border border-white/80 shadow-md text-black hover:bg-white/90 transition-all cursor-pointer">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                </div>
+            </div>
+        </section>
+
+        <!----------------Gift by------------------>
+        <section class="max-w-[1820px] mx-auto px-[50px] mt-24 mb-24">
+            <!-- Star -->
+            <div class="flex items-center justify-center w-full mb-10">
+                <div class="h-[1px] bg-primary flex-1"></div>
+                <div class="mx-6 text-purple-500 text-lg">
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="h-[1px] bg-primary flex-1"></div>
+            </div>
+            <!-- Section Title -->
+            <h2 class="text-center  font-poppins font-bold text-2xl md:text-[28px] text-[var(--color-primary)] mb-14">
+                Gift by price range
+            </h2>
+            <!-- 6 Cards -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 justify-items-center">
+                <!-- Card 1 -->
+                <a href="#" class="group block w-full max-w-[215px]">
+                    <div
+                        class="rounded-[20px] overflow-hidden shadow-sm transition-transform duration-300 group-hover:-translate-y-2 group-hover:shadow-md">
+                        <img src="./images/index_img/Shop range 1.png" alt="Shop by 100 to 500"
+                            class="w-full h-auto object-cover" />
+                    </div>
+                </a>
+                <!-- Card 2 -->
+                <a href="#" class="group block w-full max-w-[215px]">
+                    <div
+                        class="rounded-[20px] overflow-hidden shadow-sm transition-transform duration-300 group-hover:-translate-y-2 group-hover:shadow-md">
+                        <img src="./images/index_img/Shop range 2.png" alt="Shop by 500 to 1000"
+                            class="w-full h-auto object-cover" />
+                    </div>
+                </a>
+                <!-- Card 3 -->
+                <a href="#" class="group block w-full max-w-[215px]">
+                    <div
+                        class="rounded-[20px] overflow-hidden shadow-sm transition-transform duration-300 group-hover:-translate-y-2 group-hover:shadow-md">
+                        <img src="./images/index_img/Shop range 3.png" alt="Shop by 1000 to 1500"
+                            class="w-full h-auto object-cover" />
+                    </div>
+                </a>
+                <!-- Card 4 -->
+                <a href="#" class="group block w-full max-w-[215px]">
+                    <div
+                        class="rounded-[20px] overflow-hidden shadow-sm transition-transform duration-300 group-hover:-translate-y-2 group-hover:shadow-md">
+                        <img src="./images/index_img/Shop range 4.png" alt="Shop by 1500 to 2000"
+                            class="w-full h-auto object-cover" />
+                    </div>
+                </a>
+                <!-- Card 5 -->
+                <a href="#" class="group block w-full max-w-[215px]">
+                    <div
+                        class="rounded-[20px] overflow-hidden shadow-sm transition-transform duration-300 group-hover:-translate-y-2 group-hover:shadow-md">
+                        <img src="./images/index_img/Shop range 5 (1).png" alt="Shop by 2000 to 2500"
+                            class="w-full h-auto object-cover" />
+                    </div>
+                </a>
+                <!-- Card 6 -->
+                <a href="#" class="group block w-full max-w-[215px]">
+                    <div
+                        class="rounded-[20px] overflow-hidden shadow-sm transition-transform duration-300 group-hover:-translate-y-2 group-hover:shadow-md">
+                        <img src="./images/index_img/Shop range 6.png" alt="Shop by 2500 to 3000"
+                            class="w-full h-auto object-cover" />
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!--  Madhubani Section -->
+        <section class="max-w-[1820px] mx-auto px-6 sm:px-[50px] my-10">
+            <!-- Main Banner Containe-->
+            <div class="relative bg-[#F5E1BD] rounded-[20px] shadow-sm p-4 sm:p-6 lg:p-8">
+
+                <button type="button"
+                    class="absolute -left-5 sm:-left-6 top-1/2 -translate-y-1/2 z-30 w-11 h-11   border-white/80 rounded-full flex items-center justify-center backdrop-blur-md border  shadow-lg text-black  hover:bg-white transition-all cursor-pointer">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </button>
+
+                <div class="grid grid-cols-12 items-center gap-6 lg:gap-8">
+                    <!-- Image -->
+                    <div class="col-span-12 lg:col-span-7 w-full">
+                        <div class="w-full overflow-hidden rounded-[16px] shadow-md bg-white">
+                            <div class="w-full h-[260px] sm:h-[350px] lg:h-[400px]">
+                                <img src="./images/index_img/Rectangle 24 (1).png" alt="Madhubani Paintings"
+                                    class="w-full h-full object-cover" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Content  -->
+                    <div class="col-span-12 lg:col-span-5 flex flex-col justify-center px-2 lg:px-6 py-4">
+                        <!-- Heading -->
+                        <h3
+                            class="text-center font-poppins lg:text-left  text-2xl md:text-3xl lg:text-[36px] font-medium text-black mb-4">
+                            Madhubani Paintings
+                        </h3>
+                        <!-- Para Text -->
+                        <p class="text-black text-sm md:text-base leading-relaxed text-center lg:text-left mb-6">
+                            Madhubani painting, also known as Mithila art, is a vibrant Indian folk art from Bihar’s
+                            Mithila region, characterized by intricate patterns, geometric designs, and themes of
+                            nature, mythology and daily life.
+                        </p>
+                        <!-- Buttons -->
+                        <div class="flex flex-wrap justify-center lg:justify-start gap-4">
+                            <!-- Solid Button -->
+                            <a href="#"
+                                class="bg-[var(--color-primary)] text-white px-8 py-2.5 rounded-full hover:bg-[var(--color-primary)]/90 text-sm font-medium transition-colors shadow-md">
+                                Shop now
+                            </a>
+                            <a href="#"
+                                class="border-2 border-[var(--color-primary)] text-[var(--color-primary)] px-8 py-2.5 rounded-full hover:bg-[var(--color-primary)] hover:text-white text-sm font-medium transition-colors">
+                                View all
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <button type="button"
+                    class="absolute -right-5 sm:-right-6 top-1/2 -translate-y-1/2 z-30 w-11 h-11 rounded-full flex items-center justify-center backdrop-blur-md border border-white/80 shadow-lg text-black hover:bg-white transition-all cursor-pointer">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+            </div>
+        </section>
+
+
+        <!-- ---------Largest Gift -->
+        <section class="max-w-[1820px] mx-auto px-[50px] my-32">
+            <!--  Heading -->
+            <h2
+                class="text-center font-poppins font-semibold text-2xl md:text-3xl lg:text-[34px] text-[var(--color-primary)] mb-16">
+                India's largest wedding gift platform
+            </h2>
+            <div class="relative max-w-5xl mx-auto h-[280px] w-full hidden md:block">
+                <svg class="absolute inset-0 w-full h-full pointer-events-none z-0" viewBox="0 0 1000 280"
+                    preserveAspectRatio="none">
+                    <path
+                        d="M 195,97.5 Q 260,97.5 330,177.5 M 485,177.5 Q 540,177.5 590,97.5 M 745,97.5 Q 780,97.5 810,137.5"
+                        fill="none" stroke="var(--color-primary)" stroke-width="2.5" stroke-dasharray="8 8"
+                        opacity="0.6" />
+                </svg>
+                <!--circle 1:-->
+                <div
+                    class="absolute left-[40px] top-[20px] z-10 w-[155px] h-[155px] bg-[var(--color-circle-bg)] border-2 border-[var(--color-primary)] rounded-full flex flex-col items-center justify-center text-center shadow-md p-4 transition-transform hover:scale-105 duration-300">
+                    <span class="text-2xl font-semibold font-inter text-[var(--color-primary)]">500+</span>
+                    <span class="text-xs font-semibold font-inter text-[var(--color-primary)] mt-1">Brands</span>
+                </div>
+                <div
+                    class="absolute left-[330px] top-[100px] z-10 w-[155px] h-[155px] bg-[var(--color-circle-bg)] border-2 border-[var(--color-primary)] rounded-full flex flex-col items-center justify-center text-center shadow-md p-4 transition-transform hover:scale-105 duration-300">
+                    <span class="text-2xl  font-semibold font-inter text-[var(--color-primary)]">40M+</span>
+                    <span class="text-xs font-semibold font-inter text-[var(--color-primary)] mt-1">Customer
+                        Served</span>
+                </div>
+                <!-- Circle 3: 10K-->
+                <div
+                    class="absolute left-[590px] top-[20px] z-10 w-[155px] h-[155px] bg-[var(--color-circle-bg)] border-2 border-[var(--color-primary)] rounded-full flex flex-col items-center justify-center text-center shadow-md p-4 transition-transform hover:scale-105 duration-300">
+                    <span class="text-2xl font-semibold font-inter text-[var(--color-primary)]">10K+</span>
+                    <span class="text-xs font-semibold font-inter text-[var(--color-primary)] mt-1">Products</span>
+                </div>
+                <!-- Circle 4: 3200 -->
+                <div
+                    class="absolute left-[810px] top-[60px] z-10 w-[155px] h-[155px] bg-[var(--color-circle-bg)] border-2 border-[var(--color-primary)] rounded-full flex flex-col items-center justify-center text-center shadow-md p-4 transition-transform hover:scale-105 duration-300">
+                    <span class="text-2xl font-semibold font-inter text-[var(--color-primary)]">3200+</span>
+                    <span class="text-xs font-semibold font-inter text-[var(--color-primary)] mt-1">delivery
+                        ongoing</span>
+                </div>
+            </div>
+            <!-- Mobile -->
+            <div class="flex md:hidden flex-col items-center gap-6">
+                <div
+                    class="w-[155px] h-[155px] bg-[var(--color-circle-bg)] border-2 border-[var(--color-primary)] rounded-full flex flex-col items-center justify-center text-center shadow-md p-4">
+                    <span class="text-2xl font-bold text-[var(--color-primary)]">500+</span>
+                    <span class="text-xs font-medium text-[var(--color-primary)] mt-1">Brands</span>
+                </div>
+                <div
+                    class="w-[155px] h-[155px] bg-[var(--color-circle-bg)] border-2 border-[var(--color-primary)] rounded-full flex flex-col items-center justify-center text-center shadow-md p-4">
+                    <span class="text-2xl font-bold text-[var(--color-primary)]">40M+</span>
+                    <span class="text-xs font-medium text-[var(--color-primary)] mt-1">Customer Served</span>
+                </div>
+                <div
+                    class="w-[155px] h-[155px] bg-[var(--color-circle-bg)] border-2 border-[var(--color-primary)] rounded-full flex flex-col items-center justify-center text-center shadow-md p-4">
+                    <span class="text-2xl font-bold text-[var(--color-primary)]">10K+</span>
+                    <span class="text-xs font-medium text-[var(--color-primary)] mt-1">Products</span>
+                </div>
+                <div
+                    class="w-[155px] h-[155px] bg-[var(--color-circle-bg)] border-2 border-[var(--color-primary)] rounded-full flex flex-col items-center justify-center text-center shadow-md p-4">
+                    <span class="text-2xl font-bold text-[var(--color-primary)]">3200+</span>
+                    <span class="text-xs font-medium text-[var(--color-primary)] mt-1">delivery ongoing</span>
+                </div>
+            </div>
+        </section>
+
+        <!--  OUR STORES SECTION  -->
+        <section class="max-w-[1820px] mx-auto px-[50px] my-28">
+            <!-- Section Header -->
+            <div class="text-center mb-14">
+                <h2
+                    class="font-semibold  font-poppins text-2xl md:text-3xl lg:text-[34px] text-[var(--color-primary)] mb-2">
+                    Our Stores
+                </h2>
+                <p class="text-primary font-poppins   text-sm md:text-base font-medium ">
+                    Find the nearest store to experience our products
+                </p>
+            </div>
+            <!-- 3 stores  -->
+            <div class="grid grid-cols-12 gap-8 items-center">
+                <!-- Store 1 -->
+                <div class="col-span-12 md:col-span-4 flex justify-center">
+                    <img src="./images/index_img/Mumbai Icon 1.png " alt="Mumbai Store"
+                        class="w-full max-w-[420px] h-auto object-contain transition-transform hover:scale-105 duration-300" />
+                </div>
+                <!-- Store 2 -->
+                <div class="col-span-12 md:col-span-4 flex justify-center">
+                    <img src="./images/index_img/Kolkata Icon 1.png" alt="Kolkata Store"
+                        class="w-full max-w-[420px] h-auto object-contain transition-transform hover:scale-105 duration-300" />
+                </div>
+                <!-- Store 3 -->
+                <div class="col-span-12 md:col-span-4 flex justify-center">
+                    <img src="./images/index_img/Amedabad Icon 1.png" alt="Ahmedabad Store"
+                        class="w-full max-w-[420px] h-auto object-contain transition-transform hover:scale-105 duration-300" />
+                </div>
+            </div>
+        </section>
+
+        <!--  Stay Ahead section  -->
+        <section class="max-w-[1820px] mx-auto px-4 sm:px-[50px] my-24">
+            <!-- Banner -->
+            <div class="bg-[#F9F6C1] rounded-[25px] py-6 md:py-8 px-6 md:px-16 shadow-sm relative flex items-center">
+                <div
+                    class="hidden lg:block absolute left-8 md:left-12 top-1/2 -translate-y-1/2 z-20 bg-white border-2 border-[var(--color-primary)] rounded-[20px] p-3 text-center shadow-xl w-[150px]">
+                    <div
+                        class="w-full h-[120px] bg-gray-50 rounded-[12px] overflow-hidden mb-2 flex items-center justify-center">
+                        <img src="./images/index_img/Welcome to Rituals Mobile App 1.png" alt="Scanner QR"
+                            class="w-full h-full object-contain" />
+                    </div>
+                    <span class="text-2xl font-bold font-poppins text-[var(--color-primary)]">Scan Me</span>
+                </div>
+
+                <div class="grid grid-cols-12 gap-6 items-center w-full lg:pl-40">
+                    <!-- Heading & Paragraph-->
+                    <div class="col-span-12 md:col-span-8 text-center flex flex-col justify-center items-center">
+                        <h3
+                            class="font-semibold  font-poppins text-center text-2xl md:text-3xl text-[var(--color-primary)] mb-1">
+                            Stay ahead of the deals!
+                        </h3>
+                        <p class="text-primary text-2xl font-poppins text-center font-semibold text-sm md:text-base">
+                            "Experience shopping made easy - grab our app for <br class="hidden sm:inline"> deals, speed
+                            and convenience."
+                        </p>
+                    </div>
+                    <!--  App Icons & Downloa -->
+                    <div
+                        class="col-span-12 md:col-span-4 flex flex-col items-center md:items-end justify-center gap-2.5">
+                        <!-- App Store Icons -->
+                        <div class="flex items-center gap-3">
+                            <a href="#"
+                                class="w-11 h-11 rounded-full bg-[var(--color-primary)] flex items-center justify-center text-white hover:opacity-90 transition-opacity shadow-md overflow-hidden p-2.5">
+                                <img src="./images/index_img/material-symbols_android.png" alt="Google Play"
+                                    class="w-full h-full object-contain" />
+                            </a>
+                            <a href="#"
+                                class="w-11 h-11 rounded-full bg-[var(--color-primary)] flex items-center justify-center text-white hover:opacity-90 transition-opacity shadow-md overflow-hidden p-2.5">
+                                <img src="./images/index_img/ic_baseline-apple.png" alt="Apple Store"
+                                    class="w-full h-full object-contain" />
+                            </a>
+                        </div>
+                        <!-- Download Now -->
+                        <button type="button"
+                            class="bg-[var(--color-primary)] text-white text-xs md:text-sm font-semibold px-5 py-2 rounded-full hover:opacity-95 transition-opacity shadow-md cursor-pointer">
+                            Download now
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--  TEAM MEMBERS   -->
+        <section class="max-w-[1820px] mx-auto px-[50px] my-28">
+            <h2 class="text-center font-semibold text-2xl md:text-3xl lg:text-[34px] text-[var(--color-primary)] mb-16">
+                Meet our team members
+            </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 justify-items-center">
+                <!-- Team Member 1 -->
+                <div class="flex flex-col items-center text-center group">
+                    <div
+                        class="w-[200px] h-[260px] md:w-[220px] md:h-[280px] rounded-[50%] overflow-hidden mb-4 shadow-md transition-transform duration-300 group-hover:scale-105">
+                        <img src="./images/index_img/tem1.png" alt="Samantha Edwards"
+                            class="w-full h-full object-cover" />
+                    </div>
+                    <h4 class="font-bold text-base text-[var(--color-primary)] mb-1">Samantha Edwards</h4>
+                    <div class="flex items-center gap-3 text-xs text-primary font-medium">
+                        <a href="#" class="hover:text-[var(--color-primary)] transition-colors">Fb</a>
+                        <a href="#" class="hover:text-[var(--color-primary)] transition-colors">Tw</a>
+                        <a href="#" class="hover:text-[var(--color-primary)] transition-colors">In</a>
+                        <a href="#" class="hover:text-[var(--color-primary)] transition-colors">Ig</a>
+                    </div>
+                </div>
+                <!-- Team Member 2 -->
+                <div class="flex flex-col items-center text-center group">
+                    <div
+                        class="w-[200px] h-[260px] md:w-[220px] md:h-[280px] rounded-[50%] overflow-hidden mb-4 shadow-md transition-transform duration-300 group-hover:scale-105">
+                        <img src="./images/index_img/tem2.png" alt="Helen Miller" class="w-full h-full object-cover" />
+                    </div>
+                    <h4 class="font-bold text-base text-[var(--color-primary)] mb-1">Helen Miller</h4>
+                    <div class="flex items-center gap-3 text-xs text-primary font-medium">
+                        <a href="#" class="hover:text-[var(--color-primary)] transition-colors">Fb</a>
+                        <a href="#" class="hover:text-[var(--color-primary)] transition-colors">Tw</a>
+                        <a href="#" class="hover:text-[var(--color-primary)] transition-colors">In</a>
+                        <a href="#" class="hover:text-[var(--color-primary)] transition-colors">Ig</a>
+                    </div>
+                </div>
+                <!-- Team Member 3 -->
+                <div class="flex flex-col items-center text-center group">
+                    <div
+                        class="w-[200px] h-[260px] md:w-[220px] md:h-[280px] rounded-[50%] overflow-hidden mb-4 shadow-md transition-transform duration-300 group-hover:scale-105">
+                        <img src="./images/index_img/team3.png" alt="Adriana Grande"
+                            class="w-full h-full object-cover" />
+                    </div>
+                    <h4 class="font-bold text-base text-[var(--color-primary)] mb-1">Adriana Grande</h4>
+                    <div class="flex items-center gap-3 text-xs text-primary font-medium">
+                        <a href="#" class="hover:text-[var(--color-primary)] transition-colors">Fb</a>
+                        <a href="#" class="hover:text-[var(--color-primary)] transition-colors">Tw</a>
+                        <a href="#" class="hover:text-[var(--color-primary)] transition-colors">In</a>
+                        <a href="#" class="hover:text-[var(--color-primary)] transition-colors">Ig</a>
+                    </div>
+                </div>
+                <!-- Team Member 4 -->
+                <div class="flex flex-col items-center text-center group">
+                    <div
+                        class="w-[200px] h-[260px] md:w-[220px] md:h-[280px] rounded-[50%] overflow-hidden mb-4 shadow-md transition-transform duration-300 group-hover:scale-105">
+                        <img src="./images/index_img/tem4.png" alt="Selena Macnageda"
+                            class="w-full h-full object-cover" />
+                    </div>
+                    <h4 class="font-bold text-base text-[var(--color-primary)] mb-1">Selena Macnageda</h4>
+                    <div class="flex items-center gap-3 text-xs text-primary font-medium">
+                        <a href="#" class="hover:text-[var(--color-primary)] transition-colors">Fb</a>
+                        <a href="#" class="hover:text-[var(--color-primary)] transition-colors">Tw</a>
+                        <a href="#" class="hover:text-[var(--color-primary)] transition-colors">In</a>
+                        <a href="#" class="hover:text-[var(--color-primary)] transition-colors">Ig</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--  STAY Update -->
+
+        <section class="w-full bg-[#F8F3E5] py-20 px-4 md:px-12 my-28 text-center relative overflow-hidden">
+            <!-- Content -->
+            <div class="max-w-4xl mx-auto w-full">
+                <h2
+                    class="font-semibold text-2xl md:text-3xl lg:text-[34px] text-[var(--color-primary)] mb-3 font-poppins">
+                    Stay updated with what's new & what's on sale!
+                </h2>
+                <!-- Subtext -->
+                <p class="text-primary font-poppins text-sm md:text-base max-w-xl mx-auto mb-10 leading-relaxed px-2">
+                    From new arrivals to special savings and gift ideas you'll love<br class="hidden sm:inline" />
+                    Subscribe & stay in the know
+                </p>
+
+                <!-- Form -->
+                <div
+                    class="max-w-md mx-auto w-full flex items-center bg-white p-1.5 sm:p-2 rounded-full border border-gray-300 shadow-sm">
+                    <input type="email" placeholder="Write your mail"
+                        class="flex-1 min-w-0 px-4 sm:px-5 py-2.5 sm:py-3 text-[13px] sm:text-sm bg-transparent outline-none text-primary placeholder-gray-400" />
+
+                    <button type="submit"
+                        class="shrink-0 bg-[var(--color-primary)] text-white text-[13px] sm:text-sm font-semibold px-6 sm:px-8 py-2.5 sm:py-3 rounded-full hover:opacity-95 transition-opacity whitespace-nowrap cursor-pointer shadow-md">
+                        Subscribe
+                    </button>
+
+                </div>
+            </div>
+        </section>
+
+        <!------ BAR -->
+        <section class="w-full bg-white py-8 border-b border-gray-100">
+            <div class="w-full max-w-[1820px] mx-auto px-[20px]">
+                <div class="flex flex-col sm:flex-row items-center justify-evenly w-full gap-12 sm:gap-4 text-center">
+                    <!-- Feature 1 -->
+                    <div class="flex flex-col items-center justify-center gap-2.5 flex-1 w-full">
+                        <div class="w-12 h-12 flex items-center justify-center">
+                            <img src="./images/index_img/tag.png" alt="Branded Product"
+                                class="w-full h-full object-contain">
+                        </div>
+                        <h4 class="font-bold text-sm text-primary">100% Branded Product</h4>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="flex flex-col items-center justify-center gap-2.5 flex-1 w-full">
+                        <div class="w-12 h-12 flex items-center justify-center">
+                            <img src="./images/index_img/circle-star.png" alt="Original Product"
+                                class="w-full h-full object-contain">
+                        </div>
+                        <h4 class="font-bold text-sm text-primary">100% Original Product</h4>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="flex flex-col items-center justify-center gap-2.5 flex-1 w-full">
+                        <div class="w-12 h-12 flex items-center justify-center">
+                            <img src="./images/index_img/package.png" alt="Free Shipping"
+                                class="w-full h-full object-contain">
+                        </div>
+                        <h4 class="font-bold text-sm text-primary">Free Shipping</h4>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!---------------FOOTER  ----------------->
+    <footer>
+        <div class="bg-[#F8F3E5] py-16 text-gray-800">
+            <div class="max-w-[1820px] mx-auto px-[50px] grid grid-cols-12 gap-6 items-start">
+                <!-- Description Paragraph -->
+                <p class="col-span-12 lg:col-span-4 text-primary text-sm md:text-base leading-relaxed pr-0 lg:pr-8">
+                    At Rituals, we redefine gifting in India with an extensive range of 5,000+ gifts crafted for retail
+                    and
+                    bulk needs. From premium and utility gifts to return and corporate gifting, each product is designed
+                    to
+                    elevate every occasion with quality and elegance.
+                </p>
+                <!--  Details Column -->
+                <div class="col-span-6 md:col-span-3 lg:col-span-2">
+                    <p class="font-bold text-sm md:text-base text-[var(--color-primary)] mb-4">Details</p>
+                    <ul class="space-y-3 text-xs md:text-sm text-primary list-none">
+                        <li><a href="#" class="hover:underline">About Us</a></li>
+                        <li><a href="#" class="hover:underline">FAQs</a></li>
+                        <li><a href="#" class="hover:underline">Blogs</a></li>
+                    </ul>
+                </div>
+                <!-- 3. Contact Column  -->
+                <div class="col-span-6 md:col-span-3 lg:col-span-2">
+                    <p class="font-bold text-sm md:text-base text-[var(--color-primary)] mb-4">Contact</p>
+                    <ul class="space-y-3 text-xs md:text-sm text-primary list-none">
+                        <li><a href="mailto:support@rituals.com"
+                                class="hover:underline break-all">support@rituals.com</a>
+                        </li>
+                        <li><a href="tel:+91948403302114" class="hover:underline">+91 948403302114</a></li>
+                    </ul>
+                </div>
+                <!--  Customer -------------->
+                <div class="col-span-6 md:col-span-3 lg:col-span-2">
+                    <p class="font-bold text-sm md:text-base text-[var(--color-primary)] mb-4">Customer Policy</p>
+                    <ul class="space-y-3 text-xs md:text-sm text-primary list-none">
+                        <li><a href="#" class="hover:underline">Terms &amp; Conditions</a></li>
+                        <li><a href="#" class="hover:underline">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:underline">Return &amp; Refunds</a></li>
+                        <li><a href="#" class="hover:underline">Shipping</a></li>
+                        <li><a href="#" class="hover:underline">Terms of Service</a></li>
+                        <li><a href="#" class="hover:underline">Refund Policy</a></li>
+                    </ul>
+                </div>
+                <!--  Support Column -->
+                <div class="col-span-6 md:col-span-3 lg:col-span-2">
+                    <p class="font-bold text-sm md:text-base text-[var(--color-primary)] mb-4">Support</p>
+                    <ul class="space-y-3 text-xs md:text-sm text-primary list-none">
+                        <li><a href="#" class="hover:underline">Track your order</a></li>
+                        <li><a href="#" class="hover:underline">Register on Rituals</a></li>
+                        <li><a href="#" class="hover:underline">Order History</a></li>
+                    </ul>
+                </div>
+                <!--  Logo -->
+                <div class="col-span-12 lg:col-span-7 mt-8 lg:mt-4 flex items-center gap-3">
+                    <p
+                        class="font-bold text-6xl md:text-8xl lg:text-[130px] tracking-tight text-[var(--color-primary)] leading-none select-none m-0">
+                        Rituals </p>
+                    <span
+                        class="shrink-0 w-8 h-8 md:w-12 md:h-12 rounded-full bg-[#F9F6C1] border border-[var(--color-primary)] flex items-center justify-center text-sm md:text-lg font-bold text-[var(--color-primary)]">
+                        R
+                    </span>
+                </div>
+                <!--  Bottom Utilities-->
+                <div
+                    class="col-span-12 lg:col-span-5 mt-8 lg:mt-4 flex flex-col justify-between items-start lg:items-end gap-6 lg:h-full">
+                    <!-- Back to Top Button -->
+                    <a href="#top" aria-label="Back to top"
+                        class="w-11 h-11 rounded-full bg-[#F9F6C1] border border-[var(--color-primary)] flex items-center justify-center text-[var(--color-primary)] hover:opacity-80 transition-opacity">
+                        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m18 15-6-6-6 6" />
+                        </svg>
+                    </a>
+                    <!-- Bottom Row -->
+                    <div
+                        class="w-full flex flex-col md:flex-row md:items-center justify-between gap-4 text-xs md:text-sm text-gray-600">
+                        <!-- Copyright -->
+                        <a href="#" class="hover:text-[var(--color-primary)] text-primary transition-colors underline">
+                            © 2026 Rituals. All rights reserved by ari
+                        </a>
+                        <!-- Social Links  -->
+                        <ul class="flex flex-wrap items-center gap-4 list-none underline">
+                            <li><a href="#"
+                                    class="hover:text-[var(--color-primary)] text-primary underline">Facebook</a>
+                            </li>
+                            <li><a href="#"
+                                    class="hover:text-[var(--color-primary)] text-primary underline">Instagram</a>
+                            </li>
+                            <li><a href="#" class="hover:text-[var(--color-primary)] text-primary underline">Behance</a>
+                            </li>
+                            <li><a href="#"
+                                    class="hover:text-[var(--color-primary)] text-primary underline">Dribbble</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/4.0.0/jquery.min.js"
+        integrity="sha512-8LENNbXmzI/Gbj+OwXmqR6V4QaUAw0/porPzy1+dQoJqC0JPHedWoe0DDOTL2uHA5XXJyIsPtiMHH86pVlay6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

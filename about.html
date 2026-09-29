@@ -1,0 +1,1479 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Ensure perfect scaling and notch handling on iPhone 16 Pro Max -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Rituals - About us</title>
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Tailwind -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="./output/style.css">
+</head>
+
+<body>
+    <!------------------ HEADER PART ------------------->
+    <header>
+        <div class="bg-[#F8F3E5] w-full overflow-hidden flex flex-col">
+            <!--- Top Banner  -->
+            <div class="w-full">
+                <div
+                    class="max-w-[1820px] mx-auto px-[50px] py-2.5 flex justify-between items-center text-[13px] text-primary">
+                    <div class="hidden md:block flex-1"></div>
+                    <div class="flex-1 text-center font-medium font-inter">Exclusive 20% OFF on any amount</div>
+                    <div class="hidden md:flex flex-1 justify-end">
+                        <a href="#"
+                            class="hover:text-[var(--color-primary)] font-medium transition-colors text-primary">Login /
+                            Signup</a>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full border-b border-primary"></div>
+            <!-- Navbar -->
+            <div class="w-full z-40 relative">
+                <div
+                    class="max-w-[1820px] mx-auto px-[20px] md:px-[50px] py-5 flex items-center justify-between relative">
+                    <!-- Logo -->
+                    <a href="#"
+                        class="text-4xl font-bold text-[var(--color-primary)] font-pacifico relative z-10">Rituals</a>
+                    <!-- Nav Links -->
+                    <nav
+                        class="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 space-x-8 items-center whitespace-nowrap">
+                        <a href="index.html"
+                            class="nav-link text-primary hover:text-[var(--color-primary)] transition-colors">Home</a>
+                        <a href="about.html"
+                            class="nav-link text-[var(--color-primary)] font-semibold border-b-2 border-[var(--color-primary)] pb-1">About
+                            Us</a>
+                        <div class="relative group">
+                            <a href="shop.html"
+                                class="nav-link text-primary flex items-center gap-1 focus:outline-none cursor-pointer pb-2">
+                                Shop
+                                <i class="fa-solid fa-chevron-down text-[10px] ml-1"></i>
+                            </a>
+                            <div
+                                class="absolute left-0 mt-0 w-48 bg-white border border-gray-100 shadow-lg rounded-md overflow-hidden hidden group-hover:block transition-all z-50">
+                                <a href="#" class="block px-4 py-2 text-sm text-primary hover:bg-gray-50">Wedding
+                                    card</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-primary hover:bg-gray-50">Gifts</a>
+                                <a href="#"
+                                    class="block px-4 py-2 text-sm text-primary hover:bg-gray-50">Accessories</a>
+                            </div>
+                        </div>
+                        <a href="blog.html" class="nav-link text-primary">Blog</a>
+                        <a href="contact.html" class="nav-link text-primary">Contact</a>
+                    </nav>
+                    <!--  Icons -->
+                    <div class="hidden lg:flex items-center space-x-6 relative z-10">
+                        <!-- Search Bar -->
+                        <div class="relative">
+                            <input type="text" placeholder="What are you looking for..."
+                                class="search-input bg-white/60 border-transparent focus:bg-white transition-all w-[280px] py-1.5 px-4 rounded-full" />
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 absolute right-4 top-2 text-primary"
+                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                            </svg>
+                        </div>
+                        <!-- Icons -->
+                        <div class="flex items-center space-x-4 text-primary">
+                            <a href="#" class="hover:text-[var(--color-primary)] transition-colors"><i
+                                    class="fa-regular fa-user text-xl"></i></a>
+                            <a href="#" class="hover:text-[var(--color-primary)] transition-colors"><i
+                                    class="fa-regular fa-heart text-xl"></i></a>
+                            <a href="#" class="hover:text-[var(--color-primary)] transition-colors relative">
+                                <i class="fa-solid fa-cart-shopping text-xl"></i>
+                                <span
+                                    class="absolute -top-2 -right-2 bg-[var(--color-primary)] text-white text-[10px] font-bold px-[5px] py-[1px] rounded-full">0</span>
+                            </a>
+                        </div>
+                    </div>
+                    <!--  TOGGLER  -->
+                    <div class="flex lg:hidden items-center gap-5 relative z-[60]">
+                        <!-- cart  -->
+                        <a href="#" class="text-primary relative">
+                            <i class="fa-solid fa-cart-shopping text-xl"></i>
+                            <span
+                                class="absolute -top-2 -right-2 bg-[var(--color-primary)] text-white text-[10px] font-bold px-[5px] py-[1px] rounded-full">0</span>
+                        </a>
+                        <!--  Toggler Button-->
+                        <button id="mobile-menu-btn"
+                            class="text-[var(--color-primary)] text-2xl focus:outline-none cursor-pointer">
+                            <i class="fa-solid fa-bars transition-all duration-300"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div id="mobile-menu-panel"
+        class="fixed top-0 left-0 h-full w-[280px] bg-cream-bg shadow-2xl z-50 flex flex-col p-6 overflow-y-auto transform -translate-x-full transition-transform duration-300 [&.is-open]:translate-x-0">
+        <div class="mb-8 border-b border-primary/20 pb-4 mt-2">
+            <a href="#" class="text-3xl font-pacifico text-primary">Rituals</a>
+        </div>
+        <nav class="flex flex-col space-y-4 font-poppins">
+            <a href="index.html"
+                class="text-primary hover:opacity-80 font-medium text-lg border-b border-primary/10 pb-2">Home</a>
+            <a href="about.html"
+                class="text-primary hover:opacity-80 font-medium text-lg border-b border-primary/10 pb-2">About Us</a>
+            <a href="blog.html"
+                class="text-primary font-semibold text-lg flex items-center justify-between border-b border-primary/10 pb-2">
+                Shop <i class="fa-solid fa-chevron-down text-xs"></i>
+            </a>
+            <a href="shop.html"
+                class="text-primary hover:opacity-80 font-medium text-lg border-b border-primary/10 pb-2">Blog</a>
+            <a href="contact.html"
+                class="text-primary hover:opacity-80 font-medium text-lg border-b border-primary/10 pb-2">Contact</a>
+        </nav>
+        <div class="mt-8 pt-4 flex flex-col gap-4 font-poppins">
+            <div class="relative w-full">
+                <input type="text" placeholder="Search..."
+                    class="search-input bg-white w-full border border-primary/20 rounded-full py-2 pl-4 pr-10 text-sm focus:outline-none focus:border-primary" />
+                <i class="fa-solid fa-magnifying-glass absolute right-4 top-3 text-primary text-sm"></i>
+            </div>
+            <a href="#"
+                class="block text-center bg-primary text-white py-2.5 rounded-full font-medium text-sm mt-2 hover:opacity-90 transition-opacity">Login
+                / Signup</a>
+        </div>
+    </div>
+
+    <!-- <main-->
+    <main>
+        <section class="w-full bg-white">
+            <div class="max-w-[1820px] mx-auto px-4 sm:px-[50px] py-6 sm:py-10">
+                <!-- Breadcrumb -->
+                <div class="text-xs sm:text-sm text-primary mb-6 flex items-center gap-2 font-medium">
+                    <a href="index.html" class="hover:underline">Home</a>
+                    <span class="text-gray-400">&gt;</span>
+                    <a href="#" class="hover:underline">Products</a>
+                    <span class="text-gray-400">&gt;</span>
+                    <span class="text-primary font-semibold">Return Gift & Hampers</span>
+                </div>
+                <!-- Main layout-->
+                <div class="grid grid-cols-12 gap-6 lg:gap-10">
+                    <!--Filters-->
+                    <aside class="col-span-12 lg:col-span-2 space-y-6 sm:space-y-8 pr-0 lg:pr-2">
+                        <h2
+                            class="font-semibold text-lg text-primary pb-2 border-b border-gray-200/60 flex justify-between items-center">
+                            Filter
+                            <i class="fa-solid fa-sliders lg:hidden text-sm"></i>
+                        </h2>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-6">
+                            <!-- Price Filter -->
+                            <div>
+                                <h3 class="text-xs font-semibold mb-3 uppercase text-primary">Price</h3>
+                                <div class="flex items-center justify-between text-xs text-white mb-2">
+                                    <span
+                                        class="bg-primary text-white rounded-full w-7 h-7 flex items-center justify-center">Min</span>
+                                    <div class="h-0.5 bg-primary flex-1 mx-2"></div>
+                                    <span
+                                        class="bg-primary text-white rounded-full w-7 h-7 flex items-center justify-center">Max</span>
+                                </div>
+                                <button
+                                    class="w-full bg-primary text-white py-2.5 rounded-full mt-4 text-sm font-medium hover:opacity-90 transition-opacity cursor-pointer">Apply</button>
+                            </div>
+                            <!-- Product Type -->
+                            <div>
+                                <h3 class="text-xs font-semibold mb-3 uppercase text-primary">Product Type</h3>
+                                <div class="space-y-3 text-primary">
+                                    <label class="flex items-center space-x-3 text-sm cursor-pointer group">
+                                        <input type="checkbox" checked
+                                            class="w-4 h-4 accent-primary border-gray-300 rounded">
+                                        <span class="truncate">Lorem ipsum</span>
+                                    </label>
+                                    <label class="flex items-center space-x-3 text-sm cursor-pointer group">
+                                        <input type="checkbox" checked
+                                            class="w-4 h-4 accent-primary border-gray-300 rounded">
+                                        <span class="truncate">Lorem ipsum</span>
+                                    </label>
+                                    <label class="flex items-center space-x-3 text-sm cursor-pointer group">
+                                        <input type="checkbox" class="w-4 h-4 accent-primary border-gray-300 rounded">
+                                        <span class="truncate">Lorem ipsum</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <!-- Min Order Quantity -->
+                            <div>
+                                <h3 class="text-xs font-semibold mb-3 uppercase text-primary">Min order quantity</h3>
+                                <div class="space-y-3 text-primary">
+                                    <label class="flex items-center space-x-3 text-sm cursor-pointer group">
+                                        <input type="checkbox" checked
+                                            class="w-4 h-4 accent-primary border-gray-300 rounded">
+                                        <span class="truncate">Lorem ipsum</span>
+                                    </label>
+                                    <label class="flex items-center space-x-3 text-sm cursor-pointer group">
+                                        <input type="checkbox" class="w-4 h-4 accent-primary border-gray-300 rounded">
+                                        <span class="truncate">Lorem ipsum</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <!-- In Stock -->
+                            <div>
+                                <h3 class="text-xs font-semibold mb-3 uppercase text-primary">In Stock</h3>
+                                <label class="flex items-center space-x-3 text-sm cursor-pointer group text-primary">
+                                    <input type="checkbox" checked
+                                        class="w-4 h-4 accent-primary border-gray-300 rounded">
+                                    <span class="truncate">Lorem ipsum</span>
+                                </label>
+                            </div>
+                        </div>
+                    </aside>
+
+                    <!-- CONTENT SECTION  -->
+                    <div class="col-span-12 lg:col-span-10">
+                        <!-- Heading -->
+                        <div class="mb-8 pb-4 relative w-full">
+                            <h1 class="text-xl sm:text-3xl font-semibold text-primary inline-block pb-3 font-poppins">
+                                Return Gift & Hampers
+                            </h1>
+                            <div class="absolute left-0 bottom-0 w-full sm:w-[350px] flex flex-col gap-[8px]">
+                                <div class="w-full h-[1.5px] bg-primary/40"></div>
+                                <div class="w-full h-[1.5px] bg-primary/40"></div>
+                            </div>
+                        </div>
+
+                        <!-- TOP PRODUCT  -->
+                        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-6 mb-12 sm:mb-16">
+                            <!-- Product Card  -->
+                            <div
+                                class="rounded-xl border border-primary/10 overflow-hidden flex flex-col justify-between group bg-white shadow-sm">
+                                <!-- Image Section  -->
+                                <div class="aspect-square w-full overflow-hidden relative bg-white">
+                                    <img src="./images/about_img/p1.png" alt="Product"
+                                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                                </div>
+                                <!-- Description -->
+                                <div class="bg-[#FDF9F1] p-2.5 sm:p-3 flex flex-col justify-between flex-grow">
+                                    <div class="flex justify-between items-start mb-1">
+                                        <h3 class="text-xs sm:text-sm font-semibold text-primary truncate pr-2">Lorem
+                                            ipsum</h3>
+                                        <span
+                                            class="text-primary hover:text-red-500 transition-colors text-sm cursor-pointer">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </span>
+                                    </div>
+                                    <div
+                                        class="flex items-center text-primary text-[9px] sm:text-[10px] mb-1.5 sm:mb-2">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                                        <span class="text-primary ml-1 text-[8px] sm:text-[10px]">(4)</span>
+                                    </div>
+
+                                    <!-- Price Section -->
+                                    <div class="flex items-center space-x-2 mb-3">
+                                        <span class="text-sm font-bold text-primary">$ 80</span>
+                                        <span class="text-xs text-red-500 line-through opacity-70">$ 94</span>
+                                    </div>
+
+                                    <!-- 25% Off Badge -->
+                                    <div
+                                        class="flex items-center justify-end gap-1.5 mb-2 text-primary text-[11px] font-medium">
+                                        <div class="w-4 h-4 flex items-center justify-center">
+                                            <img src="./images/about_img/badge-percent.png" alt="img1"
+                                                class="w-full h-full object-contain">
+                                        </div>
+                                        <span>25% off</span>
+                                    </div>
+
+                                    <!-- Buttons Grid -->
+                                    <div class="grid grid-cols-1 min-[400px]:grid-cols-2 gap-1.5 sm:gap-2 mt-auto">
+                                        <button
+                                            class="border border-primary text-primary py-1.5 sm:py-2 rounded-full text-[10px] sm:text-[11px] font-medium hover:bg-primary hover:text-white transition-colors cursor-pointer">Add
+                                            Cart</button>
+                                        <button
+                                            class="bg-primary text-white py-1.5 sm:py-2 rounded-full text-[10px] sm:text-[11px] font-medium hover:opacity-90 transition-opacity cursor-pointer">Buy
+                                            Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Product Card 2 -->
+                            <div
+                                class="rounded-xl border border-primary/10 overflow-hidden flex flex-col justify-between group bg-white shadow-sm">
+                                <!-- Image Section -->
+                                <div class="aspect-square w-full overflow-hidden relative bg-white">
+                                    <img src="./images/about_img/p2.png" alt="Product"
+                                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                                </div>
+                                <!-- Description  -->
+                                <div class="bg-[#FDF9F1] p-2.5 sm:p-3 flex flex-col justify-between flex-grow">
+                                    <div class="flex justify-between items-start mb-1">
+                                        <h3 class="text-xs sm:text-sm font-semibold text-primary truncate pr-2">Lorem
+                                            ipsum</h3>
+                                        <span
+                                            class="text-primary hover:text-red-500 transition-colors text-sm cursor-pointer">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </span>
+                                    </div>
+                                    <div
+                                        class="flex items-center text-primary text-[9px] sm:text-[10px] mb-1.5 sm:mb-2">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                                        <span class="text-primary ml-1 text-[8px] sm:text-[10px]">(4)</span>
+                                    </div>
+                                    <div class="flex items-center space-x-2 mb-3">
+                                        <span class="text-sm font-bold text-primary">$ 80</span>
+                                        <span class="text-xs text-red-500 line-through opacity-70">$ 94</span>
+                                    </div>
+                                    <div class="grid grid-cols-1 min-[400px]:grid-cols-2 gap-1.5 sm:gap-2 mt-auto">
+                                        <button
+                                            class="border border-primary text-primary py-1.5 sm:py-2 rounded-full text-[10px] sm:text-[11px] font-medium hover:bg-primary hover:text-white transition-colors cursor-pointer">Add
+                                            Cart</button>
+                                        <button
+                                            class="bg-primary text-white py-1.5 sm:py-2 rounded-full text-[10px] sm:text-[11px] font-medium hover:opacity-90 transition-opacity cursor-pointer">Buy
+                                            Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Product Card 3 -->
+                            <div
+                                class="rounded-xl border border-primary/10 overflow-hidden flex flex-col justify-between group bg-white shadow-sm">
+                                <!-- Image Section -->
+                                <div class="aspect-square w-full overflow-hidden relative bg-white">
+                                    <img src="./images/about_img/p3.png" alt="Product"
+                                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                                </div>
+                                <!-- Description ---------->
+                                <div class="bg-[#FDF9F1] p-2.5 sm:p-3 flex flex-col justify-between flex-grow">
+                                    <div class="flex justify-between items-start mb-1">
+                                        <h3 class="text-xs sm:text-sm font-semibold text-primary truncate pr-2">Lorem
+                                            ipsum</h3>
+                                        <span
+                                            class="text-primary hover:text-red-500 transition-colors text-sm cursor-pointer">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </span>
+                                    </div>
+                                    <div
+                                        class="flex items-center text-primary text-[9px] sm:text-[10px] mb-1.5 sm:mb-2">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star-half-alt"></i>
+                                        <span class="text-primary ml-1 text-[8px] sm:text-[10px]">(4)</span>
+                                    </div>
+                                    <div class="flex items-center space-x-2 mb-3">
+                                        <span class="text-sm font-bold text-primary">$ 80</span>
+                                        <span class="text-xs text-red-500 line-through opacity-70">$ 94</span>
+                                    </div>
+                                    <div class="grid grid-cols-1 min-[400px]:grid-cols-2 gap-1.5 sm:gap-2 mt-auto">
+                                        <button
+                                            class="border border-primary text-primary py-1.5 sm:py-2 rounded-full text-[10px] sm:text-[11px] font-medium hover:bg-primary hover:text-white transition-colors cursor-pointer">Add
+                                            Cart</button>
+                                        <button
+                                            class="bg-primary text-white py-1.5 sm:py-2 rounded-full text-[10px] sm:text-[11px] font-medium hover:opacity-90 transition-opacity cursor-pointer">Buy
+                                            Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Product Card 4 -->
+                            <div
+                                class="rounded-xl border border-primary/10 overflow-hidden flex flex-col justify-between group bg-white shadow-sm">
+                                <!-- Image Section  -->
+                                <div class="aspect-square w-full overflow-hidden relative bg-white">
+                                    <img src="./images/about_img/p4.png" alt="Product"
+                                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                                </div>
+                                <!-- Description -->
+                                <div class="bg-[#FDF9F1] p-2.5 sm:p-3 flex flex-col justify-between flex-grow">
+                                    <div class="flex justify-between items-start mb-1">
+                                        <h3 class="text-xs sm:text-sm font-semibold text-primary truncate pr-2">Lorem
+                                            ipsum</h3>
+                                        <span
+                                            class="text-primary hover:text-red-500 transition-colors text-sm cursor-pointer">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </span>
+                                    </div>
+                                    <div
+                                        class="flex items-center text-primary text-[9px] sm:text-[10px] mb-1.5 sm:mb-2">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                                        <span class="text-primary ml-1 text-[8px] sm:text-[10px]">(4)</span>
+                                    </div>
+                                    <div class="flex items-center space-x-2 mb-3">
+                                        <span class="text-sm font-bold text-primary">$ 80</span>
+                                        <span class="text-xs text-red-500 line-through opacity-70">$ 94</span>
+                                    </div>
+                                    <div class="grid grid-cols-1 min-[400px]:grid-cols-2 gap-1.5 sm:gap-2 mt-auto">
+                                        <button
+                                            class="border border-primary text-primary py-1.5 sm:py-2 rounded-full text-[10px] sm:text-[11px] font-medium hover:bg-primary hover:text-white transition-colors cursor-pointer">Add
+                                            Cart</button>
+                                        <button
+                                            class="bg-primary text-white py-1.5 sm:py-2 rounded-full text-[10px] sm:text-[11px] font-medium hover:opacity-90 transition-opacity cursor-pointer">Buy
+                                            Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Product Card 5 -->
+                            <div
+                                class="rounded-xl border border-primary/10 overflow-hidden flex flex-col justify-between group bg-white shadow-sm">
+                                <!-- Image Section  -->
+                                <div class="aspect-square w-full overflow-hidden relative bg-white">
+                                    <img src="./images/about_img/p5.png" alt="Product"
+                                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                                </div>
+                                <!-- Description -->
+                                <div class="bg-[#FDF9F1] p-2.5 sm:p-3 flex flex-col justify-between flex-grow">
+                                    <div class="flex justify-between items-start mb-1">
+                                        <h3 class="text-xs sm:text-sm font-semibold text-primary truncate pr-2">Lorem
+                                            ipsum</h3>
+                                        <span
+                                            class="text-primary hover:text-red-500 transition-colors text-sm cursor-pointer">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </span>
+                                    </div>
+                                    <div
+                                        class="flex items-center text-primary text-[9px] sm:text-[10px] mb-1.5 sm:mb-2">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                                        <span class="text-primary ml-1 text-[8px] sm:text-[10px]">(4)</span>
+                                    </div>
+                                    <div class="flex items-center space-x-2 mb-3">
+                                        <span class="text-sm font-bold text-primary">$ 80</span>
+                                        <span class="text-xs text-red-500 line-through opacity-70">$ 94</span>
+                                    </div>
+                                    <div class="grid grid-cols-1 min-[400px]:grid-cols-2 gap-1.5 sm:gap-2 mt-auto">
+                                        <button
+                                            class="border border-primary text-primary py-1.5 sm:py-2 rounded-full text-[10px] sm:text-[11px] font-medium hover:bg-primary hover:text-white transition-colors cursor-pointer">Add
+                                            Cart</button>
+                                        <button
+                                            class="bg-primary text-white py-1.5 sm:py-2 rounded-full text-[10px] sm:text-[11px] font-medium hover:opacity-90 transition-opacity cursor-pointer">Buy
+                                            Now</button>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!--product 6-->
+                            <div
+                                class="rounded-xl border border-primary/10 overflow-hidden flex flex-col justify-between group bg-white shadow-sm">
+                                <!-- Image Section -->
+                                <div class="aspect-square w-full overflow-hidden relative bg-white">
+                                    <img src="images/about_img/p6.png" alt="Product"
+                                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                                </div>
+                                <!-- Description ------ -->
+                                <div class="bg-[#FDF9F1] p-2.5 sm:p-3 flex flex-col justify-between flex-grow">
+                                    <div class="flex justify-between items-start mb-1">
+                                        <h3 class="text-xs sm:text-sm font-semibold text-primary truncate pr-2">Lorem
+                                            ipsum</h3>
+                                        <span
+                                            class="text-primary hover:text-red-500 transition-colors text-sm cursor-pointer">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </span>
+                                    </div>
+                                    <div
+                                        class="flex items-center text-primary text-[9px] sm:text-[10px] mb-1.5 sm:mb-2">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                                        <span class="text-primary ml-1 text-[8px] sm:text-[10px]">(4)</span>
+                                    </div>
+                                    <div class="flex items-center space-x-2 mb-3">
+                                        <span class="text-sm font-bold text-primary">$ 80</span>
+                                        <span class="text-xs text-red-500 line-through opacity-70">$ 94</span>
+                                    </div>
+                                    <div class="grid grid-cols-1 min-[400px]:grid-cols-2 gap-1.5 sm:gap-2 mt-auto">
+                                        <button
+                                            class="border border-primary text-primary py-1.5 sm:py-2 rounded-full text-[10px] sm:text-[11px] font-medium hover:bg-primary hover:text-white transition-colors cursor-pointer">Add
+                                            Cart</button>
+                                        <button
+                                            class="bg-primary text-white py-1.5 sm:py-2 rounded-full text-[10px] sm:text-[11px] font-medium hover:opacity-90 transition-opacity cursor-pointer">Buy
+                                            Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--product7-->
+                            <div
+                                class="rounded-xl border border-primary/10 overflow-hidden flex flex-col justify-between group bg-white shadow-sm">
+                                <!-- Image Section  -->
+                                <div class="aspect-square w-full overflow-hidden relative bg-white">
+                                    <img src="./images/about_img/p7.png" alt="Product"
+                                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                                </div>
+                                <!-- Description -->
+                                <div class="bg-[#FDF9F1] p-2.5 sm:p-3 flex flex-col justify-between flex-grow">
+                                    <div class="flex justify-between items-start mb-1">
+                                        <h3 class="text-xs sm:text-sm font-semibold text-primary truncate pr-2">Lorem
+                                            ipsum</h3>
+                                        <span
+                                            class="text-primary hover:text-red-500 transition-colors text-sm cursor-pointer">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </span>
+                                    </div>
+                                    <div
+                                        class="flex items-center text-primary text-[9px] sm:text-[10px] mb-1.5 sm:mb-2">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                                        <span class="text-primary ml-1 text-[8px] sm:text-[10px]">(4)</span>
+                                    </div>
+
+                                    <!-- Price Section -->
+                                    <div class="flex items-center space-x-2 mb-3">
+                                        <span class="text-sm font-bold text-primary">$ 80</span>
+                                        <span class="text-xs text-red-500 line-through opacity-70">$ 94</span>
+                                    </div>
+
+                                    <!-- 25% Off Badge -->
+                                    <div
+                                        class="flex items-center justify-end gap-1.5 mb-2 text-primary text-[11px] font-medium">
+                                        <div class="w-4 h-4 flex items-center justify-center">
+                                            <img src="./images/about_img/badge-percent.png" alt="img1"
+                                                class="w-full h-full object-contain">
+                                        </div>
+                                        <span>25% off</span>
+                                    </div>
+
+                                    <!-- Buttons Grid -->
+                                    <div class="grid grid-cols-1 min-[400px]:grid-cols-2 gap-1.5 sm:gap-2 mt-auto">
+                                        <button
+                                            class="border border-primary text-primary py-1.5 sm:py-2 rounded-full text-[10px] sm:text-[11px] font-medium hover:bg-primary hover:text-white transition-colors cursor-pointer">Add
+                                            Cart</button>
+                                        <button
+                                            class="bg-primary text-white py-1.5 sm:py-2 rounded-full text-[10px] sm:text-[11px] font-medium hover:opacity-90 transition-opacity cursor-pointer">Buy
+                                            Now</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--procut 8-->
+                            <div
+                                class="rounded-xl border border-primary/10 overflow-hidden flex flex-col justify-between group bg-white shadow-sm">
+                                <!-- Image Section -->
+                                <div class="aspect-square w-full overflow-hidden relative bg-white">
+                                    <img src="./images/about_img/p8.png" alt="Product"
+                                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                                </div>
+                                <!-- Description -->
+                                <div class="bg-[#FDF9F1] p-2.5 sm:p-3 flex flex-col justify-between flex-grow">
+                                    <div class="flex justify-between items-start mb-1">
+                                        <h3 class="text-xs sm:text-sm font-semibold text-primary truncate pr-2">Lorem
+                                            ipsum</h3>
+                                        <span
+                                            class="text-primary hover:text-red-500 transition-colors text-sm cursor-pointer">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </span>
+                                    </div>
+                                    <div
+                                        class="flex items-center text-primary text-[9px] sm:text-[10px] mb-1.5 sm:mb-2">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star-half-alt"></i>
+                                        <span class="text-primary ml-1 text-[8px] sm:text-[10px]">(4)</span>
+                                    </div>
+                                    <div class="flex items-center space-x-2 mb-3">
+                                        <span class="text-sm font-bold text-primary">$ 80</span>
+                                        <span class="text-xs text-red-500 line-through opacity-70">$ 94</span>
+                                    </div>
+                                    <div class="grid grid-cols-1 min-[400px]:grid-cols-2 gap-1.5 sm:gap-2 mt-auto">
+                                        <button
+                                            class="border border-primary text-primary py-1.5 sm:py-2 rounded-full text-[10px] sm:text-[11px] font-medium hover:bg-primary hover:text-white transition-colors cursor-pointer">Add
+                                            Cart</button>
+                                        <button
+                                            class="bg-primary text-white py-1.5 sm:py-2 rounded-full text-[10px] sm:text-[11px] font-medium hover:opacity-90 transition-opacity cursor-pointer">Buy
+                                            Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--prob 9-->
+                            <div
+                                class="rounded-xl border border-primary/10 overflow-hidden flex flex-col justify-between group bg-white shadow-sm">
+                                <!-- Image Section -->
+                                <div class="aspect-square w-full overflow-hidden relative bg-white">
+                                    <img src="./images/about_img/p9.png" alt="Product"
+                                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                                </div>
+                                <!-- Description  -->
+                                <div class="bg-[#FDF9F1] p-2.5 sm:p-3 flex flex-col justify-between flex-grow">
+                                    <div class="flex justify-between items-start mb-1">
+                                        <h3 class="text-xs sm:text-sm font-semibold text-primary truncate pr-2">Lorem
+                                            ipsum</h3>
+                                        <span
+                                            class="text-primary hover:text-red-500 transition-colors text-sm cursor-pointer">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </span>
+                                    </div>
+                                    <div
+                                        class="flex items-center text-primary text-[9px] sm:text-[10px] mb-1.5 sm:mb-2">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star-half-alt"></i>
+                                        <span class="text-primary ml-1 text-[8px] sm:text-[10px]">(4)</span>
+                                    </div>
+                                    <div class="flex items-center space-x-2 mb-3">
+                                        <span class="text-sm font-bold text-primary">$ 80</span>
+                                        <span class="text-xs text-red-500 line-through opacity-70">$ 94</span>
+                                    </div>
+                                    <div class="grid grid-cols-1 min-[400px]:grid-cols-2 gap-1.5 sm:gap-2 mt-auto">
+                                        <button
+                                            class="border border-primary text-primary py-1.5 sm:py-2 rounded-full text-[10px] sm:text-[11px] font-medium hover:bg-primary hover:text-white transition-colors cursor-pointer">Add
+                                            Cart</button>
+                                        <button
+                                            class="bg-primary text-white py-1.5 sm:py-2 rounded-full text-[10px] sm:text-[11px] font-medium hover:opacity-90 transition-opacity cursor-pointer">Buy
+                                            Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--pro10-->
+                            <div
+                                class="rounded-xl border border-primary/10 overflow-hidden flex flex-col justify-between group bg-white shadow-sm">
+                                <!-- Image Section  -->
+                                <div class="aspect-square w-full overflow-hidden relative bg-white">
+                                    <img src="./images/about_img/p10.png" alt="Product"
+                                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                                </div>
+                                <!-- Description  -->
+                                <div class="bg-[#FDF9F1] p-2.5 sm:p-3 flex flex-col justify-between flex-grow">
+                                    <div class="flex justify-between items-start mb-1">
+                                        <h3 class="text-xs sm:text-sm font-semibold text-primary truncate pr-2">Lorem
+                                            ipsum</h3>
+                                        <span
+                                            class="text-primary hover:text-red-500 transition-colors text-sm cursor-pointer">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </span>
+                                    </div>
+                                    <div
+                                        class="flex items-center text-primary text-[9px] sm:text-[10px] mb-1.5 sm:mb-2">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star-half-alt"></i>
+                                        <span class="text-primary ml-1 text-[8px] sm:text-[10px]">(4)</span>
+                                    </div>
+                                    <div class="flex items-center space-x-2 mb-3">
+                                        <span class="text-sm font-bold text-primary">$ 80</span>
+                                        <span class="text-xs text-red-500 line-through opacity-70">$ 94</span>
+                                    </div>
+                                    <div class="grid grid-cols-1 min-[400px]:grid-cols-2 gap-1.5 sm:gap-2 mt-auto">
+                                        <button
+                                            class="border border-primary text-primary py-1.5 sm:py-2 rounded-full text-[10px] sm:text-[11px] font-medium hover:bg-primary hover:text-white transition-colors cursor-pointer">Add
+                                            Cart</button>
+                                        <button
+                                            class="bg-primary text-white py-1.5 sm:py-2 rounded-full text-[10px] sm:text-[11px] font-medium hover:opacity-90 transition-opacity cursor-pointer">Buy
+                                            Now</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <!-- GIFT BY PRICE RANGE -->
+                        <div class="mb-12 sm:mb-16">
+                            <h2 class="text-xl sm:text-2xl font-semibold text-primary mb-6 text-center font-poppins">
+                                Gift by price range
+                            </h2>
+                            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4">
+                                <div class="cursor-pointer group overflow-hidden rounded-xl">
+                                    <img src="./images/about_img/Shop range 1.png" alt="Price Range"
+                                        class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300">
+                                </div>
+                                <div class="cursor-pointer group overflow-hidden rounded-xl">
+                                    <img src="./images/about_img/Shop range 2.png" alt="Price Range"
+                                        class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300">
+                                </div>
+                                <div class="cursor-pointer group overflow-hidden rounded-xl">
+                                    <img src="./images/about_img/Shop range 3.png" alt="Price Range"
+                                        class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300">
+                                </div>
+                                <div class="cursor-pointer group overflow-hidden rounded-xl">
+                                    <img src="./images/about_img/Shop range 4.png" alt="Price Range"
+                                        class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300">
+                                </div>
+                                <div class="cursor-pointer group overflow-hidden rounded-xl">
+                                    <img src="./images/about_img/Shop range 5.png" alt="Price Range"
+                                        class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300">
+                                </div>
+                                <div class="cursor-pointer group overflow-hidden rounded-xl">
+                                    <img src="./images/about_img/Shop range 6.png" alt="Price Range"
+                                        class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--   Feature Cards Section  -->
+                        <div class="mb-12 sm:mb-16 w-full mx-auto">
+                            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 justify-items-center">
+
+                                <!-- Feature Card 1 -->
+                                <div
+                                    class="border-2 sm:border-3 border-primary p-2 sm:p-2.5 rounded-[20px] sm:rounded-[24px] shadow-md flex flex-col w-full max-w-[160px] sm:max-w-[200px] transition-transform hover:-translate-y-1  bg-primary cursor-pointer overflow-hidden">
+                                    <div
+                                        class=" bg-primary p-0 rounded-[14px] sm:rounded-[16px] w-full aspect-[4/5] overflow-hidden flex items-center justify-center">
+                                        <img src="./images/about_img/F1.png" alt="Category"
+                                            class="w-full h-full object-cover">
+                                    </div>
+                                    <div
+                                        class="bg-primary text-white text-[10px] sm:text-xs text-center font-semibold py-2 px-1 rounded-xl mt-2 flex items-center justify-center">
+                                        Return Gifts Combos
+                                    </div>
+                                </div>
+
+                                <!-- Feature Card 2 -->
+                                <div
+                                    class="border-2 sm:border-3 border-primary p-2 sm:p-2.5 rounded-[20px] sm:rounded-[24px] shadow-md flex flex-col w-full max-w-[160px] sm:max-w-[200px] transition-transform hover:-translate-y-1 cursor-pointer bg-primary overflow-hidden">
+                                    <div
+                                        class=" p-0 rounded-[14px] sm:rounded-[16px] w-full aspect-[4/5] overflow-hidden flex items-center justify-center">
+                                        <img src="./images/about_img/F2.png" alt="Category"
+                                            class="w-full h-full object-cover">
+                                    </div>
+                                    <div
+                                        class="bg-primary text-white text-[10px] sm:text-xs text-center font-semibold py-2 px-1 rounded-xl mt-2 flex items-center justify-center">
+                                        Premium Hampers
+                                    </div>
+                                </div>
+
+                                <!-- Feature Card 3 -->
+                                <div
+                                    class="border-2 sm:border-3 border-primary p-2 sm:p-2.5 rounded-[20px] sm:rounded-[24px] shadow-md flex flex-col w-full max-w-[160px] sm:max-w-[200px] transition-transform hover:-translate-y-1 cursor-pointer bg-primary overflow-hidden">
+                                    <div
+                                        class=" p-0 rounded-[14px] sm:rounded-[16px] w-full aspect-[4/5] overflow-hidden flex items-center justify-center">
+                                        <img src="./images/about_img/F3.png" alt="Category"
+                                            class="w-full h-full object-cover">
+                                    </div>
+                                    <div
+                                        class="bg-primary text-white text-[10px] sm:text-xs text-center font-semibold py-2 px-1 rounded-xl mt-2 flex items-center justify-center">
+                                        Wedding Cards
+                                    </div>
+                                </div>
+
+                                <!-- Feature Card 4 -->
+                                <div
+                                    class="border-2 sm:border-3 border-primary p-2 sm:p-2.5 rounded-[20px] sm:rounded-[24px] shadow-md flex flex-col w-full max-w-[160px] sm:max-w-[200px] transition-transform hover:-translate-y-1 cursor-pointer bg-primary overflow-hidden">
+                                    <div
+                                        class=" p-0 rounded-[14px] sm:rounded-[16px] w-full aspect-[4/5] overflow-hidden flex items-center justify-center">
+                                        <img src="./images/about_img/F4.png" alt="Category"
+                                            class="w-full h-full object-cover">
+                                    </div>
+                                    <div
+                                        class="bg-primary text-white text-[10px] sm:text-xs text-center font-semibold py-2 px-1 rounded-xl mt-2 flex items-center justify-center">
+                                        Corporate Gifts
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- BOTTOM PRODUCT  -->
+                        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-6 mb-10">
+                            <!-- Card 1 -->
+                            <div
+                                class="rounded-xl border border-primary/10 overflow-hidden flex flex-col justify-between group bg-white shadow-sm">
+                                <!-- Image Section  -->
+                                <div class="aspect-square w-full overflow-hidden relative bg-white">
+                                    <img src="./images/about_img/Rg1.png" alt="Product"
+                                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                                </div>
+                                <!-- Description -->
+                                <div class="bg-[#FDF9F1] p-2.5 sm:p-3 flex flex-col justify-between flex-grow">
+                                    <div class="flex justify-between items-start mb-1">
+                                        <h3 class="text-xs sm:text-sm font-semibold text-primary truncate pr-2">Lorem
+                                            ipsum</h3>
+                                        <span
+                                            class="text-primary hover:text-red-500 transition-colors text-sm cursor-pointer">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </span>
+                                    </div>
+                                    <div
+                                        class="flex items-center text-primary text-[9px] sm:text-[10px] mb-1.5 sm:mb-2">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                                        <span class="text-primary ml-1 text-[8px] sm:text-[10px]">(4)</span>
+                                    </div>
+
+                                    <!-- Price Section -->
+                                    <div class="flex items-center space-x-2 mb-3">
+                                        <span class="text-sm font-bold text-primary">$ 80</span>
+                                        <span class="text-xs text-red-500 line-through opacity-70">$ 94</span>
+                                    </div>
+
+                                    <!-- 25% Off Badge  -->
+                                    <div
+                                        class="flex items-center justify-end gap-1.5 mb-2 text-primary text-[11px] font-medium">
+                                        <div class="w-4 h-4 flex items-center justify-center">
+                                            <img src="./images/about_img/badge-percent.png" alt="img1"
+                                                class="w-full h-full object-contain">
+                                        </div>
+                                        <span>25% off</span>
+                                    </div>
+
+                                    <!-- Buttons Grid -->
+                                    <div class="grid grid-cols-1 min-[400px]:grid-cols-2 gap-1.5 sm:gap-2 mt-auto">
+                                        <button
+                                            class="border border-primary text-primary py-1.5 sm:py-2 rounded-full text-[10px] sm:text-[11px] font-medium hover:bg-primary hover:text-white transition-colors cursor-pointer">Add
+                                            Cart</button>
+                                        <button
+                                            class="bg-primary text-white py-1.5 sm:py-2 rounded-full text-[10px] sm:text-[11px] font-medium hover:opacity-90 transition-opacity cursor-pointer">Buy
+                                            Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card 2 -->
+                            <div
+                                class="rounded-xl border border-primary/10 overflow-hidden flex flex-col justify-between group bg-white shadow-sm">
+                                <!-- Image Section -->
+                                <div class="aspect-square w-full overflow-hidden relative bg-white">
+                                    <img src="./images/about_img/RG2.png" alt="Product"
+                                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                                </div>
+                                <!-- Description -->
+                                <div class="bg-[#FDF9F1] p-2.5 sm:p-3 flex flex-col justify-between flex-grow">
+                                    <div class="flex justify-between items-start mb-1">
+                                        <h3 class="text-xs sm:text-sm font-semibold text-primary truncate pr-2">Lorem
+                                            ipsum</h3>
+                                        <span
+                                            class="text-primary hover:text-red-500 transition-colors text-sm cursor-pointer">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </span>
+                                    </div>
+                                    <div
+                                        class="flex items-center text-primary text-[9px] sm:text-[10px] mb-1.5 sm:mb-2">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                                        <span class="text-primary ml-1 text-[8px] sm:text-[10px]">(4)</span>
+                                    </div>
+                                    <div class="flex items-center space-x-2 mb-3">
+                                        <span class="text-sm font-bold text-primary">$ 80</span>
+                                        <span class="text-xs text-red-500 line-through opacity-70">$ 94</span>
+                                    </div>
+                                    <div class="grid grid-cols-1 min-[400px]:grid-cols-2 gap-1.5 sm:gap-2 mt-auto">
+                                        <button
+                                            class="border border-primary text-primary py-1.5 sm:py-2 rounded-full text-[10px] sm:text-[11px] font-medium hover:bg-primary hover:text-white transition-colors cursor-pointer">Add
+                                            Cart</button>
+                                        <button
+                                            class="bg-primary text-white py-1.5 sm:py-2 rounded-full text-[10px] sm:text-[11px] font-medium hover:opacity-90 transition-opacity cursor-pointer">Buy
+                                            Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card 3 -->
+                            <div
+                                class="rounded-xl border border-primary/10 overflow-hidden flex flex-col justify-between group bg-white shadow-sm">
+                                <!-- Image Section -->
+                                <div class="aspect-square w-full overflow-hidden relative bg-white">
+                                    <img src="./images/about_img/Product Pic & Discount Banner 6 (1).png" alt="Product"
+                                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                                </div>
+                                <!-- Description  -->
+                                <div class="bg-[#FDF9F1] p-2.5 sm:p-3 flex flex-col justify-between flex-grow">
+                                    <div class="flex justify-between items-start mb-1">
+                                        <h3 class="text-xs sm:text-sm font-semibold text-primary truncate pr-2">Lorem
+                                            ipsum</h3>
+                                        <span
+                                            class="text-primary hover:text-red-500 transition-colors text-sm cursor-pointer">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </span>
+                                    </div>
+                                    <div
+                                        class="flex items-center text-primary text-[9px] sm:text-[10px] mb-1.5 sm:mb-2">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                                        <span class="text-primary ml-1 text-[8px] sm:text-[10px]">(4)</span>
+                                    </div>
+                                    <div class="flex items-center space-x-2 mb-3">
+                                        <span class="text-sm font-bold text-primary">$ 80</span>
+                                        <span class="text-xs text-red-500 line-through opacity-70">$ 94</span>
+                                    </div>
+                                    <div class="grid grid-cols-1 min-[400px]:grid-cols-2 gap-1.5 sm:gap-2 mt-auto">
+                                        <button
+                                            class="border border-primary text-primary py-1.5 sm:py-2 rounded-full text-[10px] sm:text-[11px] font-medium hover:bg-primary hover:text-white transition-colors cursor-pointer">Add
+                                            Cart</button>
+                                        <button
+                                            class="bg-primary text-white py-1.5 sm:py-2 rounded-full text-[10px] sm:text-[11px] font-medium hover:opacity-90 transition-opacity cursor-pointer">Buy
+                                            Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card 4 -->
+                            <div
+                                class="rounded-xl border border-primary/10 overflow-hidden flex flex-col justify-between group bg-white shadow-sm">
+                                <!-- Image Section  -->
+                                <div class="aspect-square w-full overflow-hidden relative bg-white">
+                                    <img src="./images/about_img/Product Pic & Discount Banner 6 (12).png" alt="Product"
+                                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                                </div>
+                                <!-- Description -->
+                                <div class="bg-[#FDF9F1] p-2.5 sm:p-3 flex flex-col justify-between flex-grow">
+                                    <div class="flex justify-between items-start mb-1">
+                                        <h3 class="text-xs sm:text-sm font-semibold text-primary truncate pr-2">Lorem
+                                            ipsum</h3>
+                                        <span
+                                            class="text-primary hover:text-red-500 transition-colors text-sm cursor-pointer">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </span>
+                                    </div>
+                                    <div
+                                        class="flex items-center text-primary text-[9px] sm:text-[10px] mb-1.5 sm:mb-2">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                                        <span class="text-primary ml-1 text-[8px] sm:text-[10px]">(4)</span>
+                                    </div>
+
+                                    <!-- Price Section -->
+                                    <div class="flex items-center space-x-2 mb-3">
+                                        <span class="text-sm font-bold text-primary">$ 80</span>
+                                        <span class="text-xs text-red-500 line-through opacity-70">$ 94</span>
+                                    </div>
+
+                                    <!-- 25% Off Badge  -->
+                                    <div
+                                        class="flex items-center justify-end gap-1.5 mb-2 text-primary text-[11px] font-medium">
+                                        <div class="w-4 h-4 flex items-center justify-center">
+                                            <img src="./images/about_img/badge-percent.png" alt="img1"
+                                                class="w-full h-full object-contain">
+                                        </div>
+                                        <span>25% off</span>
+                                    </div>
+
+                                    <!-- Buttons Grid -->
+                                    <div class="grid grid-cols-1 min-[400px]:grid-cols-2 gap-1.5 sm:gap-2 mt-auto">
+                                        <button
+                                            class="border border-primary text-primary py-1.5 sm:py-2 rounded-full text-[10px] sm:text-[11px] font-medium hover:bg-primary hover:text-white transition-colors cursor-pointer">Add
+                                            Cart</button>
+                                        <button
+                                            class="bg-primary text-white py-1.5 sm:py-2 rounded-full text-[10px] sm:text-[11px] font-medium hover:opacity-90 transition-opacity cursor-pointer">Buy
+                                            Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card 5 -->
+                            <div
+                                class="rounded-xl border border-primary/10 overflow-hidden flex flex-col justify-between group bg-white shadow-sm">
+                                <!-- Image Section -->
+                                <div class="aspect-square w-full overflow-hidden relative bg-white">
+                                    <img src="./images/about_img/Product Pic & Discount Banner 6 (15).png" alt="Product"
+                                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                                </div>
+                                <!------------------ Description ---------------->
+                                <div class="bg-[#FDF9F1] p-2.5 sm:p-3 flex flex-col justify-between flex-grow">
+                                    <div class="flex justify-between items-start mb-1">
+                                        <h3 class="text-xs sm:text-sm font-semibold text-primary truncate pr-2">Lorem
+                                            ipsum</h3>
+                                        <span
+                                            class="text-primary hover:text-red-500 transition-colors text-sm cursor-pointer">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </span>
+                                    </div>
+                                    <div
+                                        class="flex items-center text-primary text-[9px] sm:text-[10px] mb-1.5 sm:mb-2">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star-half-alt"></i>
+                                        <span class="text-primary ml-1 text-[8px] sm:text-[10px]">(4)</span>
+                                    </div>
+                                    <div class="flex items-center space-x-2 mb-3">
+                                        <span class="text-sm font-bold text-primary">$ 80</span>
+                                        <span class="text-xs text-red-500 line-through opacity-70">$ 94</span>
+                                    </div>
+                                    <div class="grid grid-cols-1 min-[400px]:grid-cols-2 gap-1.5 sm:gap-2 mt-auto">
+                                        <button
+                                            class="border border-primary text-primary py-1.5 sm:py-2 rounded-full text-[10px] sm:text-[11px] font-medium hover:bg-primary hover:text-white transition-colors cursor-pointer">Add
+                                            Cart</button>
+                                        <button
+                                            class="bg-primary text-white py-1.5 sm:py-2 rounded-full text-[10px] sm:text-[11px] font-medium hover:opacity-90 transition-opacity cursor-pointer">Buy
+                                            Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card 6 -->
+                            <div
+                                class="rounded-xl border border-primary/10 overflow-hidden flex flex-col justify-between group bg-white shadow-sm">
+                                <!-- Image Section ----------->
+                                <div class="aspect-square w-full overflow-hidden relative bg-white">
+                                    <img src="./images/about_img/Product Pic & Discount Banner 6 (10).png" alt="Product"
+                                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                                </div>
+                                <!------------------ Description ------------ -->
+                                <div class="bg-[#FDF9F1] p-2.5 sm:p-3 flex flex-col justify-between flex-grow">
+                                    <div class="flex justify-between items-start mb-1">
+                                        <h3 class="text-xs sm:text-sm font-semibold text-primary truncate pr-2">Lorem
+                                            ipsum</h3>
+                                        <span
+                                            class="text-primary hover:text-red-500 transition-colors text-sm cursor-pointer">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </span>
+                                    </div>
+                                    <div
+                                        class="flex items-center text-primary text-[9px] sm:text-[10px] mb-1.5 sm:mb-2">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star-half-alt"></i>
+                                        <span class="text-primary ml-1 text-[8px] sm:text-[10px]">(4)</span>
+                                    </div>
+                                    <div class="flex items-center space-x-2 mb-3">
+                                        <span class="text-sm font-bold text-primary">$ 80</span>
+                                        <span class="text-xs text-red-500 line-through opacity-70">$ 94</span>
+                                    </div>
+                                    <div class="grid grid-cols-1 min-[400px]:grid-cols-2 gap-1.5 sm:gap-2 mt-auto">
+                                        <button
+                                            class="border border-primary text-primary py-1.5 sm:py-2 rounded-full text-[10px] sm:text-[11px] font-medium hover:bg-primary hover:text-white transition-colors cursor-pointer">Add
+                                            Cart</button>
+                                        <button
+                                            class="bg-primary text-white py-1.5 sm:py-2 rounded-full text-[10px] sm:text-[11px] font-medium hover:opacity-90 transition-opacity cursor-pointer">Buy
+                                            Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card 7 -->
+                            <div
+                                class="rounded-xl border border-primary/10 overflow-hidden flex flex-col justify-between group bg-white shadow-sm">
+                                <!-- Image Section  -->
+                                <div class="aspect-square w-full overflow-hidden relative bg-white">
+                                    <img src="./images/about_img/Product Pic & Discount Banner 6 (11).png" alt="Product"
+                                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                                </div>
+                                <!-- Description -->
+                                <div class="bg-[#FDF9F1] p-2.5 sm:p-3 flex flex-col justify-between flex-grow">
+                                    <div class="flex justify-between items-start mb-1">
+                                        <h3 class="text-xs sm:text-sm font-semibold text-primary truncate pr-2">Lorem
+                                            ipsum</h3>
+                                        <span
+                                            class="text-primary hover:text-red-500 transition-colors text-sm cursor-pointer">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </span>
+                                    </div>
+                                    <div
+                                        class="flex items-center text-primary text-[9px] sm:text-[10px] mb-1.5 sm:mb-2">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                                        <span class="text-primary ml-1 text-[8px] sm:text-[10px]">(4)</span>
+                                    </div>
+                                    <div class="flex items-center space-x-2 mb-3">
+                                        <span class="text-sm font-bold text-primary">$ 80</span>
+                                        <span class="text-xs text-red-500 line-through opacity-70">$ 94</span>
+                                    </div>
+                                    <div class="grid grid-cols-1 min-[400px]:grid-cols-2 gap-1.5 sm:gap-2 mt-auto">
+                                        <button
+                                            class="border border-primary text-primary py-1.5 sm:py-2 rounded-full text-[10px] sm:text-[11px] font-medium hover:bg-primary hover:text-white transition-colors cursor-pointer">Add
+                                            Cart</button>
+                                        <button
+                                            class="bg-primary text-white py-1.5 sm:py-2 rounded-full text-[10px] sm:text-[11px] font-medium hover:opacity-90 transition-opacity cursor-pointer">Buy
+                                            Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card 8 -->
+                            <div
+                                class="rounded-xl border border-primary/10 overflow-hidden flex flex-col justify-between group bg-white shadow-sm">
+                                <!-- Image Section  -->
+                                <div class="aspect-square w-full overflow-hidden relative bg-white">
+                                    <img src="./images/about_img/Product Pic & Discount Banner 6 (12).png" alt="Product"
+                                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                                </div>
+                                <!-- Description -->
+                                <div class="bg-[#FDF9F1] p-2.5 sm:p-3 flex flex-col justify-between flex-grow">
+                                    <div class="flex justify-between items-start mb-1">
+                                        <h3 class="text-xs sm:text-sm font-semibold text-primary truncate pr-2">Lorem
+                                            ipsum</h3>
+                                        <span
+                                            class="text-primary hover:text-red-500 transition-colors text-sm cursor-pointer">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </span>
+                                    </div>
+                                    <div
+                                        class="flex items-center text-primary text-[9px] sm:text-[10px] mb-1.5 sm:mb-2">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                                        <span class="text-primary ml-1 text-[8px] sm:text-[10px]">(4)</span>
+                                    </div>
+                                    <div class="flex items-center space-x-2 mb-3">
+                                        <span class="text-sm font-bold text-primary">$ 80</span>
+                                        <span class="text-xs text-red-500 line-through opacity-70">$ 94</span>
+                                    </div>
+                                    <div class="grid grid-cols-1 min-[400px]:grid-cols-2 gap-1.5 sm:gap-2 mt-auto">
+                                        <button
+                                            class="border border-primary text-primary py-1.5 sm:py-2 rounded-full text-[10px] sm:text-[11px] font-medium hover:bg-primary hover:text-white transition-colors cursor-pointer">Add
+                                            Cart</button>
+                                        <button
+                                            class="bg-primary text-white py-1.5 sm:py-2 rounded-full text-[10px] sm:text-[11px] font-medium hover:opacity-90 transition-opacity cursor-pointer">Buy
+                                            Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card 9 -->
+                            <div
+                                class="rounded-xl border border-primary/10 overflow-hidden flex flex-col justify-between group bg-white shadow-sm">
+                                <!-- Image Section -->
+                                <div class="aspect-square w-full overflow-hidden relative bg-white">
+                                    <img src="./images/about_img/Product Pic & Discount Banner 6 (13).png" alt="Product"
+                                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                                </div>
+                                <!-- Description  -->
+                                <div class="bg-[#FDF9F1] p-2.5 sm:p-3 flex flex-col justify-between flex-grow">
+                                    <div class="flex justify-between items-start mb-1">
+                                        <h3 class="text-xs sm:text-sm font-semibold text-primary truncate pr-2">Lorem
+                                            ipsum</h3>
+                                        <span
+                                            class="text-primary hover:text-red-500 transition-colors text-sm cursor-pointer">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </span>
+                                    </div>
+                                    <div
+                                        class="flex items-center text-primary text-[9px] sm:text-[10px] mb-1.5 sm:mb-2">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                                        <span class="text-primary ml-1 text-[8px] sm:text-[10px]">(4)</span>
+                                    </div>
+                                    <div class="flex items-center space-x-2 mb-3">
+                                        <span class="text-sm font-bold text-primary">$ 80</span>
+                                        <span class="text-xs text-red-500 line-through opacity-70">$ 94</span>
+                                    </div>
+                                    <div class="grid grid-cols-1 min-[400px]:grid-cols-2 gap-1.5 sm:gap-2 mt-auto">
+                                        <button
+                                            class="border border-primary text-primary py-1.5 sm:py-2 rounded-full text-[10px] sm:text-[11px] font-medium hover:bg-primary hover:text-white transition-colors cursor-pointer">Add
+                                            Cart</button>
+                                        <button
+                                            class="bg-primary text-white py-1.5 sm:py-2 rounded-full text-[10px] sm:text-[11px] font-medium hover:opacity-90 transition-opacity cursor-pointer">Buy
+                                            Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card 10 -->
+                            <div
+                                class="rounded-xl border border-primary/10 overflow-hidden flex flex-col justify-between group bg-white shadow-sm">
+                                <!-- Image Section -->
+                                <div class="aspect-square w-full overflow-hidden relative bg-white">
+                                    <img src="./images/about_img/Product Pic & Discount Banner 6 (14).png" alt="Product"
+                                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                                </div>
+                                <!-- Description -->
+                                <div class="bg-[#FDF9F1] p-2.5 sm:p-3 flex flex-col justify-between flex-grow">
+                                    <div class="flex justify-between items-start mb-1">
+                                        <h3 class="text-xs sm:text-sm font-semibold text-primary truncate pr-2">Lorem
+                                            ipsum</h3>
+                                        <span
+                                            class="text-primary hover:text-red-500 transition-colors text-sm cursor-pointer">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </span>
+                                    </div>
+                                    <div
+                                        class="flex items-center text-primary text-[9px] sm:text-[10px] mb-1.5 sm:mb-2">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star-half-alt"></i>
+                                        <span class="text-primary ml-1 text-[8px] sm:text-[10px]">(4)</span>
+                                    </div>
+                                    <div class="flex items-center space-x-2 mb-3">
+                                        <span class="text-sm font-bold text-primary">$ 80</span>
+                                        <span class="text-xs text-red-500 line-through opacity-70">$ 94</span>
+                                    </div>
+                                    <div class="grid grid-cols-1 min-[400px]:grid-cols-2 gap-1.5 sm:gap-2 mt-auto">
+                                        <button
+                                            class="border border-primary text-primary py-1.5 sm:py-2 rounded-full text-[10px] sm:text-[11px] font-medium hover:bg-primary hover:text-white transition-colors cursor-pointer">Add
+                                            Cart</button>
+                                        <button
+                                            class="bg-primary text-white py-1.5 sm:py-2 rounded-full text-[10px] sm:text-[11px] font-medium hover:opacity-90 transition-opacity cursor-pointer">Buy
+                                            Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- SHOW MORE BUTTON -->
+                        <div class="flex justify-center mb-16 mt-8">
+                            <button
+                                class="bg-primary text-white py-3 px-10 rounded-full text-sm font-semibold hover:opacity-90 transition-opacity cursor-pointer shadow-md">
+                                Show more products
+                            </button>
+                        </div>
+
+                        <!-- RECENTLY VIEWED P -->
+                        <div class="w-full relative mb-12">
+                            <h2 class="text-xl sm:text-2xl font-bold text-center text-primary mb-10 font-poppins">
+                                Recently viewed products
+                            </h2>
+
+                            <div class="relative group w-full">
+                                <!--  Arrow -->
+                                <button id="recent-prev"
+                                    class="absolute -left-4 sm:-left-6 top-[35%] -translate-y-1/2 w-10 h-10 bg-white shadow-md rounded-full flex items-center justify-center text-primary hover:bg-gray-50 transition-all z-10 cursor-pointer border border-gray-100 hidden sm:flex">
+                                    <i class="fa-solid fa-chevron-left text-sm"></i>
+                                </button>
+
+                                <!-- Carousel Container -->
+                                <div id="recent-carousel"
+                                    class="flex gap-4 sm:gap-4 lg:gap-5 overflow-x-auto snap-x snap-mandatory scroll-smooth [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] px-2 py-4">
+
+                                    <!-- Carousel Item 1 -->
+                                    <div
+                                        class="snap-start flex-none w-[130px] sm:w-[150px] lg:w-[calc(14.28%-1.1rem)] flex flex-col group/card cursor-pointer">
+                                        <div
+                                            class="w-full aspect-[4/5] rounded-xl overflow-hidden mb-3 relative bg-gray-50">
+                                            <img src="./images/contact_img/y1 (1).png" alt="Product"
+                                                class="w-full h-full object-cover group-hover/card:scale-110 transition-transform duration-300">
+                                        </div>
+                                        <h4 class="text-xs sm:text-sm text-gray-700 font-semibold truncate">Product 1
+                                        </h4>
+                                        <div class="flex items-center gap-1 text-[10px] text-gray-500 mt-1 mb-1.5">
+                                            <div class="flex text-primary space-x-[1px]">
+                                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                            </div>
+                                            <span class="truncate">4 Reviews</span>
+                                        </div>
+                                        <span class="text-sm font-bold text-gray-900">$55</span>
+                                    </div>
+
+                                    <!-- Carousel Item 2 -->
+                                    <div
+                                        class="snap-start flex-none w-[130px] sm:w-[150px] lg:w-[calc(14.28%-1.1rem)] flex flex-col group/card cursor-pointer">
+                                        <div
+                                            class="w-full aspect-[4/5] rounded-xl overflow-hidden mb-3 relative bg-gray-50">
+                                            <img src="./images/contact_img/y4.png" alt="Product"
+                                                class="w-full h-full object-cover group-hover/card:scale-110 transition-transform duration-300">
+                                        </div>
+                                        <h4 class="text-xs sm:text-sm text-gray-700 font-semibold truncate">Product 2
+                                        </h4>
+                                        <div class="flex items-center gap-1 text-[10px] text-gray-500 mt-1 mb-1.5">
+                                            <div class="flex text-primary space-x-[1px]">
+                                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                            </div>
+                                            <span class="truncate">4 Reviews</span>
+                                        </div>
+                                        <span class="text-sm font-bold text-gray-900">$55</span>
+                                    </div>
+
+                                    <!-- Carousel Item 3 -->
+                                    <div
+                                        class="snap-start flex-none w-[130px] sm:w-[150px] lg:w-[calc(14.28%-1.1rem)] flex flex-col group/card cursor-pointer">
+                                        <div
+                                            class="w-full aspect-[4/5] rounded-xl overflow-hidden mb-3 relative bg-gray-50">
+                                            <img src="./images/contact_img/y1 (2).png" alt="Product"
+                                                class="w-full h-full object-cover group-hover/card:scale-110 transition-transform duration-300">
+                                        </div>
+                                        <h4 class="text-xs sm:text-sm text-gray-700 font-semibold truncate">Product 3
+                                        </h4>
+                                        <div class="flex items-center gap-1 text-[10px] text-gray-500 mt-1 mb-1.5">
+                                            <div class="flex text-primary space-x-[1px]">
+                                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                            </div>
+                                            <span class="truncate">4 Reviews</span>
+                                        </div>
+                                        <span class="text-sm font-bold text-gray-900">$55</span>
+                                    </div>
+
+                                    <!-- Carousel Item 4 -->
+                                    <div
+                                        class="snap-start flex-none w-[130px] sm:w-[150px] lg:w-[calc(14.28%-1.1rem)] flex flex-col group/card cursor-pointer">
+                                        <div
+                                            class="w-full aspect-[4/5] rounded-xl overflow-hidden mb-3 relative bg-gray-50">
+                                            <img src="./images/contact_img/y1 (3).png" alt="Product"
+                                                class="w-full h-full object-cover group-hover/card:scale-110 transition-transform duration-300">
+                                        </div>
+                                        <h4 class="text-xs sm:text-sm text-gray-700 font-semibold truncate">Product 4
+                                        </h4>
+                                        <div class="flex items-center gap-1 text-[10px] text-gray-500 mt-1 mb-1.5">
+                                            <div class="flex text-primary space-x-[1px]">
+                                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                            </div>
+                                            <span class="truncate">4 Reviews</span>
+                                        </div>
+                                        <span class="text-sm font-bold text-gray-900">$55</span>
+                                    </div>
+
+                                    <!-- Carousel Item 5 -->
+                                    <div
+                                        class="snap-start flex-none w-[130px] sm:w-[150px] lg:w-[calc(14.28%-1.1rem)] flex flex-col group/card cursor-pointer">
+                                        <div
+                                            class="w-full aspect-[4/5] rounded-xl overflow-hidden mb-3 relative bg-gray-50">
+                                            <img src="./images/contact_img/y1 (1).png" alt="Product"
+                                                class="w-full h-full object-cover group-hover/card:scale-110 transition-transform duration-300">
+                                        </div>
+                                        <h4 class="text-xs sm:text-sm text-gray-700 font-semibold truncate">Product 5
+                                        </h4>
+                                        <div class="flex items-center gap-1 text-[10px] text-gray-500 mt-1 mb-1.5">
+                                            <div class="flex text-primary space-x-[1px]">
+                                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                            </div>
+                                            <span class="truncate">4 Reviews</span>
+                                        </div>
+                                        <span class="text-sm font-bold text-gray-900">$55</span>
+                                    </div>
+
+                                    <!-- Carousel Item 6 -->
+                                    <div
+                                        class="snap-start flex-none w-[130px] sm:w-[150px] lg:w-[calc(14.28%-1.1rem)] flex flex-col group/card cursor-pointer">
+                                        <div
+                                            class="w-full aspect-[4/5] rounded-xl overflow-hidden mb-3 relative bg-gray-50">
+                                            <img src="./images/contact_img/y4.png" alt="Product"
+                                                class="w-full h-full object-cover group-hover/card:scale-110 transition-transform duration-300">
+                                        </div>
+                                        <h4 class="text-xs sm:text-sm text-gray-700 font-semibold truncate">Product 6
+                                        </h4>
+                                        <div class="flex items-center gap-1 text-[10px] text-gray-500 mt-1 mb-1.5">
+                                            <div class="flex text-primary space-x-[1px]">
+                                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                            </div>
+                                            <span class="truncate">4 Reviews</span>
+                                        </div>
+                                        <span class="text-sm font-bold text-gray-900">$55</span>
+                                    </div>
+
+                                    <!-- Carousel Item 7 -->
+                                    <div
+                                        class="snap-start flex-none w-[130px] sm:w-[150px] lg:w-[calc(14.28%-1.1rem)] flex flex-col group/card cursor-pointer">
+                                        <div
+                                            class="w-full aspect-[4/5] rounded-xl overflow-hidden mb-3 relative bg-gray-50">
+                                            <img src="./images/contact_img/y1 (2).png" alt="Product"
+                                                class="w-full h-full object-cover group-hover/card:scale-110 transition-transform duration-300">
+                                        </div>
+                                        <h4 class="text-xs sm:text-sm text-gray-700 font-semibold truncate">Product 7
+                                        </h4>
+                                        <div class="flex items-center gap-1 text-[10px] text-gray-500 mt-1 mb-1.5">
+                                            <div class="flex text-primary space-x-[1px]">
+                                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                            </div>
+                                            <span class="truncate">4 Reviews</span>
+                                        </div>
+                                        <span class="text-sm font-bold text-gray-900">$55</span>
+                                    </div>
+
+                                    <!-- Carousel Item 8 -->
+                                    <div id="extra-carousel-item"
+                                        class="snap-start flex-none w-[130px] sm:w-[150px] lg:w-[calc(14.28%-1.1rem)] flex-col group/card cursor-pointer hidden">
+                                        <div
+                                            class="w-full aspect-[4/5] rounded-xl overflow-hidden mb-3 relative bg-gray-50">
+                                            <img src="./images/contact_img/y1 (3).png" alt="Product"
+                                                class="w-full h-full object-cover group-hover/card:scale-110 transition-transform duration-300">
+                                        </div>
+                                        <h4 class="text-xs sm:text-sm text-gray-700 font-semibold truncate">Product 8
+                                        </h4>
+                                        <div class="flex items-center gap-1 text-[10px] text-gray-500 mt-1 mb-1.5">
+                                            <div class="flex text-primary space-x-[1px]">
+                                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                            </div>
+                                            <span class="truncate">4 Reviews</span>
+                                        </div>
+                                        <span class="text-sm font-bold text-gray-900">$55</span>
+                                    </div>
+
+                                </div>
+                                <!-- Right Arrow -->
+                                <button id="recent-next"
+                                    class="absolute -right-4 sm:-right-6 top-[35%] -translate-y-1/2 w-10 h-10 bg-white shadow-md rounded-full flex items-center justify-center text-primary hover:bg-gray-50 transition-all z-10 cursor-pointer border border-gray-100 hidden sm:flex">
+                                    <i class="fa-solid fa-chevron-right text-sm"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+
+
+
+    <!-------------- Footer --------------->
+    <footer>
+        <div class="bg-[#F8F3E5] py-16 text-gray-800">
+            <div class="max-w-[1820px] mx-auto px-[50px] grid grid-cols-12 gap-6 items-start">
+                <!-- Paragraph -->
+                <p class="col-span-12 lg:col-span-4 text-primary text-sm md:text-base leading-relaxed pr-0 lg:pr-8">
+                    At Rituals, we redefine gifting in India with an extensive range of 5,000+ gifts crafted for retail
+                    and
+                    bulk needs. From premium and utility gifts to return and corporate gifting, each product is designed
+                    to
+                    elevate every occasion with quality and elegance.
+                </p>
+                <!--  Details Column -->
+                <div class="col-span-6 md:col-span-3 lg:col-span-2">
+                    <p class="font-bold text-sm md:text-base text-[var(--color-primary)] mb-4">Details</p>
+                    <ul class="space-y-3 text-xs md:text-sm text-primary list-none">
+                        <li><a href="#" class="hover:underline">About Us</a></li>
+                        <li><a href="#" class="hover:underline">FAQs</a></li>
+                        <li><a href="#" class="hover:underline">Blogs</a></li>
+                    </ul>
+                </div>
+                <!-- 3. Contact Column  -->
+                <div class="col-span-6 md:col-span-3 lg:col-span-2">
+                    <p class="font-bold text-sm md:text-base text-[var(--color-primary)] mb-4">Contact</p>
+                    <ul class="space-y-3 text-xs md:text-sm text-primary list-none">
+                        <li><a href="mailto:support@rituals.com"
+                                class="hover:underline break-all">support@rituals.com</a>
+                        </li>
+                        <li><a href="tel:+91948403302114" class="hover:underline">+91 948403302114</a></li>
+                    </ul>
+                </div>
+                <!--  Customer -------------->
+                <div class="col-span-6 md:col-span-3 lg:col-span-2">
+                    <p class="font-bold text-sm md:text-base text-[var(--color-primary)] mb-4">Customer Policy</p>
+                    <ul class="space-y-3 text-xs md:text-sm text-primary list-none">
+                        <li><a href="#" class="hover:underline">Terms &amp; Conditions</a></li>
+                        <li><a href="#" class="hover:underline">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:underline">Return &amp; Refunds</a></li>
+                        <li><a href="#" class="hover:underline">Shipping</a></li>
+                        <li><a href="#" class="hover:underline">Terms of Service</a></li>
+                        <li><a href="#" class="hover:underline">Refund Policy</a></li>
+                    </ul>
+                </div>
+                <!--  Support Column -->
+                <div class="col-span-6 md:col-span-3 lg:col-span-2">
+                    <p class="font-bold text-sm md:text-base text-[var(--color-primary)] mb-4">Support</p>
+                    <ul class="space-y-3 text-xs md:text-sm text-primary list-none">
+                        <li><a href="#" class="hover:underline">Track your order</a></li>
+                        <li><a href="#" class="hover:underline">Register on Rituals</a></li>
+                        <li><a href="#" class="hover:underline">Order History</a></li>
+                    </ul>
+                </div>
+                <!--  Logo -->
+                <div class="col-span-12 lg:col-span-7 mt-8 lg:mt-4 flex items-center gap-3">
+                    <p
+                        class="font-bold text-6xl md:text-8xl lg:text-[130px] tracking-tight text-[var(--color-primary)] leading-none select-none m-0">
+                        Rituals </p>
+                    <span
+                        class="shrink-0 w-8 h-8 md:w-12 md:h-12 rounded-full bg-[#F9F6C1] border border-[var(--color-primary)] flex items-center justify-center text-sm md:text-lg font-bold text-[var(--color-primary)]">
+                        R
+                    </span>
+                </div>
+                <!--  Bottom Utilities-->
+                <div
+                    class="col-span-12 lg:col-span-5 mt-8 lg:mt-4 flex flex-col justify-between items-start lg:items-end gap-6 lg:h-full">
+                    <!-- Back to Top Button -->
+                    <a href="#top" aria-label="Back to top"
+                        class="w-11 h-11 rounded-full bg-[#F9F6C1] border border-[var(--color-primary)] flex items-center justify-center text-[var(--color-primary)] hover:opacity-80 transition-opacity">
+                        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m18 15-6-6-6 6" />
+                        </svg>
+                    </a>
+
+                    <div
+                        class="w-full flex flex-col md:flex-row md:items-center justify-between gap-4 text-xs md:text-sm text-gray-600">
+                        <!-- Copyright -->
+                        <a href="#" class="hover:text-[var(--color-primary)] text-primary transition-colors underline">
+                            © 2026 Rituals. All rights reserved by ari
+                        </a>
+                        <!-- Social Links  -->
+                        <ul class="flex flex-wrap items-center gap-4 list-none underline">
+                            <li><a href="#"
+                                    class="hover:text-[var(--color-primary)] text-primary underline">Facebook</a>
+                            </li>
+                            <li><a href="#"
+                                    class="hover:text-[var(--color-primary)] text-primary underline">Instagram</a>
+                            </li>
+                            <li><a href="#" class="hover:text-[var(--color-primary)] text-primary underline">Behance</a>
+                            </li>
+                            <li><a href="#"
+                                    class="hover:text-[var(--color-primary)] text-primary underline">Dribbble</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- jQuery-->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - Rituals</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="./output/style.css">
+
+</head>
+
+<body>
+
+    <!-------- HEADER SECTION -------->
+    <header>
+        <div class="bg-[#F8F3E5] w-full overflow-hidden flex flex-col">
+            <!--- Top Banner -->
+            <div class="w-full">
+                <div
+                    class="max-w-[1820px] mx-auto px-[50px] py-2.5 flex justify-between items-center text-[13px] text-primary">
+                    <div class="hidden md:block flex-1"></div>
+                    <div class="flex-1 text-center font-medium font-inter">Exclusive 20% OFF on any amount</div>
+                    <div class="hidden md:flex flex-1 justify-end">
+                        <a href="#"
+                            class="hover:text-[var(--color-primary)] font-medium transition-colors text-primary">Login /
+                            Signup</a>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full border-b border-primary"></div>
+
+            <!-- Navbar -->
+            <div class="w-full z-40 relative">
+                <div class="max-w-[1820px] mx-auto px-[20px] md:px-[50px] py-3 flex items-center justify-between">
+                    <!-- Logo -->
+                    <a href="#" class="text-4xl font-bold text-[var(--color-primary)] font-pacifico">Rituals</a>
+
+                    <!-- Nav Links -->
+                    <nav class="hidden md:flex space-x-8 items-center">
+                        <a href="index.html"
+                            class="nav-link text-[var(--color-primary)] font-semibold border-b-2 border-[var(--color-primary)] pb-1">Home</a>
+                        <a href="about.html"
+                            class="nav-link text-primary hover:text-[var(--color-primary)] transition-colors">About
+                            Us</a>
+                        <a href="blog.html"
+                            class="nav-link flex items-center gap-1 text-[var(--color-primary)] font-semibold border-b-2 border-[var(--color-primary)] pb-1 cursor-pointer transition-colors">
+                            Shop
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </a>
+
+                        <a href="blog.html"
+                            class="nav-link text-primary hover:text-[var(--color-primary)] transition-colors">Blog</a>
+                        <a href="contact.html"
+                            class="nav-link text-primary hover:text-[var(--color-primary)] transition-colors">Contact</a>
+                    </nav>
+
+                    <!-- Icons & Search -->
+                    <div class="hidden lg:flex items-center space-x-6">
+                        <div class="relative">
+                            <input type="text" placeholder="What are you looking for..."
+                                class="search-input bg-white/60 border border-primary/20 rounded-full py-1.5 pl-4 pr-10 text-sm focus:bg-white transition-all w-[280px] outline-none" />
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 absolute right-3 top-2 text-primary"
+                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                            </svg>
+                        </div>
+                        <div class="flex items-center space-x-4 text-primary">
+                            <a href="#" class="hover:text-[var(--color-primary)] transition-colors"><i
+                                    class="fa-regular fa-user text-xl"></i></a>
+                            <a href="#" class="hover:text-[var(--color-primary)] transition-colors"><i
+                                    class="fa-regular fa-heart text-xl"></i></a>
+                            <a href="#" class="hover:text-[var(--color-primary)] transition-colors relative">
+                                <i class="fa-solid fa-cart-shopping text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- TOGGLER -->
+                    <div class="flex md:hidden items-center gap-5 relative z-[60]">
+                        <a href="#" class="text-primary relative">
+                            <i class="fa-solid fa-cart-shopping text-xl"></i>
+                            <span
+                                class="absolute -top-2 -right-2 bg-[var(--color-primary)] text-white text-[10px] font-bold px-[5px] py-[1px] rounded-full">0</span>
+                        </a>
+                        <button id="mobile-menu-btn"
+                            class="text-[var(--color-primary)] text-2xl focus:outline-none cursor-pointer">
+                            <i class="fa-solid fa-bars transition-all duration-300"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Panel -->
+    <div id="mobile-menu-panel"
+        class="fixed top-0 left-0 h-full w-[280px] bg-[#F8F3E5] shadow-2xl z-50 flex flex-col p-6 overflow-y-auto transform -translate-x-full transition-transform duration-300 [&.is-open]:translate-x-0">
+        <div class="mb-8 border-b border-primary/20 pb-4 mt-2">
+            <a href="#" class="text-3xl font-bold text-[var(--color-primary)] font-pacifico">Rituals</a>
+        </div>
+        <nav class="flex flex-col space-y-4">
+            <a href="index.html"
+                class="text-[var(--color-primary)] font-semibold text-lg border-b border-primary/10 pb-2">Home</a>
+            <a href="about.html"
+                class="text-primary hover:text-[var(--color-primary)] font-medium text-lg border-b border-primary/10 pb-2">About
+                Us</a>
+            <a href="shop.html"
+                class="text-primary hover:text-[var(--color-primary)] font-medium text-lg flex items-center justify-between border-b border-primary/10 pb-2">
+                Shop <i class="fa-solid fa-chevron-down text-xs"></i>
+            </a>
+            <a href="blog.html"
+                class="text-primary hover:text-[var(--color-primary)] font-medium text-lg border-b border-primary/10 pb-2">Blog</a>
+            <a href="contact.html"
+                class="text-primary hover:text-[var(--color-primary)] font-medium text-lg border-b border-primary/10 pb-2">Contact</a>
+        </nav>
+        <div class="mt-8 pt-4 flex flex-col gap-4">
+            <div class="relative w-full">
+                <input type="text" placeholder="Search..."
+                    class="search-input bg-white w-full border border-primary/20 rounded-full py-2 pl-4 pr-10 text-sm focus:outline-none" />
+                <i class="fa-solid fa-magnifying-glass absolute right-4 top-3 text-primary text-sm"></i>
+            </div>
+            <a href="#"
+                class="block text-center bg-[var(--color-primary)] text-white py-2.5 rounded-full font-medium text-sm mt-2">Login
+                / Signup</a>
+        </div>
+    </div>
+
+    <main>
+        <div
+            class="w-full max-w-[1820px] mx-auto px-4 sm:px-[50px] pt-8 pb-2 text-xs sm:text-sm text-[var(--color-primary)] font-medium">
+            <a href="index.html" class="hover:underline">Home page</a> &gt; <span>Return Gifts</span> &gt; <span>Printed
+                Tin jar</span>
+        </div>
+
+        <!-- Product  -->
+        <section class="w-full max-w-[1820px] mx-auto px-4 sm:px-[50px] pb-8 pt-2">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-stretch">
+
+                <div
+                    class="col-span-12 lg:col-span-7 bg-[#EBE7E0] p-4 sm:p-6 rounded-2xl border border-gray-300 flex flex-col gap-4 h-full">
+
+                    <div
+                        class="w-full  rounded-2xl overflow-hidden shadow-sm border border-gray-300 p-3 flex-1 flex flex-col min-h-[300px]">
+                        <div class="w-full flex-1 relative">
+                            <img src="./images/shop_img(4th)/Rectangle 72.png" alt="Kids Printed Tin Jar"
+                                class="absolute inset-0 w-full h-full object-cover rounded-xl" />
+                        </div>
+                    </div>
+
+                    <div
+                        class="w-full  rounded-xl overflow-hidden border border-gray-300 p-2 h-[120px] sm:h-[140px] shrink-0">
+                        <img src="./images/shop_img(4th)/Rectangle 74.png" alt="Tin Jar Full Width View"
+                            class="w-full h-full object-cover rounded-lg" />
+                    </div>
+
+                    <div class="grid grid-cols-12 gap-4 h-[160px] sm:h-[180px] shrink-0">
+                        <div
+                            class="col-span-12 sm:col-span-7 rounded-xl overflow-hidden border border-gray-300 p-2 h-full">
+                            <img src="./images/shop_img(4th)/Rectangle 73.png" alt="Tin Jar Open View 60%"
+                                class="w-full h-full object-cover rounded-lg" />
+                        </div>
+                        <div
+                            class="col-span-12 sm:col-span-5 rounded-xl overflow-hidden border border-gray-300 p-2 h-full">
+                            <img src="./images/shop_img(4th)/Rectangle 75.png" alt="Tin Jar Lid View 40%"
+                                class="w-full h-full object-cover rounded-lg" />
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-12 gap-4 h-[160px] sm:h-[180px] shrink-0">
+                        <div
+                            class="col-span-12 sm:col-span-6 rounded-xl overflow-hidden border border-gray-300 p-2 h-full">
+                            <img src="./images/shop_img(4th)/Rectangle 74.png" alt="Tin Jar Angle View 50%"
+                                class="w-full h-full object-cover rounded-lg" />
+                        </div>
+                        <div
+                            class="col-span-12 sm:col-span-6 rounded-xl overflow-hidden border border-gray-300 p-2 h-full">
+                            <img src="./images/shop_img(4th)/Rectangle 77.png" alt="Tin Jar Detail View 50%"
+                                class="w-full h-full object-cover rounded-lg" />
+                        </div>
+                    </div>
+                </div>
+                <!-- Right Side -->
+                <div class="col-span-12 lg:col-span-5 flex flex-col justify-start h-full">
+                    <!-- Product Icons-->
+                    <div class="flex justify-between items-start mb-2">
+                        <h1 class="text-2xl sm:text-3xl font-bold font-poppins text-primary">
+                            Kids Printed Tin Jar
+                        </h1>
+                        <div class="flex items-center gap-4 text-primary mt-1">
+                            <button class="hover:text-[var(--color-primary)] transition-colors"><i
+                                    class="fa-solid fa-share-nodes text-xl"></i></button>
+                            <button class="hover:text-red-500 transition-colors"><i
+                                    class="fa-regular fa-heart text-xl"></i></button>
+                        </div>
+                    </div>
+                    <!-- Rating & Reviews -->
+                    <div class="flex items-center gap-2 mb-3">
+                        <div class="text-primary text-sm">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <span class="text-xs sm:text-sm text-primary font-medium">4 Reviews</span>
+                    </div>
+                    <!-- Product  -->
+                    <p class="text-xs sm:text-sm text-primary mb-4">
+                        Product ID: <span class="font-semibold text-primary">546820</span>
+                    </p>
+                    <!-- Price -->
+                    <div class="flex items-center gap-4 mb-4">
+                        <span class="text-2xl sm:text-3xl font-bold text-[var(--color-primary)]">$14.00</span>
+                        <span class="text-base sm:text-lg text-red-500 line-through">$24.00</span>
+                    </div>
+                    <!-- Quantity  -->
+                    <div class="flex flex-wrap items-center gap-4 mb-6">
+                        <!-- Square Buttons -->
+                        <div class="flex items-center gap-3">
+                            <button type="button"
+                                class="w-10 h-10 flex items-center justify-center border border-gray-300 rounded-md bg-white shadow-sm text-primary hover:bg-gray-100 transition-colors cursor-pointer text-lg font-medium">-</button>
+                            <span class="font-medium text-base w-6 text-center">10</span>
+                            <button type="button"
+                                class="w-10 h-10 flex items-center justify-center border border-gray-300 rounded-md bg-white shadow-sm text-primary hover:bg-gray-100 transition-colors cursor-pointer text-lg font-medium">+</button>
+                        </div>
+                        <!-- Add to Cart -->
+                        <button type="button"
+                            class="flex-1 min-w-[130px] border-2 border-[var(--color-primary)] text-[var(--color-primary)] font-medium text-sm py-3 px-6 rounded-full hover:bg-[var(--color-primary)] hover:text-white transition-all shadow-sm cursor-pointer">
+                            Add to Cart
+                        </button>
+                        <!-- Buy Now -->
+                        <button type="button"
+                            class="flex-1 min-w-[130px] bg-[var(--color-primary)] text-white font-medium text-sm py-3 px-6 rounded-full hover:bg-[#3d0525] transition-all shadow-md cursor-pointer">
+                            Buy Now
+                        </button>
+                    </div>
+                    <!-- Minimum Order-->
+                    <p class="text-xs sm:text-sm text-black mb-6 font-medium">
+                        Minimum order quantity <span class=" font-semibold"> -10 pcs/bag</span>
+                    </p>
+                    <!-- Offers Cards  -->
+                    <div class="mb-6 relative">
+                        <div class="text-xs sm:text-sm font-semibold text-primary mb-3">
+                            <img src="./images/shop_img(4th)/badge-percent.png" alt="icon">
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                            <!-- Card 1 -->
+                            <div class="bg-[#F8F3E5] p-3 rounded-xl border border-amber-100 text-xs">
+                                <p class="font-bold text-[var(--color-primary)] mb-1">Cashback</p>
+                                <p class="text-primary">Upto $1.2 cashback as smart pay balance when you pay with it
+                                    lorem ip.... <span class="text-blue-500 font-medium cursor-pointer">1 offer ></span>
+                                </p>
+                            </div>
+                            <!-- Card 2 -->
+                            <div class="bg-[#F8F3E5] p-3 rounded-xl border border-amber-100 text-xs">
+                                <p class="font-bold text-[var(--color-primary)] mb-1">Bank Offer</p>
+                                <p class="text-primary">Upto $1.2 cashback as smart pay balance when you pay with it
+                                    lorem ip.... <span class="text-blue-500 font-medium cursor-pointer">1 offer ></span>
+                                </p>
+                            </div>
+                            <!-- Card-->
+                            <div
+                                class="bg-[#F8F3E5] p-3 rounded-xl border border-amber-100 text-xs relative flex items-center justify-between">
+                                <div class="pr-6">
+                                    <p class="font-bold text-[var(--color-primary)] mb-1">Card Offer</p>
+                                    <p class="text-primary">Upto $1.2 cashback as smart pay balance when you pay with it
+                                        lorem ip.... <span class="text-blue-500 font-medium cursor-pointer">1 offer
+                                            ></span>
+                                    </p>
+                                </div>
+                                <button>
+                                    <p
+                                        class="absolute -right-4 top-1/2 -translate-y-1/2 z-20 w-8 h-8 rounded-full flex items-center justify-center bg-white border border-gray-200 shadow-md text-black hover:bg-gray-50 transition-all cursor-pointer">
+                                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                                    </p>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Feature Icons -->
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8 py-4 border-y border-gray-200">
+                        <div class="flex flex-col items-center text-center">
+                            <div class="w-10 h-10 mb-2 flex items-center justify-center bg-[#F8F3E5] rounded-full p-2">
+                                <img src="./images/shop_img(4th)/Frame 13.png" alt="Pay on Delivery"
+                                    class="w-full h-full object-contain" />
+                            </div>
+                            <span class="text-xs font-medium text-primary">Pay on Delivery</span>
+                        </div>
+                        <div class="flex flex-col items-center text-center">
+                            <div class="w-10 h-10 mb-2 flex items-center justify-center bg-[#F8F3E5] rounded-full p-2">
+                                <img src="./images/shop_img(4th)/Frame 11.png" alt="Secure Transaction"
+                                    class="w-full h-full object-contain" />
+                            </div>
+                            <span class="text-xs font-medium text-primary font-poppins">Secure Transaction</span>
+                        </div>
+                        <div class="flex flex-col items-center text-center">
+                            <div class="w-10 h-10 mb-2 flex items-center justify-center bg-[#F8F3E5] rounded-full p-2">
+                                <img src="./images/shop_img(4th)/Frame 9.png" alt="Quick Delivery"
+                                    class="w-full h-full object-contain" />
+                            </div>
+                            <span class="text-xs font-medium text-primary font-poppins">Rituals Trusted Delivery</span>
+                        </div>
+                        <div class="flex flex-col items-center text-center">
+                            <div class="w-10 h-10 mb-2 flex items-center justify-center bg-[#F8F3E5] rounded-full p-2">
+                                <img src="./images/shop_img(4th)/Frame 10.png" alt="Free Delivery"
+                                    class="w-full h-full object-contain" />
+                            </div>
+                            <span class="text-xs font-medium text-primary">Free Delivery</span>
+                        </div>
+                    </div>
+
+                    <!-- Product Specification -->
+                    <div class="mb-8 flex-1">
+                        <h3 class="text-lg font-semibold text-[var(--color-primary)] mb-3">Product Specification</h3>
+                        <ul class="list-disc list-inside space-y-2 text-xs sm:text-sm text-primary leading-relaxed">
+                            <li>Brighten up your storage with this beautiful tin jar, featuring a delightful and
+                                colorful kids design.</li>
+                            <li>Made with premium quality tin, it is durable and completely safe for storing various
+                                items.</li>
+                            <li>Adorned with vibrant graphic prints, adding a cheerful touch to your home decor.</li>
+                            <li>The tight-fitting lid keeps contents fresh; ideal for gifting or personal utility use.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!--  Reviews Section -->
+                    <div
+                        class="mt-auto bg-[#F8F3E5] p-5 sm:p-6 rounded-2xl border border-amber-100 flex flex-col gap-4">
+                        <div>
+                            <h3 class="text-xl sm:text-2xl font-semibold mb-2">Customer reviews</h3>
+                            <div class="flex items-center gap-2 mb-2">
+                                <div class="flex text-[var(--color-primary)] gap-1 text-lg">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
+                                <span class="text-sm font-medium text-primary">4 Reviews</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="flex text-[var(--color-primary)] gap-1 text-[13px] w-[120px]">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="flex-1 h-1.5 bg-white mx-2 rounded-full p-2"></div>
+                            <span class="text-xs sm:text-sm font-medium w-[65px] text-right">5 Reviews</span>
+                        </div>
+
+                        <div class="flex items-center gap-3">
+                            <div class="flex text-[var(--color-primary)] gap-1 text-[13px] w-[120px]">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="flex-1 h-1.5 bg-white mx-2 rounded-full p-2"></div>
+                            <span class="text-xs sm:text-sm font-medium text-primary w-[65px] text-right">4
+                                Reviews</span>
+                        </div>
+
+                        <div class="flex items-center gap-3">
+                            <div class="flex text-[var(--color-primary)] gap-1 text-[13px] w-[120px]">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="flex-1 h-1.5 bg-white p-2 mx-2 rounded-full"></div>
+                            <span class="text-xs sm:text-sm font-medium text-primary w-[65px] text-right">3
+                                Reviews</span>
+                        </div>
+
+                        <div class="flex items-center gap-3">
+                            <div class="flex text-[var(--color-primary)] gap-1 text-[13px] w-[120px]">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="flex-1 h-1.5 bg-white mx-2 rounded-full p-2"></div>
+                            <span class="text-xs sm:text-sm font-medium text-primary w-[65px] text-right">2
+                                Reviews</span>
+                        </div>
+
+                        <div class="flex items-center gap-3">
+                            <div class="flex text-[var(--color-primary)] gap-1 text-[13px] w-[120px]">
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="flex-1 h-1.5 bg-white p-2 mx-2 rounded-full"></div>
+                            <span class="text-xs sm:text-sm font-medium text-primary w-[65px] text-right">1
+                                Reviews</span>
+                        </div>
+                        <!-- Button -->
+                        <div class="mt-4 flex justify-center w-full">
+                            <button type="button"
+                                class="w-[85%] bg-[var(--color-primary)] text-white font-medium text-sm py-3 px-6 rounded-2xl font-poppins hover:bg-[#3d0525] transition-all shadow-md cursor-pointer">
+                                Give a review
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- You May Also Like Section -->
+         <section class="max-w-[1820px] mx-auto px-[50px] mt-24 pb-20">
+            <div class="mb-16">
+                <!--  Heading -->
+                <h3
+                    class="text-center font-semibold font-poppins text-xl md:text-2xl text-[var(--color-primary)] mb-10">
+                    You may also like
+                </h3>
+                <div class="relative w-full max-w-[1450px] mx-auto">
+                    <button
+                        class="absolute left-3 top-[105px] -translate-y-1/2 z-20 w-10 h-10 rounded-full flex items-center justify-center backdrop-blur-md border border-white/80 shadow-md text-black hover:bg-white/90 transition-all cursor-pointer">
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </button>
+                    <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6 justify-items-center">
+                        <!-- Card 1 -->
+                        <a href="#" class="group block w-full max-w-[280px]">
+                            <div class="w-full h-[250px] bg-gray-50 rounded-[20px] overflow-hidden mb-3 relative">
+                                <img src="./images/shop_img(4th)/Rg1.png" alt="Card"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                            </div>
+                            <div class="flex flex-col px-1">
+                                <div class="flex justify-between items-start mb-1">
+                                    <h4 class="font-semibold font-poppins text-sm text-primary">Mural Printed Tin Jar
+                                    </h4>
+                                    <span class="text-primary hover:text-red-500 transition-colors text-base">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </span>
+                                </div>
+                                <div class="flex items-center gap-1.5 mb-1">
+                                    <div class="flex text-[var(--color-primary)] text-xs gap-[2px]">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-regular fa-star"></i>
+                                    </div>
+                                    <span class="text-xs font-poppins font-medium text-primary">4 Reviews</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span class="font-bold text-sm text-primary">$20.00</span>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- Card 2 -->
+                        <a href="#" class="group block w-full max-w-[280px]">
+                            <div class="w-full h-[250px] bg-gray-50 rounded-[20px] overflow-hidden mb-3 relative">
+                                <img src="./images/shop_img(4th)/RG2.png" alt="Card"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                            </div>
+                            <div class="flex flex-col px-1">
+                                <div class="flex justify-between items-start mb-1">
+                                    <h4 class="font-semibold font-poppins text-sm text-primary">Printed Tin Jar</h4>
+                                    <span class="text-primary hover:text-red-500 transition-colors text-base">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </span>
+                                </div>
+                                <div class="flex items-center gap-1.5 mb-1">
+                                    <div class="flex text-[var(--color-primary)] text-xs gap-[2px]">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-regular fa-star"></i>
+                                    </div>
+                                    <span class="text-xs font-poppins font-medium text-primary">4 Reviews</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span class="font-bold text-sm text-primary">$18.00</span>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- Card 3 -->
+                        <a href="#" class="group block w-full max-w-[280px]">
+                            <div class="w-full h-[250px] bg-gray-50 rounded-[20px] overflow-hidden mb-3 relative">
+                                <img src="./images/shop_img(4th)/Rg3.png" alt="Card"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                            </div>
+                            <div class="flex flex-col px-1">
+                                <div class="flex justify-between items-start mb-1">
+                                    <h4 class="font-semibold font-poppins text-sm text-primary">Floral Printed Tin Jar
+                                    </h4>
+                                    <span class="text-primary hover:text-red-500 transition-colors text-base">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </span>
+                                </div>
+                                <div class="flex items-center gap-1.5 mb-1">
+                                    <div class="flex text-[var(--color-primary)] text-xs gap-[2px]">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-regular fa-star"></i>
+                                    </div>
+                                    <span class="text-xs font-poppins font-medium text-primary">4 Reviews</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span class="font-bold text-sm text-primary">$22.00</span>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- Card 4 -->
+                        <a href="#" class="group block w-full max-w-[280px]">
+                            <div class="w-full h-[250px] bg-gray-50 rounded-[20px] overflow-hidden mb-3 relative">
+                                <img src="./images/shop_img(4th)/Rg4.png" alt="Card"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                            </div>
+                            <div class="flex flex-col px-1">
+                                <div class="flex justify-between items-start mb-1">
+                                    <h4 class="font-semibold font-poppins text-sm text-primary">Doli Printed Tin Jar
+                                    </h4>
+                                    <span class="text-primary hover:text-red-500 transition-colors text-base">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </span>
+                                </div>
+                                <div class="flex items-center gap-1.5 mb-1">
+                                    <div class="flex text-[var(--color-primary)] text-xs gap-[2px]">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-regular fa-star"></i>
+                                    </div>
+                                    <span class="text-xs font-poppins font-medium text-primary">4 Reviews</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span class="font-bold text-sm text-primary">$25.00</span>
+                                </div>
+                            </div>
+                        </a>
+
+                    </div>
+
+                    <!-- Right Arrow -->
+                    <button
+                        class="absolute right-3 top-[105px] -translate-y-1/2 z-20 w-10 h-10 rounded-full flex items-center justify-center text-black backdrop-blur-md border border-white/80 shadow-md text-[var(--color-primary)] hover:bg-white/90 transition-all cursor-pointer">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>   
+        <!-- Scanner Section  -->
+        <section class="max-w-[1820px] mx-auto px-4 sm:px-[50px] mt-10 mb-20">
+            <div
+                class="bg-[#F9F6C1] rounded-[25px] py-8 md:py-10 px-6 md:px-16 shadow-sm relative flex items-center w-full">
+                <!-- QR Scanner  -->
+                <div
+                    class="hidden lg:block absolute left-10 md:left-16 -top-2 z-20 bg-white border-2 border-[var(--color-primary)] rounded-[20px] p-3 text-center shadow-xl w-[150px]">
+                    <div
+                        class="w-full h-[120px] bg-gray-50 rounded-[12px] overflow-hidden mb-2 flex items-center justify-center">
+                        <img src="./images/shop_img(4th)/Welcome to Rituals Mobile App 1.png" alt="Scanner QR"
+                            class="w-full h-full object-contain" />
+                    </div>
+                    <span class="text-2xl font-bold font-poppins text-[var(--color-primary)]">Scan Me</span>
+                </div>
+
+                <div class="grid grid-cols-12 gap-6 items-center w-full lg:pl-56">
+                    <!-- Heading & Paragraph-->
+                    <div class="col-span-12 md:col-span-8 text-center flex flex-col justify-center items-center">
+                        <h3 class="font-semibold text-center text-2xl md:text-3xl text-[var(--color-primary)] mb-1">
+                            Stay ahead of the deals!
+                        </h3>
+                        <p
+                            class="text-[var(--color-primary)] font-poppins text-center font-medium text-sm md:text-base italic">
+                            "Experience shopping made easy - grab our app for <br class="hidden sm:inline"> deals, speed
+                            and convenience."
+                        </p>
+                    </div>
+                    <!--  App Icons & Download -->
+                    <div
+                        class="col-span-12 md:col-span-4 flex flex-col items-center md:items-end justify-center gap-2.5">
+                        <!-- App Store Icons -->
+                        <div class="flex items-center gap-3">
+                            <a href="#"
+                                class="w-11 h-11 rounded-full bg-[var(--color-primary)] flex items-center justify-center text-white hover:opacity-90 transition-opacity shadow-md overflow-hidden p-2.5">
+                                <img src="./images/shop_img(4th)/material-symbols_android.png" alt="Google Play"
+                                    class="w-full h-full object-contain" />
+                            </a>
+                            <a href="#"
+                                class="w-11 h-11 rounded-full bg-[var(--color-primary)] flex items-center justify-center text-white hover:opacity-90 transition-opacity shadow-md overflow-hidden p-2.5">
+                                <img src="./images/shop_img(4th)/ic_baseline-apple.png" alt="Apple Store"
+                                    class="w-full h-full object-contain" />
+                            </a>
+                        </div>
+                        <!-- Download Now -->
+                        <button type="button"
+                            class="bg-[var(--color-primary)] text-white text-xs md:text-sm font-semibold px-5 py-2 rounded-full hover:opacity-95 transition-opacity shadow-md cursor-pointer">
+                            Download now
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 4 Cards -->
+        <section class="max-w-[1820px] mx-auto px-[50px] my-16">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!--  Card 1 -->
+                <div class="bg-[#F8F3E5] p-6 rounded-[24px] border border-amber-100/60 shadow-sm flex flex-col">
+                    <div class="flex items-center gap-3 mb-4">
+                        <img src="./images/shop_img(4th)/Ellipse 21.png" alt="Richard Jones"
+                            class="w-12 h-12 rounded-full object-cover">
+                        <div>
+                            <h4 class="font-semibold text-primary text-sm">Richard Jones</h4>
+                            <span class="text-xs text-primary">Customer</span>
+                        </div>
+                    </div>
+                    <p class="text-xs text-primary leading-relaxed">
+                        There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+                        alteration in some form, by injected humour, or randomised words which don't look even slightly
+                        believable.
+                    </p>
+                </div>
+                <!--  Card 2 -->
+                <div class="bg-[#F8F3E5] p-6 rounded-[24px] border border-amber-100/60 shadow-sm flex flex-col">
+                    <div class="flex items-center gap-3 mb-4">
+                        <img src="./images/shop_img(4th)/Ellipse 22.png" alt="Richard Jones"
+                            class="w-12 h-12 rounded-full object-cover">
+                        <div>
+                            <h4 class="font-semibold text-primary text-sm">Richard Jones</h4>
+                            <span class="text-xs text-primary">Customer</span>
+                        </div>
+                    </div>
+                    <p class="text-xs text-primary leading-relaxed">
+                        There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+                        alteration in some form, by injected humour, or randomised words which don't look even slightly
+                        believable.
+                    </p>
+                </div>
+                <!--  Card 3 -->
+                <div class="bg-[#F8F3E5] p-6 rounded-[24px] border border-amber-100/60 shadow-sm flex flex-col">
+                    <div class="flex items-center gap-3 mb-4">
+                        <img src="./images/shop_img(4th)/Ellipse 23.png" alt="Richard Jones"
+                            class="w-12 h-12 rounded-full object-cover">
+                        <div>
+                            <h4 class="font-semibold text-primary text-sm">Richard Jones</h4>
+                            <span class="text-xs text-primary">Customer</span>
+                        </div>
+                    </div>
+                    <p class="text-xs text-primary leading-relaxed">
+                        There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+                        alteration in some form, by injected humour, or randomised words which don't look even slightly
+                        believable.
+                    </p>
+                </div>
+                <!-- Review Card 4 -->
+                <div class="bg-[#F8F3E5] p-6 rounded-[24px] border border-amber-100/60 shadow-sm flex flex-col">
+                    <div class="flex items-center gap-3 mb-4">
+                        <img src="./images/shop_img(4th)/Ellipse 24.png" alt="Richard Jones"
+                            class="w-12 h-12 rounded-full object-cover">
+                        <div>
+                            <h4 class="font-semibold text-primary text-sm">Richard Jones</h4>
+                            <span class="text-xs text-primary">Customer</span>
+                        </div>
+                    </div>
+                    <p class="text-xs text-primary leading-relaxed">
+                        There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+                        alteration in some form, by injected humour, or randomised words which don't look even slightly
+                        believable.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- stay update-->
+        <section class="w-full my-16">
+            <div class="bg-[#F8F3E5] py-14 px-6 text-center w-full flex flex-col items-center">
+                <h3 class="font-semibold text-xl md:text-2xl text-[var(--color-primary)] mb-2">
+                    Stay updated with what's new & what's on sale!
+                </h3>
+                <p class="text-xs md:text-sm text-primary not-[]:mb-6 font-poppins">
+                    From new arrivals to special savings and gift ideas you'll love.<br>Subscribe & stay in the know
+                </p>
+                <div class="relative w-full max-w-[450px]">
+                    <input type="email" placeholder="Write your mail"
+                        class="w-full py-3.5 pl-6 pr-32 rounded-full bg-white text-xs border border-gray-200 focus:outline-none shadow-sm">
+                    <button type="submit"
+                        class="absolute right-1.5 top-1.5 bottom-1.5 bg-[var(--color-primary)] text-white text-xs font-semibold px-6 rounded-full hover:opacity-95 transition-all cursor-pointer">
+                        Subscribe
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!--  Features Section -->
+        <section class="max-w-[1820px] mx-auto px-[50px] my-16">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center text-center">
+                <!-- img1-->
+                <div class="flex flex-col items-center">
+                    <div class="w-10 h-10 flex items-center justify-center mb-3">
+                        <img src="./images/shop_img(4th)/tag.png" alt="100% Branded Product"
+                            class="w-full h-full object-contain">
+                    </div>
+                    <h4 class="font-semibold text-sm text-[var(--color-primary)]">100% Branded Product</h4>
+                </div>
+                <!-- img2 -->
+                <div class="flex flex-col items-center">
+                    <div class="w-10 h-10 flex items-center justify-center mb-3">
+                        <img src="./images/shop_img(4th)/circle-star.png" alt="100% Original Product"
+                            class="w-full h-full object-contain">
+                    </div>
+                    <h4 class="font-semibold text-sm text-[var(--color-primary)]">100% Original Product</h4>
+                </div>
+                <!-- img 3 -->
+                <div class="flex flex-col items-center">
+                    <div class="w-10 h-10 flex items-center justify-center mb-3">
+                        <img src="./images/shop_img(4th)/package-check.png" alt="Free Shipping"
+                            class="w-full h-full object-contain">
+                    </div>
+                    <h4 class="font-semibold text-sm text-[var(--color-primary)]">Free Shipping</h4>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-------- FOOTER SECTION -------->
+    <footer class="overflow-hidden bg-[#F8F3E5]">
+        <div class="w-full pt-12 lg:pt-16 text-gray-800">
+            <div class="w-full max-w-[1820px] mx-auto px-4 sm:px-[50px]">
+                <div class="grid grid-cols-12 gap-6 items-start pb-12 lg:pb-16">
+                    <!-- Description -->
+                    <p class="col-span-12 lg:col-span-4 text-primary text-sm md:text-base leading-relaxed pr-0 lg:pr-8">
+                        At Rituals, we redefine gifting in India with an extensive range of 5,000+ gifts crafted for
+                        retail and bulk needs. From premium and utility gifts to return and corporate gifting, each
+                        product is designed to elevate every occasion with quality and elegance.
+                    </p>
+                    <!-- Details -->
+                    <div class="col-span-6 md:col-span-3 lg:col-span-2">
+                        <p class="font-bold text-sm md:text-base text-[var(--color-primary)] mb-4">Details</p>
+                        <ul class="space-y-3 text-xs md:text-sm text-primary list-none">
+                            <li><a href="#" class="hover:underline">About Us</a></li>
+                            <li><a href="#" class="hover:underline">FAQs</a></li>
+                            <li><a href="#" class="hover:underline">Blogs</a></li>
+                        </ul>
+                    </div>
+                    <!-- Contact -->
+                    <div class="col-span-6 md:col-span-3 lg:col-span-2">
+                        <p class="font-bold text-sm md:text-base text-[var(--color-primary)] mb-4">Contact</p>
+                        <ul class="space-y-3 text-xs md:text-sm text-primary list-none">
+                            <li><a href="mailto:support@rituals.com"
+                                    class="hover:underline break-all">support@rituals.com</a></li>
+                            <li><a href="tel:+91948403302114" class="hover:underline">+91 948403302114</a></li>
+                        </ul>
+                    </div>
+                    <!-- Customer Policy -->
+                    <div class="col-span-6 md:col-span-3 lg:col-span-2 mt-6 md:mt-0">
+                        <p class="font-bold text-sm md:text-base text-[var(--color-primary)] mb-4">Customer Policy</p>
+                        <ul class="space-y-3 text-xs md:text-sm text-primary list-none">
+                            <li><a href="#" class="hover:underline">Terms &amp; Conditions</a></li>
+                            <li><a href="#" class="hover:underline">Privacy Policy</a></li>
+                            <li><a href="#" class="hover:underline">Return &amp; Refunds</a></li>
+                            <li><a href="#" class="hover:underline">Shipping</a></li>
+                            <li><a href="#" class="hover:underline">Terms of Service</a></li>
+                            <li><a href="#" class="hover:underline">Refund Policy</a></li>
+                        </ul>
+                    </div>
+                    <!-- Support -->
+                    <div class="col-span-6 md:col-span-3 lg:col-span-2 mt-6 md:mt-0">
+                        <p class="font-bold text-sm md:text-base text-[var(--color-primary)] mb-4">Support</p>
+                        <ul class="space-y-3 text-xs md:text-sm text-primary list-none">
+                            <li><a href="#" class="hover:underline">Track your order</a></li>
+                            <li><a href="#" class="hover:underline">Register on Rituals</a></li>
+                            <li><a href="#" class="hover:underline">Order History</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Logo -->
+                <div class="flex flex-col lg:flex-row justify-between items-end mt-4">
+                    <!-- G Logo -->
+                    <div class="flex items-end gap-3 transform translate-y-[10px] lg:translate-y-[15px]">
+                        <p
+                            class="font-bold text-6xl md:text-8xl lg:text-[130px] tracking-tight text-[var(--color-primary)] leading-[0.75] select-none m-0 font-poppins">
+                            Rituals
+                        </p>
+                        <span
+                            class="shrink-0 w-8 h-8 md:w-12 md:h-12 rounded-full bg-[#F9F6C1] border border-[var(--color-primary)] flex items-center justify-center text-sm md:text-lg font-bold text-[var(--color-primary)] mb-2 lg:mb-4">
+                            R
+                        </span>
+                    </div>
+
+                    <div class="flex flex-col lg:items-end w-full lg:w-auto pb-4 lg:pb-8 mt-8 lg:mt-0 gap-6 z-10">
+                        <!-- Back to top icon -->
+                        <a href="#top" aria-label="Back to top"
+                            class="w-11 h-11 rounded-full bg-[#F9F6C1] border border-[var(--color-primary)] flex items-center justify-center text-[var(--color-primary)] hover:opacity-80 transition-opacity ml-auto lg:ml-0">
+                            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="m18 15-6-6-6 6" />
+                            </svg>
+                        </a>
+                        <!-- Copyright and Social Links -->
+                        <div
+                            class="w-full flex flex-col md:flex-row lg:items-center justify-between lg:justify-end gap-4 text-xs md:text-sm text-primary">
+                            <a href="#"
+                                class="hover:text-[var(--color-primary)] text-primary transition-colors underline">
+                                © 2026 Rituals. All rights reserved by ari
+                            </a>
+                            <ul class="flex flex-wrap items-center gap-4 list-none underline lg:ml-6">
+                                <li><a href="#"
+                                        class="hover:text-[var(--color-primary)] text-primary hover:underline">Facebook</a>
+                                </li>
+                                <li><a href="#"
+                                        class="hover:text-[var(--color-primary)] text-primary hover:underline">Instagram</a>
+                                </li>
+                                <li><a href="#"
+                                        class="hover:text-[var(--color-primary)] text-primary hover:underline">Behance</a>
+                                </li>
+                                <li><a href="#"
+                                        class="hover:text-[var(--color-primary)] text-primary hover:underline">Dribbble</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/4.0.0/jquery.min.js"
+        integrity="sha512-8LENNbXmzI/Gbj+OwXmqR6V4QaUAw0/porPzy1+dQoJqC0JPHedWoe0DDOTL2uHA5XXJyIsPtiMHH86pVlay6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./js/script.js"></script>
+
+</body>
+
+</html>
